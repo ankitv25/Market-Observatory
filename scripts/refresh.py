@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 from context_data import collect_curve, collect_macro
 from graphics import render_graphics
-from markets import collect
+from markets import collect, INSTRUMENTS
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "dashboard/latest.json"
@@ -73,6 +73,17 @@ def readings(edition):
         day = max(r["stats"]["day"] for r in sectors)
         sectors = sorted((r for r in sectors if r["stats"]["day"] == day), key=lambda r:r["stats"]["pct"])
         result.append(("Sector participation", f"{sum(r['stats']['pct'] > 0 for r in sectors)} of {len(sectors)} reporting sector ETFs rose on {day}. {sectors[-1]['name']} led at {pct(sectors[-1]['stats']['pct'])}; {sectors[0]['name']} finished at {pct(sectors[0]['stats']['pct'])}."))
+    by_id = {r["id"]: r for r in rows}
+    growth, value = by_id.get("iwf"), by_id.get("iwd")
+    if growth and value:
+        g, v = growth["stats"], value["stats"]
+        if g["day"] == v["day"] and g["previous_day"] == v["previous_day"] and None not in (g["pct"], v["pct"]):
+            spread = g["pct"] - v["pct"]
+            result.append(("Equity style", f"On {g['day']} large-cap growth ({pct(g['pct'])}) finished {abs(spread):.2f} percentage points {'ahead of' if spread >= 0 else 'behind'} large-cap value ({pct(v['pct'])}), measured by IWF and IWD."))
+    oil = by_id.get("wti")
+    if oil and oil.get("contract"):
+        o = oil["stats"]
+        result.append(("Energy", f"The {oil['contract']} WTI contract closed at ${o['last']:.2f}/bbl on {o['day']}, {o['change']:+.2f} dollars per barrel against its own {o['previous_day']} close."))
     pairs = [r for r in edition["curve"].get("rows", []) if {"2Y","10Y"} <= r["rates"].keys()]
     if len(pairs) >= 2:
         prior, last = pairs[-2:]
@@ -129,6 +140,8 @@ def readme(e):
            "**[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**", "",
            f"Edition compiled **{e['created']}** · {len(rows)} market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.", "",
            "## The daily reading",""]
+    if e["issues"]:
+        lines += ["**Source status.** " + " ".join(e["issues"]), ""]
     for title,body in e["readings"]: lines += [f"**{title}.** {body}", ""]
     lines += ["## Market tape","", "| Instrument | Last | Δ units | Δ % | 6 months | Observation |","|---|---:|---:|---:|---:|---|"]
     for group in dict.fromkeys(GROUPS+[r["group"] for r in rows]):
@@ -179,6 +192,10 @@ def main():
             c=prev["curve"]; issues.append("Treasury returned an older dataset; retained the verified curve.")
         if len(rows)<12 or not any(r["id"]=="spx" for r in rows): raise SystemExit("Core market data missing")
         fresh_ids={r["id"] for r in fresh}
+        missing = [r["symbol"] for r in INSTRUMENTS if r["id"] not in {x["id"] for x in rows}]
+        if missing: issues.append("No usable history for " + ", ".join(missing))
+        archived = [r["symbol"] for r in fresh if r["source"] == "Convexity Lab archive"]
+        if archived: issues.append("Live feed unavailable; checked archived coverage for " + ", ".join(archived))
         retained=[r["symbol"] for r in rows if r["id"] not in fresh_ids]
         if retained: issues.append("Prior observations retained for "+", ".join(retained))
         stale=[r["symbol"] for r in rows if (now.date()-date.fromisoformat(r["stats"]["day"])).days>4]
