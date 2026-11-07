@@ -2,7 +2,7 @@
 
 ## Reading an edition
 
-The repository landing page is the dashboard. GitHub renders the three SVG charts and Markdown tables directly. The standalone HTML file contains an interactive chart reader and the same edition data. Download the file to open it locally. No server or API token is needed to read a saved edition.
+The [live dashboard](https://ankitv25.github.io/Market-Observatory/) runs on GitHub Pages and opens with the cross-asset overview. The repository landing page is the text companion. GitHub renders the three SVG charts and Markdown tables directly. The standalone HTML file contains an interactive chart reader and the same edition data. Download the file to open it locally. No server or API token is needed to read a saved edition.
 
 Each instrument retains its observation date. The compilation time indicates when the edition was assembled. Sector panels measure US sector ETF price returns. The market tape includes index levels, ETF prices, FX quote units and individual futures contracts. The previous observation and six-month anchor are available in the JSON snapshot. The market summaries describe associations and arithmetic; they do not attribute a cause to a day’s price move.
 
@@ -38,3 +38,7 @@ python3 scripts/refresh.py --render-only
 ```
 
 The [work log](../WORKLOG.md) records implementation changes. The [refresh ledger](../CADENCE.md) records data editions. The original thesis work and private repository inputs are outside this public collection.
+
+## Live rendering and portfolio books
+
+Each successful edition triggers a Pages deployment. The publishing job checks the bytes returned by the live URL against the built dashboard. The comparison chart aligns observed dates and rebases both instruments at their first common observation within the selected window. Sector tiles switch between daily and six-month price returns. The portfolio lens reads the five public portfolio books at refresh time, preserving their own as-of dates, forecast risk and sleeve contributions. These model risk shares are distinct from daily portfolio performance.

@@ -10,7 +10,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from context_data import collect_curve, collect_macro
+from context_data import collect_curve, collect_macro, collect_books
 from graphics import render_graphics
 from markets import collect, INSTRUMENTS
 
@@ -136,7 +136,7 @@ def research_page(edition):
 
 def readme(e):
     rows=e["markets"]
-    lines=["# Market Observatory", "", "![Market Observatory · US market edition](assets/banner.svg)", "",
+    lines=["# Market Observatory", "", "**[Open the live dashboard →](https://ankitv25.github.io/Market-Observatory/)**", "", "![Market Observatory · US market edition](assets/banner.svg)", "",
            "**[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**", "",
            f"Edition compiled **{e['created']}** · {len(rows)} market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.", "",
            "## The daily reading",""]
@@ -186,6 +186,7 @@ def main():
         rows=market_rows(fresh,prev.get("markets",[]),now)
         c=attempt("Treasury",collect_curve,prev.get("curve",{}))
         m=attempt("Macro",collect_macro,prev.get("macro",{}))
+        books=attempt("Portfolio books",collect_books,prev.get("books",{}))
         for key,value in [("curve",c),("macro",m)]:
             if not value and prev.get(key): issues.append(f"Missing {key} response.")
         if c.get("rows") and prev.get("curve",{}).get("rows") and c["rows"][-1]["date"] < prev["curve"]["rows"][-1]["date"]:
@@ -200,7 +201,7 @@ def main():
         if retained: issues.append("Prior observations retained for "+", ".join(retained))
         stale=[r["symbol"] for r in rows if (now.date()-date.fromisoformat(r["stats"]["day"])).days>4]
         if stale: issues.append("Observations older than four calendar days: "+", ".join(stale))
-        e={"created":now.isoformat(timespec="seconds"),"markets":rows,"curve":c,"macro":m,"issues":issues}
+        e={"created":now.isoformat(timespec="seconds"),"markets":rows,"curve":c,"macro":m,"issues":issues,"books":books}
         e["readings"]=readings(e)
         write_json(DATA,e)
         # Each distinct publication retains its exact inputs and commentary.
@@ -223,7 +224,7 @@ def main():
         notes.append(f"|{r['name']}|[{r['source']}]({r['url']})|{r['basis']}|{r['stats']['day']}|{r['stats']['base'] or '—'}|")
     (ROOT/"dashboard/SOURCES.md").write_text("\n".join(notes)+"\n")
     payload=json.dumps(e,ensure_ascii=False).replace("<","\\u003c")
-    (ROOT/"dashboard/observatory.html").write_text((ROOT/"scripts/reader.html").read_text().replace("<!--EDITION-->",payload))
+    (ROOT/"dashboard/observatory.html").write_text((ROOT/"scripts/reader.html").read_text().replace("/*STYLE*/", (ROOT/"scripts/monitor.css").read_text()).replace("/*APP*/", (ROOT/"scripts/monitor.js").read_text()).replace("<!--EDITION-->",payload))
     print(f"Edition {e['created']} · {len(e['markets'])} instruments · {hashlib.sha256(DATA.read_bytes()).hexdigest()[:16]}")
 
 

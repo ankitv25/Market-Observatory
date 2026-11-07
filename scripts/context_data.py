@@ -151,3 +151,27 @@ def collect_macro():
         "note": " ".join(parts),
         "source_generated_at": metadata["generated_at"],
     }
+
+
+def collect_books():
+    """Small public snapshot of each book, preserving its source date and units."""
+    url = "https://ankitv25.github.io/Asset-Allocation/data/portfolio_books.json"
+    source = json.loads(read_text(url))
+    books = {}
+    for key in source["order"]:
+        book = source["books"][key]
+        risk = book["risk"]
+        books[key] = {
+            "name": source["portfolios"][key]["name"],
+            "role": source["portfolios"][key]["role"],
+            "date": date.fromisoformat(book["asof"]).isoformat(),
+            "growth": book["positioning"].get("growth_weight"),
+            "stance": book["positioning"].get("stance"),
+            "forecast": risk.get("forecast_vol"),
+            "budget": risk.get("vol_budget"),
+            "sleeves": risk.get("risk_contributions", []),
+            "blocks": book["construction"].get("blocks", []),
+            "thesis": book.get("portfolio", {}).get("thesis"),
+            "url": "https://ankitv25.github.io/Asset-Allocation/?p=" + key,
+        }
+    return books

@@ -5,6 +5,7 @@
 | 2026-11-07 | Opened the public Market Observatory repository. Built the README edition, S&P 500 masthead, sector chart, Treasury curve, market tape and offline chart reader. | [Dashboard](README.md) · [Charts](assets/) · [Reader source](scripts/reader.html) |
 | 2026-11-07 | Integrated market histories, named futures contracts, official Treasury/H.15 curves, confirmed MRS vintage, and sector risk calculations. | [Source ledger](dashboard/SOURCES.md) · [Research notebook](dashboard/RESEARCH.md) |
 | 2026-11-07 | Added weekday collection, immutable dated snapshots, run ledger, artifact validation and GitHub readback. | [Workflow](.github/workflows/refresh.yml) · [Edition ledger](CADENCE.md) |
+| 2026-11-07 | Shipped the GitHub Pages monitor with benchmark comparison, sector rotation, rates and macro, portfolio risk and searchable market tape. | [Live dashboard](https://ankitv25.github.io/Market-Observatory/) · [Publication workflow](.github/workflows/pages.yml) |
 
 ## Build queue
 

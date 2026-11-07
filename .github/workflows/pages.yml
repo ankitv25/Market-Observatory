@@ -1,0 +1,66 @@
+name: Publish live dashboard
+on:
+  push:
+    branches: [main]
+    paths:
+      - dashboard/observatory.html
+      - .github/workflows/pages.yml
+  workflow_run:
+    workflows: [Market edition]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: market-observatory-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Prepare live edition
+        run: |
+          python3 scripts/verify.py
+          mkdir -p public
+          cp dashboard/observatory.html public/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Confirm the served edition matches the published file
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import os
+          import time
+          import urllib.request
+          from pathlib import Path
+          expected = hashlib.sha256(Path("public/index.html").read_bytes()).digest()
+          url = os.environ["PAGE_URL"] + "?edition=" + os.environ["GITHUB_RUN_ID"]
+          for attempt in range(12):
+              try:
+                  with urllib.request.urlopen(url, timeout=15) as response:
+                      if hashlib.sha256(response.read()).digest() == expected:
+                          print("Verified served dashboard", url)
+                          break
+              except OSError as exc:
+                  print(exc)
+              time.sleep(5)
+          else:
+              raise SystemExit("Served dashboard did not match this edition")
+          PY
