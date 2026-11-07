@@ -4,13 +4,17 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-07T16:41:57-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-07T16:43:34-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
 **US equities.** The S&P 500 reached 7,376.86 on 2026-11-06, a move of +23.13 points (+0.31%) against 2026-11-05. Its six-month price change was +0.16% from 2026-05-06.
 
 **Sector participation.** 3 of 11 reporting sector ETFs rose on 2026-11-06. Technology led at +1.45%; Consumer Staples finished at -1.28%.
+
+**Equity style.** On 2026-11-06 large-cap growth (+1.26%) finished 1.62 percentage points ahead of large-cap value (-0.36%), measured by IWF and IWD.
+
+**Energy.** The Dec 2026 WTI contract closed at $90.83/bbl on 2026-11-06, +0.31 dollars per barrel against its own 2026-11-05 close.
 
 **US rates.** On 2026-11-05 the 2-year par yield was 4.46% and the 10-year was 4.84%. The 2s10s spread stood at +38 bp, changing by +6 bp versus 2026-11-04.
 
