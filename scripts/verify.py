@@ -1,6 +1,6 @@
 """Check the same artifacts readers see on GitHub and in the offline edition."""
 from datetime import date, datetime
-from html.parser import HTMLParser
+from edition_quality import quality_errors
 import json
 import math
 from pathlib import Path
@@ -9,6 +9,9 @@ from xml.etree import ElementTree
 
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/"dashboard/latest.json").read_text())
+errors=quality_errors(data)
+if errors:
+    raise SystemExit("Financial quality checks failed:\n" + "\n".join(errors))
 rows=data["markets"]
 assert len(rows)==len({r["id"] for r in rows})
 observed=set()

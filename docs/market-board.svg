@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc"><title id="title">Six-desk market board design</title><desc id="desc">Historical November 6 market levels and changes, alongside three cross-asset signals. Proposed desktop opening view.</desc>
+<rect x="0" y="0" width="1440" height="900" fill="#f2f5f4"/>
+<rect x="0" y="0" width="1440" height="65" fill="#102e3b"/>
+<text x="36" y="42" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="start">Market Observatory</text>
+<text x="1402" y="40" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#b6d8d3" text-anchor="end">RESEARCH PROTOTYPE   /   HISTORICAL EDITION</text>
+<text x="38" y="120" font-family="Arial,Helvetica,sans-serif" font-size="37" font-weight="700" fill="#183443" text-anchor="start">Multi-asset market board</text>
+<text x="1400" y="117" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#183443" text-anchor="end">US close  ·  6 November 2026</text>
+<text x="38" y="158" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#486170" text-anchor="start">Cash closes and named contracts • Treasury curve observed 5 November • returns are price changes</text>
+<rect x="32" y="185" width="944" height="672" fill="#ffffff"/>
+<rect x="994" y="185" width="412" height="672" fill="#153440"/>
+<text x="49" y="219" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#486170" text-anchor="start">ASSET CLASS</text>
+<text x="213" y="219" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#486170" text-anchor="start">INSTRUMENT</text>
+<text x="562" y="219" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#486170" text-anchor="end">LEVEL</text>
+<text x="680" y="219" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#486170" text-anchor="end">1 DAY</text>
+<text x="794" y="219" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#486170" text-anchor="end">1 MONTH</text>
+<text x="932" y="219" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#486170" text-anchor="end">6 MONTHS</text>
+<rect x="43" y="236" width="917" height="1" fill="#d7e4e2"/>
+<text x="49" y="276" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183443" text-anchor="start">Equities</text>
+<text x="213" y="271" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">S&amp;P 500</text>
+<text x="562" y="271" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">7,376.86</text>
+<text x="680" y="271" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+0.31%</text>
+<text x="794" y="271" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-5.65%</text>
+<text x="932" y="271" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+0.16%</text>
+<text x="213" y="302" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">Euro STOXX 50</text>
+<text x="562" y="302" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">6,170.49</text>
+<text x="680" y="302" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.98%</text>
+<text x="794" y="302" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-1.62%</text>
+<text x="932" y="302" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+2.38%</text>
+<rect x="43" y="335" width="917" height="1" fill="#d7e4e2"/>
+<text x="49" y="375" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183443" text-anchor="start">Sovereign rates</text>
+<text x="213" y="370" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">US 2Y Treasury</text>
+<text x="562" y="370" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">4.46%</text>
+<text x="680" y="370" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-12 bp</text>
+<text x="794" y="370" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-38 bp</text>
+<text x="932" y="370" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+53 bp</text>
+<text x="213" y="401" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">US 10Y Treasury</text>
+<text x="562" y="401" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">4.84%</text>
+<text x="680" y="401" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-6 bp</text>
+<text x="794" y="401" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-47 bp</text>
+<text x="932" y="401" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+41 bp</text>
+<rect x="43" y="434" width="917" height="1" fill="#d7e4e2"/>
+<text x="49" y="474" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183443" text-anchor="start">Credit proxies</text>
+<text x="213" y="469" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">LQD · IG credit ETF</text>
+<text x="562" y="469" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">104.53</text>
+<text x="680" y="469" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.12%</text>
+<text x="794" y="469" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+2.34%</text>
+<text x="932" y="469" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-4.27%</text>
+<text x="213" y="500" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">HYG · HY credit ETF</text>
+<text x="562" y="500" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">77.23</text>
+<text x="680" y="500" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.06%</text>
+<text x="794" y="500" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.05%</text>
+<text x="932" y="500" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-3.66%</text>
+<rect x="43" y="533" width="917" height="1" fill="#d7e4e2"/>
+<text x="49" y="573" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183443" text-anchor="start">FX</text>
+<text x="213" y="568" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">US Dollar Index</text>
+<text x="562" y="568" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">102.30</text>
+<text x="680" y="568" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+0.74%</text>
+<text x="794" y="568" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+0.46%</text>
+<text x="932" y="568" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+4.37%</text>
+<text x="213" y="599" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">USD/JPY</text>
+<text x="562" y="599" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">157.50</text>
+<text x="680" y="599" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.54%</text>
+<text x="794" y="599" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.29%</text>
+<text x="932" y="599" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.11%</text>
+<rect x="43" y="632" width="917" height="1" fill="#d7e4e2"/>
+<text x="49" y="672" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183443" text-anchor="start">Commodities</text>
+<text x="213" y="667" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">WTI · Dec 2026</text>
+<text x="562" y="667" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">90.83</text>
+<text x="680" y="667" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+0.34%</text>
+<text x="794" y="667" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+2.71%</text>
+<text x="932" y="667" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+17.85%</text>
+<text x="213" y="698" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">Copper · Dec 2026</text>
+<text x="562" y="698" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">6.238</text>
+<text x="680" y="698" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.52%</text>
+<text x="794" y="698" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-6.20%</text>
+<text x="932" y="698" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-1.49%</text>
+<rect x="43" y="731" width="917" height="1" fill="#d7e4e2"/>
+<text x="49" y="771" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#183443" text-anchor="start">Alternatives</text>
+<text x="213" y="766" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">VNQ · listed property</text>
+<text x="562" y="766" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">95.73</text>
+<text x="680" y="766" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-0.52%</text>
+<text x="794" y="766" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+6.45%</text>
+<text x="932" y="766" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-1.40%</text>
+<text x="213" y="797" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#183443" text-anchor="start">DBMF · managed futures</text>
+<text x="562" y="797" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#183443" text-anchor="end">31.48</text>
+<text x="680" y="797" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+1.29%</text>
+<text x="794" y="797" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#a63b40" text-anchor="end">-4.72%</text>
+<text x="932" y="797" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#03765b" text-anchor="end">+3.38%</text>
+<text x="1019" y="222" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#abded1" text-anchor="start">SIGNAL MONITOR</text>
+<text x="1020" y="270" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#eff6f6" text-anchor="start">Equity leadership</text>
+<text x="1020" y="323" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" fill="#a4e1cc" text-anchor="start">+1.62 pp</text>
+<text x="1020" y="358" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#d6e5e7" text-anchor="start">Growth over value on the day.</text>
+<text x="1020" y="381" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#d6e5e7" text-anchor="start">The six-month spread is −18.53 pp.</text>
+<rect x="1020" y="409" width="354" height="1" fill="#43606b"/>
+<text x="1020" y="446" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#eff6f6" text-anchor="start">US yield curve</text>
+<text x="1020" y="499" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" fill="#a4e1cc" text-anchor="start">+38 bp</text>
+<text x="1020" y="534" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#d6e5e7" text-anchor="start">10Y less 2Y on November 5.</text>
+<text x="1020" y="557" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#d6e5e7" text-anchor="start">The spread widened 6 bp in one session.</text>
+<rect x="1020" y="585" width="354" height="1" fill="#43606b"/>
+<text x="1020" y="622" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#eff6f6" text-anchor="start">Equity / Treasury dependence</text>
+<text x="1020" y="675" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" fill="#a4e1cc" text-anchor="start">+0.48 → +0.06</text>
+<text x="1020" y="710" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#d6e5e7" text-anchor="start">S&amp;P 500 versus IEF price returns.</text>
+<text x="1020" y="733" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#d6e5e7" text-anchor="start">Adjacent 63-observation windows.</text>
+<rect x="1020" y="761" width="354" height="1" fill="#43606b"/>
+<text x="49" y="825" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#4c6672" text-anchor="start">Sovereign changes in bp • all other horizon columns in % • prices in instrument-native units</text>
+<text x="38" y="886" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#486170" text-anchor="start">Design reference for milestone 02. Desk selection opens that asset class; commentary begins below this board.</text>
+</svg>

@@ -7,7 +7,11 @@
 | 2026-11-07 | Added weekday collection, immutable dated snapshots, run ledger, artifact validation and GitHub readback. | [Workflow](.github/workflows/refresh.yml) · [Edition ledger](CADENCE.md) |
 | 2026-11-07 | Shipped the GitHub Pages monitor with benchmark comparison, sector rotation, rates and macro, portfolio risk and searchable market tape. | [Live dashboard](https://ankitv25.github.io/Market-Observatory/) · [Publication workflow](.github/workflows/pages.yml) |
 
-## Build queue
+## November 7 project review
+
+Three independent reviewers evaluated desk depth, portfolio-manager workflow and release controls. The [delivery plan](docs/PROJECT_PLAN.md), [five-page research brief](docs/Market-Observatory-Research.pdf), [milestones](https://github.com/ankitv25/Market-Observatory/milestones) and [financial quality workflow](.github/workflows/quality.yml) now govern the next release. Live site remains the prior edition.
+
+## Earlier build queue
 
 1. Add real Treasury yields and breakevens alongside nominal yields. Verify the tenors, units and release timestamps.
 2. Add a dated FOMC event card and a forecast-versus-outcome record. Resolve the source and horizon of each expectation.
