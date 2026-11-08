@@ -4,6 +4,9 @@ on:
     branches: [main]
     paths:
       - dashboard/observatory.html
+      - docs/DESK_DESIGNS.md
+      - scripts/build_desk_designs.py
+      - scripts/desk_design.css
       - .github/workflows/pages.yml
   workflow_run:
     workflows: [Market edition]
@@ -34,6 +37,7 @@ jobs:
           python3 scripts/verify.py
           mkdir -p public
           cp dashboard/observatory.html public/index.html
+          python3 scripts/build_desk_designs.py public/design/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
