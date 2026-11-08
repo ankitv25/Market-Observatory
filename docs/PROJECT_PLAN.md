@@ -4,6 +4,8 @@
 
 [Five-page research brief](Market-Observatory-Research.pdf) · [Readable research specification](MARKET_RESEARCH.md) · [Milestones](https://github.com/ankitv25/Market-Observatory/milestones) · [Work packages](https://github.com/ankitv25/Market-Observatory/issues) · [Financial QA](https://github.com/ankitv25/Market-Observatory/actions/workflows/quality.yml)
 
+[Open the twelve desk designs](https://ankitv25.github.io/Market-Observatory/design/) · [Tab-by-tab table definitions and writeups](DESK_DESIGNS.md)
+
 ## Baseline and research decision
 
 The November 7 review examined a real edition with 62 market instruments, 11 US sector proxies, nine named futures, five portfolio books, nominal Treasury yields and the confirmed MRS. The existing first viewport concentrates on two US indices, oil, VIX and sector rotation. Mid-cap style cells, constituent-level breadth, excess-total-return alpha, real curves, instrument cash flows, OAS, private-market history and vintage-aligned expectations need additional inputs. A level-only screen cannot supply those analytics. The research brief defines the actual analytical deliverables and numerical examples.

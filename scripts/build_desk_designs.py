@@ -67,9 +67,9 @@ def chart(kind):
         return line_chart("Treasury yields · selected maturities, equally spaced",[(r["date"],[(k,r["rates"][k]) for k in tenors]) for r in rs],"%",True)
     if kind=="portfolio":
         rows=edition["books"]["saa"]["sleeves"]
-        return '<figure><figcaption>SAA · weight in capital and share of risk</figcaption><div class="legend"><span style="--series:#007c71">Capital</span><span style="--series:#995126">Risk</span></div>'+''.join(
-            f'<div class="risk"><b>{esc(r["sleeve"])}</b><span><i style="width:{r["capital"]*1.5}%"></i><i style="width:{abs(r["risk"])*1.5}%;background:#995126"></i></span><small>{r["capital"]:.1f}% / {r["risk"]:+.1f}%</small></div>'
-            for r in rows if r["risk"]>=0)+'</figure>'
+        return '<figure><figcaption>SAA · capital and risk shares (negative contributions extend left of zero)</figcaption><div class="legend"><span style="--series:#007c71">Capital</span><span style="--series:#995126">Risk</span></div>'+''.join(
+            f'<div class="risk"><b>{esc(r["sleeve"])}</b><span class="risk-axis"><i style="left:10%;width:{r["capital"]*1.5}%"></i><i style="left:{10+min(0,r["risk"])*1.5}%;width:{abs(r["risk"])*1.5}%;background:#995126"></i></span><small>{r["capital"]:.1f}% / {r["risk"]:+.1f}%</small></div>'
+            for r in rows)+'</figure>'
     symbols={"equity":("iwf","iwd"),"tape":("spx","ndx","nikkei"),"credit":("lqd","hyg","bkln"),"fx":("dxy","usdjpy"),"commodities":("wti","copper"),"alternatives":("vnq","dbmf","gld")}
     if kind not in symbols:raise ValueError(kind)
     rows=[markets[k] for k in symbols[kind]]
