@@ -4,3 +4,5 @@
 @media(max-width:740px){.grid,.equal{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr;gap:8px}.metric{min-height:94px}.metric strong{font-size:23px}.metric .spark{width:30%}.network a:first-child{display:none}.heading{align-items:flex-end}.log{font-size:10px;padding:5px}.heading p{font-size:12px}.top{height:50px}.brand{font-size:18px}nav>div{gap:17px}nav a{font-size:12px}.dateline{font-size:10px}main{padding-top:18px}.statgrid{gap:5px}.statgrid>div{padding:6px}.statgrid b{font-size:17px}footer{flex-wrap:wrap}.chart text{font-size:14px}.chartHelp{font-size:10px}.matrix{grid-template-columns:repeat(4,1fr)}}
 .tile small{display:block;font-size:10px;line-height:1.15;min-height:1.15em;color:#2c454c;margin-top:3px}
 @media(max-width:740px){.metric .spark{width:28%;height:15px;top:9px;right:8px}.chart text{font-size:17px}.tile{padding:6px 4px}.tile small{font-size:9px}}
+
+.design-entry{color:#bde6dc;font-size:13px;font-weight:650;text-decoration:none}
