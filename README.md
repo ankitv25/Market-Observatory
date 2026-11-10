@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-09T16:37:58-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-09T23:45:05-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -56,10 +56,10 @@ Edition compiled **2026-11-09T16:37:58-05:00** · 62 market instruments · dated
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|56.04|+1.21|+2.21%|+6.52%|2026-11-09|
 |**Global**||||||
 |[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,290.45|+119.96|+1.94%|+6.41%|2026-11-09|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,782.87|+108.97|+1.02%|+5.37%|2026-11-09|
-|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|57,434.77|-3,643.13|-5.96%|-3.49%|2026-11-06|
-|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|24,481.86|-315.12|-1.27%|-6.61%|2026-11-06|
-|[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,030.35|+493.75|+2.01%|+2.87%|2026-11-06|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,782.90|+109.00|+1.02%|+5.37%|2026-11-09|
+|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|58,775.50|+1,340.73|+2.33%|-6.28%|2026-11-09|
+|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|24,448.95|-32.91|-0.13%|-7.37%|2026-11-09|
+|[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,044.65|+14.30|+0.06%|+3.59%|2026-11-09|
 |[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|36,446.26|+657.16|+1.84%|+6.95%|2026-11-09|
 |[All-country equity](https://finance.yahoo.com/quote/ACWI/history/) · ACWI|156.35|+3.98|+2.61%|+0.62%|2026-11-09|
 |[Developed ex-US/Canada](https://finance.yahoo.com/quote/EFA/history/) · EFA|104.96|+3.07|+3.01%|+0.96%|2026-11-09|
@@ -76,10 +76,10 @@ Edition compiled **2026-11-09T16:37:58-05:00** · 62 market instruments · dated
 |[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|107.11|-0.22|-0.20%|-3.01%|2026-11-06|
 |**FX**||||||
 |[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|102.3000|+0.7500|+0.74%|+4.37%|2026-11-06|
-|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.1228|-0.0007|-0.06%|-4.16%|2026-11-06|
-|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|157.4980|-0.8590|-0.54%|-0.11%|2026-11-06|
-|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3456|-0.0021|-0.16%|-0.83%|2026-11-06|
-|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8154|-0.0011|-0.13%|+4.35%|2026-11-06|
+|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.1147|-0.0081|-0.72%|-4.98%|2026-11-09|
+|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|158.2920|+0.7940|+0.50%|+0.93%|2026-11-09|
+|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3360|-0.0096|-0.71%|-1.44%|2026-11-09|
+|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8195|+0.0042|+0.51%|+5.04%|2026-11-09|
 |**Credit**||||||
 |[Short Treasuries](https://finance.yahoo.com/quote/SHY/history/) · SHY|81.59|-0.04|-0.05%|-0.86%|2026-11-09|
 |[Intermediate Treasuries](https://finance.yahoo.com/quote/IEF/history/) · IEF|91.80|-0.06|-0.07%|-3.33%|2026-11-09|

@@ -1,6 +1,6 @@
 # Sources and observation dates
 
-Compiled 2026-11-09T16:37:58-05:00.
+Compiled 2026-11-09T23:45:05-05:00.
 
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
@@ -30,9 +30,9 @@ Compiled 2026-11-09T16:37:58-05:00.
 |US quality|[Yahoo Finance](https://finance.yahoo.com/quote/QUAL/history/)|ETF session close, price only|2026-11-09|2026-05-08|
 |Euro STOXX 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ESTOXX50E/history/)|Cash index session close, index points|2026-11-09|2026-05-08|
 |FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-09|2026-05-08|
-|Nikkei 225|[Yahoo Finance](https://finance.yahoo.com/quote/%5EN225/history/)|Cash index session close, index points|2026-11-06|2026-05-01|
-|Hang Seng|[Yahoo Finance](https://finance.yahoo.com/quote/%5EHSI/history/)|Cash index session close, index points|2026-11-06|2026-05-06|
-|Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-06|2026-05-06|
+|Nikkei 225|[Yahoo Finance](https://finance.yahoo.com/quote/%5EN225/history/)|Cash index session close, index points|2026-11-09|2026-05-08|
+|Hang Seng|[Yahoo Finance](https://finance.yahoo.com/quote/%5EHSI/history/)|Cash index session close, index points|2026-11-09|2026-05-08|
+|Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-09|2026-05-08|
 |S&P/TSX Composite|[Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPTSE/history/)|Cash index session close, index points|2026-11-09|2026-05-08|
 |All-country equity|[Yahoo Finance](https://finance.yahoo.com/quote/ACWI/history/)|ETF session close, price only|2026-11-09|2026-05-08|
 |Developed ex-US/Canada|[Yahoo Finance](https://finance.yahoo.com/quote/EFA/history/)|ETF session close, price only|2026-11-09|2026-05-08|
@@ -54,10 +54,10 @@ Compiled 2026-11-09T16:37:58-05:00.
 |Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-08|2026-05-08|
 |Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-09|2026-05-08|
 |US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-06|2026-05-06|
-|EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-06|2026-05-06|
-|USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-06|2026-05-06|
-|GBP/USD|[Yahoo Finance](https://finance.yahoo.com/quote/GBPUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-06|2026-05-06|
-|USD/CHF|[Yahoo Finance](https://finance.yahoo.com/quote/CHF%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-06|2026-05-06|
+|EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-09|2026-05-08|
+|USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-09|2026-05-08|
+|GBP/USD|[Yahoo Finance](https://finance.yahoo.com/quote/GBPUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-09|2026-05-08|
+|USD/CHF|[Yahoo Finance](https://finance.yahoo.com/quote/CHF%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-09|2026-05-08|
 |WTI crude|[Yahoo Finance](https://finance.yahoo.com/quote/CLZ26.NYM/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-06|2026-05-06|
 |Brent crude|[Yahoo Finance](https://finance.yahoo.com/quote/BZF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-06|2026-05-06|
 |Natural gas|[Yahoo Finance](https://finance.yahoo.com/quote/NGZ26.NYM/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-06|2026-05-06|
