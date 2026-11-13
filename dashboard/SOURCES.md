@@ -1,6 +1,6 @@
 # Sources and observation dates
 
-Compiled 2026-11-12T22:32:14-05:00.
+Compiled 2026-11-13T13:46:45-05:00.
 
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
@@ -28,8 +28,8 @@ Compiled 2026-11-12T22:32:14-05:00.
 |US small cap|[Yahoo Finance](https://finance.yahoo.com/quote/IWM/history/)|ETF session close, price only|2026-11-12|2026-05-12|
 |US momentum|[Yahoo Finance](https://finance.yahoo.com/quote/MTUM/history/)|ETF session close, price only|2026-11-12|2026-05-12|
 |US quality|[Yahoo Finance](https://finance.yahoo.com/quote/QUAL/history/)|ETF session close, price only|2026-11-12|2026-05-12|
-|Euro STOXX 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ESTOXX50E/history/)|Cash index session close, index points|2026-11-12|2026-05-12|
-|FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-12|2026-05-12|
+|Euro STOXX 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ESTOXX50E/history/)|Cash index session close, index points|2026-11-13|2026-05-13|
+|FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-13|2026-05-13|
 |Nikkei 225|[Yahoo Finance](https://finance.yahoo.com/quote/%5EN225/history/)|Cash index session close, index points|2026-11-12|2026-05-12|
 |Hang Seng|[Yahoo Finance](https://finance.yahoo.com/quote/%5EHSI/history/)|Cash index session close, index points|2026-11-12|2026-05-12|
 |Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-12|2026-05-12|
@@ -51,19 +51,19 @@ Compiled 2026-11-12T22:32:14-05:00.
 |Listed infrastructure|[Yahoo Finance](https://finance.yahoo.com/quote/IGF/history/)|ETF session close, price only|2026-11-12|2026-05-12|
 |Managed futures|[Yahoo Finance](https://finance.yahoo.com/quote/DBMF/history/)|ETF session close, price only|2026-11-12|2026-05-12|
 |Physical gold ETF|[Yahoo Finance](https://finance.yahoo.com/quote/GLD/history/)|ETF session close, price only|2026-11-12|2026-05-12|
-|Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-11|2026-05-11|
+|Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-12|2026-05-12|
 |Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-12|2026-05-12|
-|US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-11|2026-05-11|
+|US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-12|2026-05-12|
 |EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-12|2026-05-12|
 |USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-12|2026-05-12|
 |GBP/USD|[Yahoo Finance](https://finance.yahoo.com/quote/GBPUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-12|2026-05-12|
 |USD/CHF|[Yahoo Finance](https://finance.yahoo.com/quote/CHF%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-12|2026-05-12|
-|WTI crude|[Yahoo Finance](https://finance.yahoo.com/quote/CLZ26.NYM/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-11|2026-05-11|
-|Brent crude|[Yahoo Finance](https://finance.yahoo.com/quote/BZF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-11|2026-05-11|
-|Natural gas|[Yahoo Finance](https://finance.yahoo.com/quote/NGZ26.NYM/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-11|2026-05-11|
-|Gold|[Yahoo Finance](https://finance.yahoo.com/quote/GCZ26.CMX/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-11|2026-05-11|
-|Silver|[Yahoo Finance](https://finance.yahoo.com/quote/SIZ26.CMX/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-11|2026-05-11|
-|Copper|[Yahoo Finance](https://finance.yahoo.com/quote/HGZ26.CMX/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-11|2026-05-11|
-|Corn|[Yahoo Finance](https://finance.yahoo.com/quote/ZCZ26.CBT/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-11|2026-05-11|
-|S&P 500 E-mini|[Yahoo Finance](https://finance.yahoo.com/quote/ESZ26.CME/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-11|2026-05-11|
-|10Y Treasury note|[Yahoo Finance](https://finance.yahoo.com/quote/ZNZ26.CBT/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-11|2026-05-11|
+|WTI crude|[Yahoo Finance](https://finance.yahoo.com/quote/CLZ26.NYM/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-12|2026-05-12|
+|Brent crude|[Yahoo Finance](https://finance.yahoo.com/quote/BZF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-12|2026-05-12|
+|Natural gas|[Yahoo Finance](https://finance.yahoo.com/quote/NGZ26.NYM/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-12|2026-05-12|
+|Gold|[Yahoo Finance](https://finance.yahoo.com/quote/GCZ26.CMX/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-12|2026-05-12|
+|Silver|[Yahoo Finance](https://finance.yahoo.com/quote/SIZ26.CMX/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-12|2026-05-12|
+|Copper|[Yahoo Finance](https://finance.yahoo.com/quote/HGZ26.CMX/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-12|2026-05-12|
+|Corn|[Yahoo Finance](https://finance.yahoo.com/quote/ZCZ26.CBT/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-12|2026-05-12|
+|S&P 500 E-mini|[Yahoo Finance](https://finance.yahoo.com/quote/ESZ26.CME/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-12|2026-05-12|
+|10Y Treasury note|[Yahoo Finance](https://finance.yahoo.com/quote/ZNZ26.CBT/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-12|2026-05-12|
