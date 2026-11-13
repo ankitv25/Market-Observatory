@@ -117,6 +117,7 @@ def render():
     style=(ROOT/"scripts/desk_design.css").read_text()
     page='''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Desk designs · Market Observatory</title><style>'''+style+'''</style></head><body><header><b>Market Observatory</b><a href="../">Live market edition ↗</a></header><div class="layout"><aside><div class="sideTitle">Market desks</div><nav aria-label="Desk designs">'''+''.join(links)+'''</nav></aside><main>'''+''.join(pages)+'''</main></div><script>
     function display(){const articles=[...document.querySelectorAll("article")];const key=articles.some(a=>a.id===location.hash.slice(1))?location.hash.slice(1):articles[0].id;
+    if(key==="market-board"){location.replace("../#overview");return}
     for(const a of articles)a.hidden=a.id!==key;
     for(const a of document.querySelectorAll("nav a")){if(a.hash==="#"+key)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")}
     window.scrollTo(0,0);}

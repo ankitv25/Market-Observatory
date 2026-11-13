@@ -21,3 +21,7 @@ Three independent reviewers evaluated desk depth, portfolio-manager workflow and
 2. Add a dated FOMC event card and a forecast-versus-outcome record. Resolve the source and horizon of each expectation.
 3. Extend credit with dated OAS and duration where eligible. Add full repricing and risk-factor attribution when the required inputs are available.
 4. Add explicit user-authored public theses with revision history. Company comparison and the equity valuation agent belong to the separate equity research project.
+
+## November 13 market homepage
+
+Rebuilt the live opening screen with a benchmark strip, a dated closing brief, six asset-class rows, same-session gainers and decliners, and regional index boards. The historical Market Board entry now opens the current edition.

@@ -6,3 +6,63 @@
 @media(max-width:740px){.metric .spark{width:28%;height:15px;top:9px;right:8px}.chart text{font-size:17px}.tile{padding:6px 4px}.tile small{font-size:9px}}
 
 .design-entry{color:#bde6dc;font-size:13px;font-weight:650;text-decoration:none}
+
+/* Market homepage */
+.front-page{background:#f6f7f5}
+.front-page main{padding-top:0}
+.front-page .dateline,.front-page .heading{display:none}
+.quotes{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border-bottom:1px solid #cbd8d3;padding:15px 0}
+.quote{background:transparent;border:0;border-right:1px solid #d6dfda;text-align:left;padding:0 10px;min-width:0}
+.quote:first-child{padding-left:0}
+.quote:last-child{border:0}
+.quote span,.quote b,.quote small{display:block}
+.quote span{font-size:12px;font-weight:650}
+.quote b{font-size:18px;letter-spacing:-.6px}
+.quote small{font-size:10px;font-weight:600}
+.lead{display:grid;grid-template-columns:minmax(0,2fr) minmax(180px,.85fr);gap:5%;align-items:center;margin:17px 0;color:#f5faf5;background:#17352f;border-radius:9px;padding:20px 25px}
+.lead h1{font:500 clamp(26px,2.65vw,43px)/1.04 Georgia,serif;letter-spacing:-1.4px;margin:7px 0}
+.lead p{font-size:13px;color:#d0e1d6}
+.lead-date{font:650 11px var(--mono);letter-spacing:.09em;color:#a0e2c0}
+.lead-date span{margin-left:12px;color:#c2d8cc;letter-spacing:0;font-weight:400}
+.close-figure{margin:0;min-width:0}
+.close-figure figcaption,.close-figure>div{display:flex;justify-content:space-between;font:11px var(--mono);color:#bed3c8}
+.close-figure figcaption b{color:white}
+.close-figure svg{display:block;width:100%;height:63px;margin:5px 0}
+.home-grid{display:grid;grid-template-columns:minmax(0,2.35fr) minmax(245px,.9fr);gap:15px}
+.home-panel{background:white;border:1px solid #d4ded8;border-radius:8px;padding:15px 18px;min-width:0}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:9px;margin-bottom:10px}
+.panel-head h2{font-size:20px;letter-spacing:-.7px}
+.panel-head a{font-size:12px;font-weight:650;text-decoration:none}
+.desk-table{font-size:13px}
+.desk-table td{padding:7px 5px}
+.desk-table th{font-size:9px;padding:6px 5px}
+.desk-table :is(td,th):nth-child(2){text-align:left}
+.desk-table tbody tr:last-child td{border:0}
+.desk-table td span{display:block;font-size:10px;color:#586c69}
+.desk-table .desk-link{display:inline-block;border-left:3px solid var(--desk);padding-left:8px;color:#233d37;text-decoration:none;font-weight:670}
+.desk-table td button{font-size:13px;color:#233745}
+.desk-table .desk-level{font-weight:680}
+.desk-table .desk-trend{width:76px}
+.desk-table .spark{width:68px;height:24px;vertical-align:middle}
+.desk-table .desk-peer{white-space:normal}
+.desk-table .desk-peer span{font-size:11px}
+.movers-panel ol{list-style:none;padding:0;margin:7px 0}
+.movers-panel li{display:flex;align-items:center;gap:9px;border-bottom:1px solid #e2e8e4;padding:7px 0}
+.movers-panel li:last-child{border:0}
+.rank{font:11px var(--mono);color:#677f75}
+.movers-panel li button{min-width:0;flex:1;text-align:left;background:transparent;border:0;padding:0}
+.movers-panel li button b,.movers-panel li button small{display:block}
+.movers-panel li button b{font-size:13px}
+.movers-panel li button small,.universe{font-size:10px;color:var(--muted)}
+.movers-panel li strong{font-size:14px}
+.world-panel{margin-top:15px}
+.world-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+.world-grid button{text-align:left;padding:4px 10px;border:0;border-left:2px solid #d7e4de;background:none}
+.world-grid button>*{display:block}
+.world-grid span{font-size:12px;font-weight:650}
+.world-grid b{font-size:18px}
+.world-grid small{font-size:12px}
+.world-grid em{font-size:10px;font-style:normal;color:var(--muted)}
+.quote:hover,.world-grid button:hover{background:#eaf2ec}
+@media(max-width:1100px){.desk-peer{display:none}.quotes{display:flex;overflow-x:auto}.quote{min-width:126px;flex:1}.home-grid{grid-template-columns:minmax(0,1.8fr) minmax(220px,1fr)}}
+@media(max-width:760px){.home-grid{grid-template-columns:1fr}.desk-table .desk-trend{display:none}.lead{grid-template-columns:1fr;padding:14px 16px}.close-figure{display:none}.home-panel{padding:12px}.quotes{padding:9px 0}.quote{min-width:112px}.quote b{font-size:16px}.lead h1{font-size:27px}.lead p{font-size:12px}.desk-table td,.desk-table th{padding:6px 2px}.desk-table td,.desk-table td button{font-size:12px}.desk-table .desk-link{padding-left:4px}.desk-table .desk-move span{font-size:9px}.panel-head h2{font-size:18px}.world-panel .panel-head{flex-wrap:wrap}.world-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
