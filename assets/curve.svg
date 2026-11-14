@@ -1,74 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 422" width="940" height="422" role="img" aria-labelledby="title desc">
 <title id="title">Treasury curve</title>
-<desc id="desc">Observed par yields by maturity, with change since the prior observation in basis points. Latest date 2026-11-10.</desc>
+<desc id="desc">Observed par yields by maturity, with change since the prior observation in basis points. Latest date 2026-11-12.</desc>
 <rect x="0.00" y="0.00" width="940.00" height="422.00" fill="#faf8f1"/>
 <text x="32.0" y="53.0" fill="#152b2b" font-size="43" font-family="Georgia,Times New Roman,serif" font-weight="normal" letter-spacing="0" text-anchor="start">Treasury curve</text>
 <text x="32.0" y="84.0" fill="#506360" font-size="16" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="normal" letter-spacing="0" text-anchor="start">US Treasury nominal par yields · equally spaced tenors</text>
 <line x1="32.00" y1="103.00" x2="908.00" y2="103.00" stroke="#cdd4ca" stroke-width="1"/>
 <text x="62.0" y="311.0" fill="#506360" font-size="13" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="end">4.00%</text>
 <line x1="85.00" y1="306.00" x2="875.00" y2="306.00" stroke="#cdd4ca" stroke-width="1" stroke-dasharray="2 5"/>
-<text x="62.0" y="241.5" fill="#506360" font-size="13" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="end">4.75%</text>
+<text x="62.0" y="241.5" fill="#506360" font-size="13" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="end">4.88%</text>
 <line x1="85.00" y1="236.50" x2="875.00" y2="236.50" stroke="#cdd4ca" stroke-width="1" stroke-dasharray="2 5"/>
-<text x="62.0" y="172.0" fill="#506360" font-size="13" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="end">5.50%</text>
+<text x="62.0" y="172.0" fill="#506360" font-size="13" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="end">5.75%</text>
 <line x1="85.00" y1="167.00" x2="875.00" y2="167.00" stroke="#cdd4ca" stroke-width="1" stroke-dasharray="2 5"/>
 <line x1="360.00" y1="133.00" x2="387.00" y2="133.00" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<text x="397.0" y="138.0" fill="#506360" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="normal" letter-spacing="0" text-anchor="start">Prior · 2026-11-09</text>
-<circle cx="85.00" cy="302.29" r="2" fill="#a36c47"/>
-<line x1="85.00" y1="302.29" x2="164.00" y2="283.76" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="164.00" cy="283.76" r="2" fill="#a36c47"/>
-<line x1="164.00" y1="283.76" x2="243.00" y2="281.91" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="243.00" cy="281.91" r="2" fill="#a36c47"/>
-<line x1="243.00" y1="281.91" x2="322.00" y2="270.79" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="322.00" cy="270.79" r="2" fill="#a36c47"/>
-<line x1="322.00" y1="270.79" x2="401.00" y2="254.11" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="401.00" cy="254.11" r="2" fill="#a36c47"/>
-<line x1="401.00" y1="254.11" x2="480.00" y2="252.25" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="480.00" cy="252.25" r="2" fill="#a36c47"/>
-<line x1="480.00" y1="252.25" x2="559.00" y2="243.91" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="559.00" cy="243.91" r="2" fill="#a36c47"/>
-<line x1="559.00" y1="243.91" x2="638.00" y2="235.57" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="638.00" cy="235.57" r="2" fill="#a36c47"/>
-<line x1="638.00" y1="235.57" x2="717.00" y2="224.45" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="717.00" cy="224.45" r="2" fill="#a36c47"/>
-<line x1="717.00" y1="224.45" x2="796.00" y2="186.46" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="796.00" cy="186.46" r="2" fill="#a36c47"/>
-<line x1="796.00" y1="186.46" x2="875.00" y2="189.24" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
-<circle cx="875.00" cy="189.24" r="2" fill="#a36c47"/>
+<text x="397.0" y="138.0" fill="#506360" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="normal" letter-spacing="0" text-anchor="start">Prior · 2026-11-10</text>
+<circle cx="85.00" cy="302.03" r="2" fill="#a36c47"/>
+<line x1="85.00" y1="302.03" x2="164.00" y2="282.17" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="164.00" cy="282.17" r="2" fill="#a36c47"/>
+<line x1="164.00" y1="282.17" x2="243.00" y2="275.82" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="243.00" cy="275.82" r="2" fill="#a36c47"/>
+<line x1="243.00" y1="275.82" x2="322.00" y2="261.52" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="322.00" cy="261.52" r="2" fill="#a36c47"/>
+<line x1="322.00" y1="261.52" x2="401.00" y2="248.02" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="401.00" cy="248.02" r="2" fill="#a36c47"/>
+<line x1="401.00" y1="248.02" x2="480.00" y2="247.22" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="480.00" cy="247.22" r="2" fill="#a36c47"/>
+<line x1="480.00" y1="247.22" x2="559.00" y2="241.66" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="559.00" cy="241.66" r="2" fill="#a36c47"/>
+<line x1="559.00" y1="241.66" x2="638.00" y2="235.31" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="638.00" cy="235.31" r="2" fill="#a36c47"/>
+<line x1="638.00" y1="235.31" x2="717.00" y2="228.16" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="717.00" cy="228.16" r="2" fill="#a36c47"/>
+<line x1="717.00" y1="228.16" x2="796.00" y2="195.59" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="796.00" cy="195.59" r="2" fill="#a36c47"/>
+<line x1="796.00" y1="195.59" x2="875.00" y2="198.77" stroke="#a36c47" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="875.00" cy="198.77" r="2" fill="#a36c47"/>
 <line x1="650.00" y1="133.00" x2="677.00" y2="133.00" stroke="#007965" stroke-width="3"/>
-<text x="687.0" y="138.0" fill="#506360" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="normal" letter-spacing="0" text-anchor="start">Latest · 2026-11-10</text>
-<circle cx="85.00" cy="301.37" r="3.5" fill="#007965"/>
-<line x1="85.00" y1="301.37" x2="164.00" y2="278.20" stroke="#007965" stroke-width="3"/>
-<circle cx="164.00" cy="278.20" r="3.5" fill="#007965"/>
-<line x1="164.00" y1="278.20" x2="243.00" y2="270.79" stroke="#007965" stroke-width="3"/>
-<circle cx="243.00" cy="270.79" r="3.5" fill="#007965"/>
-<line x1="243.00" y1="270.79" x2="322.00" y2="254.11" stroke="#007965" stroke-width="3"/>
-<circle cx="322.00" cy="254.11" r="3.5" fill="#007965"/>
-<line x1="322.00" y1="254.11" x2="401.00" y2="238.35" stroke="#007965" stroke-width="3"/>
-<circle cx="401.00" cy="238.35" r="3.5" fill="#007965"/>
-<line x1="401.00" y1="238.35" x2="480.00" y2="237.43" stroke="#007965" stroke-width="3"/>
-<circle cx="480.00" cy="237.43" r="3.5" fill="#007965"/>
-<line x1="480.00" y1="237.43" x2="559.00" y2="230.94" stroke="#007965" stroke-width="3"/>
-<circle cx="559.00" cy="230.94" r="3.5" fill="#007965"/>
-<line x1="559.00" y1="230.94" x2="638.00" y2="223.53" stroke="#007965" stroke-width="3"/>
-<circle cx="638.00" cy="223.53" r="3.5" fill="#007965"/>
-<line x1="638.00" y1="223.53" x2="717.00" y2="215.19" stroke="#007965" stroke-width="3"/>
-<circle cx="717.00" cy="215.19" r="3.5" fill="#007965"/>
-<line x1="717.00" y1="215.19" x2="796.00" y2="177.19" stroke="#007965" stroke-width="3"/>
-<circle cx="796.00" cy="177.19" r="3.5" fill="#007965"/>
-<line x1="796.00" y1="177.19" x2="875.00" y2="180.90" stroke="#007965" stroke-width="3"/>
-<circle cx="875.00" cy="180.90" r="3.5" fill="#007965"/>
+<text x="687.0" y="138.0" fill="#506360" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="normal" letter-spacing="0" text-anchor="start">Latest · 2026-11-12</text>
+<circle cx="85.00" cy="296.47" r="3.5" fill="#007965"/>
+<line x1="85.00" y1="296.47" x2="164.00" y2="280.58" stroke="#007965" stroke-width="3"/>
+<circle cx="164.00" cy="280.58" r="3.5" fill="#007965"/>
+<line x1="164.00" y1="280.58" x2="243.00" y2="272.64" stroke="#007965" stroke-width="3"/>
+<circle cx="243.00" cy="272.64" r="3.5" fill="#007965"/>
+<line x1="243.00" y1="272.64" x2="322.00" y2="254.37" stroke="#007965" stroke-width="3"/>
+<circle cx="322.00" cy="254.37" r="3.5" fill="#007965"/>
+<line x1="322.00" y1="254.37" x2="401.00" y2="237.69" stroke="#007965" stroke-width="3"/>
+<circle cx="401.00" cy="237.69" r="3.5" fill="#007965"/>
+<line x1="401.00" y1="237.69" x2="480.00" y2="234.51" stroke="#007965" stroke-width="3"/>
+<circle cx="480.00" cy="234.51" r="3.5" fill="#007965"/>
+<line x1="480.00" y1="234.51" x2="559.00" y2="230.54" stroke="#007965" stroke-width="3"/>
+<circle cx="559.00" cy="230.54" r="3.5" fill="#007965"/>
+<line x1="559.00" y1="230.54" x2="638.00" y2="224.98" stroke="#007965" stroke-width="3"/>
+<circle cx="638.00" cy="224.98" r="3.5" fill="#007965"/>
+<line x1="638.00" y1="224.98" x2="717.00" y2="218.63" stroke="#007965" stroke-width="3"/>
+<circle cx="717.00" cy="218.63" r="3.5" fill="#007965"/>
+<line x1="717.00" y1="218.63" x2="796.00" y2="188.45" stroke="#007965" stroke-width="3"/>
+<circle cx="796.00" cy="188.45" r="3.5" fill="#007965"/>
+<line x1="796.00" y1="188.45" x2="875.00" y2="192.42" stroke="#007965" stroke-width="3"/>
+<circle cx="875.00" cy="192.42" r="3.5" fill="#007965"/>
 <line x1="32.00" y1="352.00" x2="908.00" y2="352.00" stroke="#cdd4ca" stroke-width="1"/>
 <text x="32.0" y="378.0" fill="#506360" font-size="14" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="normal" letter-spacing="0" text-anchor="start">Δ bp</text>
 <text x="85.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">1M</text>
-<text x="85.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+1</text>
+<text x="85.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+7</text>
 <text x="164.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">3M</text>
-<text x="164.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+6</text>
+<text x="164.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+2</text>
 <text x="243.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">6M</text>
-<text x="243.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+12</text>
+<text x="243.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+4</text>
 <text x="322.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">1Y</text>
-<text x="322.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+18</text>
+<text x="322.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+9</text>
 <text x="401.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">2Y</text>
-<text x="401.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+17</text>
+<text x="401.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+13</text>
 <text x="480.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">3Y</text>
 <text x="480.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+16</text>
 <text x="559.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">5Y</text>
@@ -76,9 +76,9 @@
 <text x="638.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">7Y</text>
 <text x="638.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+13</text>
 <text x="717.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">10Y</text>
-<text x="717.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+10</text>
+<text x="717.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+12</text>
 <text x="796.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">20Y</text>
-<text x="796.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+10</text>
+<text x="796.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+9</text>
 <text x="875.0" y="334.0" fill="#152b2b" font-size="15" font-family="system-ui,-apple-system,Segoe UI,Arial,sans-serif" font-weight="600" letter-spacing="0" text-anchor="middle">30Y</text>
-<text x="875.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+9</text>
+<text x="875.0" y="378.0" fill="#506360" font-size="15" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-weight="normal" letter-spacing="0" text-anchor="middle">+8</text>
 </svg>
