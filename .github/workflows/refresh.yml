@@ -2,8 +2,14 @@ name: Market edition
 on:
   workflow_dispatch:
   schedule:
-    - cron: '45 11 * * 1-5'
-    - cron: '30 23 * * 1-5'
+    - cron: '17 7,13 * * 1-5'
+      timezone: America/New_York
+    - cron: '47 18,22 * * 1-5'
+      timezone: America/New_York
+    - cron: '17 10 * * 0,6'
+      timezone: America/New_York
+    - cron: '43 * * * *'
+      timezone: America/New_York
 
 permissions:
   contents: write
@@ -22,23 +28,36 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check scheduled target
+        id: cadence
+        run: python scripts/cadence.py
       - name: Collect and render edition
-        run: python scripts/refresh.py
+        if: steps.cadence.outputs.due == 'true'
+        run: |
+          python scripts/refresh.py || python scripts/refresh.py
       - name: Validate edition and source dates
-        run: python scripts/verify.py
+        if: steps.cadence.outputs.due == 'true'
+        run: |
+          python -m unittest discover -s tests -v
+          python scripts/verify.py
+          node tests/test_dashboard.cjs
       - name: Publish edition to the default branch
+        if: steps.cadence.outputs.due == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md CADENCE.md assets dashboard editions
           git commit -m "Publish market edition for run ${GITHUB_RUN_ID}"
+          git pull --rebase origin main
           git push origin HEAD:main
       - name: Verify the published README and data from GitHub
+        if: steps.cadence.outputs.due == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           python scripts/verify_remote.py
       - uses: actions/upload-artifact@v4
+        if: steps.cadence.outputs.due == 'true'
         with:
           name: Market-Observatory-${{ github.run_number }}
           path: dashboard/observatory.html

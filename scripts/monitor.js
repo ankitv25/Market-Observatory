@@ -17,9 +17,9 @@ const views={
  overview:["Market overview","Closing levels, market leadership and cross-asset confirmation."],
  markets:["Cross-asset tape","Compare prices, changes and six-month trends across the covered universe."],
  rates:["Rates & macro","Treasury curve changes and the evidence behind the confirmed macro regime."],
- portfolio:["Portfolio lens","Capital allocation, risk concentration and the published view for each book."],
+ portfolio:["Portfolio monitor","Performance, attribution and risk across the published portfolio books."],
  research:["Research desk","Daily observations, sector sensitivities and the sources behind this edition."]};
-const labels={overview:"Overview",markets:"Market tape",rates:"Rates & macro",portfolio:"Portfolio lens",research:"Research desk"};
+const labels={overview:"Overview",markets:"Market tape",rates:"Rates & macro",portfolio:"Portfolio monitor",research:"Research desk"};
 function section(title,sub,body,control=""){return '<section class="card"><div class="head"><div><h2>'+esc(title)+'</h2><p class="sub">'+esc(sub)+'</p></div>'+control+'</div>'+body+'</section>'}
 function option(v,t,selected){return '<option value="'+esc(v)+'" '+(selected===v?'selected':'')+'>'+esc(t)+'</option>'}
 function segments(values,active,attribute){return '<div class="seg">'+values.map(([value,label])=>'<button '+attribute+'="'+value+'" class="'+(active==value?'on':'')+'" aria-pressed="'+(active==value)+'">'+label+'</button>').join("")+'</div>'}
@@ -49,14 +49,6 @@ function relativeChart(){
  for(let i=0;i<4;i++){let j=Math.round(i*(pairs.length-1)/3);svg+='<text x="'+X(j)+'" y="194" fill="#b4c6d7" text-anchor="'+(i===0?'start':i===3?'end':'middle')+'">'+esc(pairs[j][0].slice(5))+'</text>'}
  window.plotPoints=pairs.map(([d],i)=>({d,x:X(i),values:series.map(a=>a[i])}));
  return '<section class="card dark" id="comparisonPanel">'+head+selections+'<div class="legend" style="margin:12px 0 2px">'+dots(p.name+' '+pct(series[0].at(-1)),colors[0])+(q?dots(q.name+' '+pct(series[1].at(-1)),colors[1]):'')+'</div><svg role="img" aria-label="Cumulative percentage price changes over common observations" id="comparisonChart" class="chart" viewBox="0 0 650 201">'+svg+'<line id="cross" stroke="#d5e6f1" y1="12" y2="170" stroke-dasharray="3 3" visibility="hidden"/></svg><div id="hover" class="chartHelp">Rebased at '+esc(pairs[0][0])+' · through '+esc(pairs.at(-1)[0])+'</div></section>';
-}
-function rotation(){
- const rows=sectors.filter(r=>Number.isFinite(r.stats[sectorWindow])).sort((a,b)=>b.stats[sectorWindow]-a.stats[sectorWindow]);
- const through=rows.map(r=>r.stats.day).sort().at(-1),same=rows.filter(r=>r.stats.day===through),rising=same.filter(r=>r.stats[sectorWindow]>0).length;
- const max=Math.max(0.01,...rows.map(r=>Math.abs(r.stats[sectorWindow])));
- const tiles=rows.map(r=>{const v=r.stats[sectorWindow],alpha=.1+.48*Math.abs(v)/max;
- return '<button class="tile" data-focus="'+r.id+'" title="'+esc(r.name+' · '+r.stats.day)+'" style="background:rgba('+(v>=0?'66,174,142':'222,129,116')+','+alpha+')"><b>'+esc(r.symbol)+'</b><span>'+pct(v)+'</span><small>'+esc(r.name)+'</small></button>'}).join("");
- return section("Sector rotation","US sector ETFs · sorted by price return",'<div class="matrix">'+tiles+'</div><div class="breadth"><b>'+rising+' / '+same.length+'</b><div class="track"><i style="width:'+100*rising/Math.max(1,same.length)+'%"></i></div></div><div class="mini">Sectors advancing · through '+esc(through)+'</div>',segments([["pct","1D"],["six","6M"]],sectorWindow,"data-sector"));
 }
 function curvePanel(){
  const c=curves.at(-1),p=curves.at(-2),targetDate=c?Date.parse(c.date)-30*864e5:0,old=curves.filter(r=>Date.parse(r.date)<=targetDate).at(-1);
@@ -104,7 +96,7 @@ function quoteTarget(row){
 }
 function dailyMove(row){
  if(row.yield)return sf(row.stats.change,0)+" bp";
- return sf(row.stats.change,row.group==="FX" && row.id!=="dxy"?4:2)+" "+esc(row.unit);
+ return sf(row.stats.change,dispatchPrecision(row))+" "+row.unit;
 }
 function quoteStrip(){
  const quotes=["spx","dji","ixic","rut","yield10","vix","wti","btc"].map(marketQuote).filter(Boolean);
@@ -113,26 +105,28 @@ function quoteStrip(){
   f(r.stats.last)+(r.yield?"%":"")+'</b><small class="'+cls(r.stats.change)+'">'+dailyMove(r)+(r.yield?'':' · '+pct(r.stats.pct))+'</small></button>').join("")+'</div>';
 }
 function leadChart(row){
- const history=row.history.slice(-22);
- const values=history.map(p=>p[1]);
- const path=xy(values,320,62);
- return '<figure class="close-figure"><figcaption><b>S&amp;P 500</b><span>'+history.length+' closes</span></figcaption>'+
-  '<svg viewBox="0 0 320 66" preserveAspectRatio="none" role="img" aria-label="S&amp;P 500 closing levels across '+history.length+' observations">'+
-  '<path d="M0 20H320 M0 44H320" stroke="#36534e" stroke-dasharray="2 4"/>'+
+ const history=row.history.slice(-22), values=history.map(p=>p[1]), path=xy(values,320,62);
+ return '<figure class="close-figure"><figcaption><b>'+esc(row.name)+'</b><span>'+history.length+' closes</span></figcaption>'+
+  '<svg viewBox="0 0 320 66" preserveAspectRatio="none" role="img" aria-label="'+esc(row.name+' closing levels across '+history.length+' observations')+'">'+
+  '<path d="M0 20H320 M0 44H320" stroke="#486b60" stroke-dasharray="2 4"/>'+
   '<polygon points="0,66 '+path+' 320,66" fill="#659e85" opacity=".15"/><polyline points="'+path+'" stroke="#9ee6c5" stroke-width="2.3" fill="none"/></svg>'+
-  '<div><span>'+shortDate(history[0][0])+'</span><span>'+shortDate(history.at(-1)[0])+' · '+f(values.at(-1))+'</span></div></figure>';
+  '<div><span>'+shortDate(history[0][0])+'</span><span>'+shortDate(history.at(-1)[0])+' · '+f(values.at(-1),dispatchPrecision(row))+' '+esc(row.unit)+'</span></div></figure>';
 }
 function marketLead(){
- const sp=byId.get("spx"),s=sp.stats;
- const eligible=sectors.filter(r=>r.stats.day===s.day && r.stats.previous_day===s.previous_day && Number.isFinite(r.stats.pct))
-  .sort((a,b)=>b.stats.pct-a.stats.pct);
- const up=eligible.filter(r=>r.stats.pct>0).length;
- const verb=s.change>0?"gains":s.change<0?"falls":"finishes flat";
- const headline=s.change===0?"S&P 500 finishes flat":"S&P 500 "+verb+" "+f(Math.abs(s.change))+" points";
- const breadth=eligible.length?(up===1?', only one sector advances':', '+up+' of '+eligible.length+' sectors advance'):'';
- const summary=eligible.length?eligible[0].name+' led at '+pct(eligible[0].stats.pct)+'. '+eligible.at(-1).name+' finished at '+pct(eligible.at(-1).stats.pct)+'.':'';
- return '<section class="lead"><div><div class="lead-date">US MARKET CLOSE <span>'+esc(dateLabel(s.day))+'</span></div><h1>'+esc(headline+breadth)+'</h1>'+
-  '<p>'+esc('The index closed at '+f(s.last)+' ('+pct(s.pct)+'). '+summary)+'</p></div>'+leadChart(sp)+'</section>';
+ const sp=byId.get("spx"), session=sp.stats;
+ const featured=pulsePicks.find(p=>p.row.stats.day===session.day)?.row || sp;
+ const winners=sectors.filter(r=>dispatchPeriodsMatch(r,sp) && r.stats.pct>0);
+ const covered=sectors.filter(r=>dispatchPeriodsMatch(r,sp)).length;
+ const headline=featured.yield ?
+  featured.name+' yield '+(featured.stats.change===0?'holds at '+f(featured.stats.last)+'%':(featured.stats.change>0?'rises ':'falls ')+f(Math.abs(featured.stats.change),0)+' bp') :
+  featured.name+(featured.group==='Credit'?' ETF':'')+(featured.stats.change===0?' finishes flat':(featured.stats.change>0?' rises ':' falls ')+f(Math.abs(featured.stats.pct))+'%');
+
+ const close='The S&P 500 closed at '+f(session.last)+', '+sf(session.change)+' points ('+pct(session.pct)+') on '+shortDate(session.day)+'.';
+ const breadth=covered?' '+winners.length+' of '+covered+' US sectors advanced.':'';
+ const subtitle=featured.id===sp?close+breadth:
+  (featured.yield?'The yield finished at '+f(featured.stats.last)+'%. ':featured.name+' closed at '+dispatchPoint(featured)+', '+dailyMove(featured)+' on the session. ')+close+breadth;
+ return '<section class="lead"><div><div class="lead-date">THE MARKET CLOSE <span>'+esc(dateLabel(featured.stats.day))+'</span></div><h1>'+esc(headline)+'</h1>'+
+  '<p>'+esc(subtitle)+'</p></div>'+leadChart(featured)+'</section>';
 }
 function deskTable(){
  const lines=marketDesks.map(d=>{
@@ -151,7 +145,7 @@ function movers(){
  const eligible=markets.filter(r=>r.stats.day===session.day && r.stats.previous_day===session.previous_day && Number.isFinite(r.stats.pct));
  const ranked=eligible.filter(r=>increasing?r.stats.pct>0:r.stats.pct<0)
   .sort((a,b)=>increasing?b.stats.pct-a.stats.pct:a.stats.pct-b.stats.pct).slice(0,5);
- const rows=ranked.map((r,i)=>'<li><span class="rank">'+String(i+1).padStart(2,"0")+'</span><button data-focus="'+r.id+'"><b>'+esc(r.name)+'</b><small>'+esc(r.symbol)+' · '+esc(r.group)+'</small></button><strong class="'+cls(r.stats.pct)+'">'+pct(r.stats.pct)+'</strong></li>').join("");
+ const rows=ranked.map((r,i)=>'<li><span class="rank">'+String(i+1).padStart(2,"0")+'</span><button data-focus="'+r.id+'"><b>'+esc(r.name)+'</b><small>'+f(r.stats.last,dispatchPrecision(r))+' '+esc(r.unit)+'</small></button><div class="mover-change"><strong class="'+cls(r.stats.pct)+'">'+pct(r.stats.pct)+'</strong><small>'+dailyMove(r)+'</small></div></li>').join("");
  return '<section class="home-panel movers-panel"><div class="panel-head"><h2>Market movers</h2></div><div class="mover-tabs">'+segments([["gainers","Gainers"],["decliners","Decliners"]],moversSide,"data-movers")+'</div>'+
  '<ol>'+rows+'</ol>'+(ranked.length?'':'<p class="empty">No qualifying moves.</p>')+'<small class="universe">'+eligible.length+' tracked instruments · '+shortDate(session.day)+' close</small></section>';
 }
@@ -161,8 +155,11 @@ function worldMarkets(){
  '<div class="world-grid">'+rows.map(r=>'<button data-focus="'+r.id+'"><span>'+esc(r.name)+'</span><b>'+f(r.stats.last)+'</b><small class="'+cls(r.stats.pct)+'">'+sf(r.stats.change)+' pts · '+pct(r.stats.pct)+'</small><em>'+shortDate(r.stats.day)+' local close</em></button>').join("")+'</div></section>';
 }
 function overview(){
- return quoteStrip()+marketLead()+'<div class="home-grid">'+deskTable()+movers()+'</div>'+worldMarkets()+
-  '<div class="grid">'+relativeChart()+rotation()+'</div><div class="grid equal">'+curvePanel()+regimePanel()+'</div>';
+ const jumps=[["dispatches","Market dispatches"],["active-charts","Moves in focus"],["rotation-detail","Sector leadership"],["portfolio-brief","Portfolio thesis"]];
+ const contents='<div class="edition-contents" aria-label="Overview sections">'+jumps.filter(([id])=>id!=="active-charts"||pulsePicks.length).map(([target,label])=>'<button data-jump="'+target+'">'+label+' <span aria-hidden="true">↓</span></button>').join("")+'<a href="#portfolio">Portfolio monitor ↗</a></div>';
+ return quoteStrip()+marketLead()+contents+'<div class="home-grid">'+deskTable()+movers()+'</div>'+worldMarkets()+
+  '<div class="grid">'+relativeChart()+sectorRotation()+'</div>'+activeCharts()+marketDispatches()+rotationDetail()+
+  '<div class="grid equal">'+curvePanel()+regimePanel()+'</div>'+overviewTheses();
 }
 function marketTable(){
  const rows=markets.filter(r=>(!group||r.group===group)&&(r.name+' '+r.symbol).toLowerCase().includes(filter.toLowerCase())).sort((a,b)=>sort==='name'?a.name.localeCompare(b.name):(b.stats[sort]??-Infinity)-(a.stats[sort]??-Infinity));
@@ -170,14 +167,6 @@ function marketTable(){
 }
 function tape(){return section("Market tape",markets.length+" covered instruments · select a name to open its chart",'<div class="tools"><input id="search" placeholder="Search name or ticker" aria-label="Search name or ticker"><select id="group" aria-label="Asset group">'+option("","All asset groups",group)+[...new Set(markets.map(r=>r.group))].map(g=>option(g,g,group)).join("")+'</select><select id="sort" aria-label="Sort instruments">'+[["name","Name A–Z"],["pct","Largest daily return"],["six","Largest six-month return"]].map(([k,v])=>option(k,v,sort)).join("")+'</select></div><div id="table">'+marketTable()+'</div>')}
 function rates(){const c=curves.at(-1),p=curves.at(-2);return '<div class="grid equal">'+curvePanel()+regimePanel()+'</div><div class="section">'+section("Term structure",c?E.curve.source+' · '+c.date:'Awaiting data',c&&p?'<div class="tablebox"><table><thead><tr><th>Maturity</th><th>Yield</th><th>Previous</th><th>Move (bp)</th></tr></thead><tbody>'+Object.entries(c.rates).map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+f(v)+'%</td><td>'+f(p.rates[k])+'%</td><td>'+sf((v-p.rates[k])*100,0)+'</td></tr>').join("")+'</tbody></table></div>':'')+'</div>'}
-function portfolio(){
- const books=E.books||{},b=books[book]||Object.values(books)[0];if(!b)return section("Portfolio books","",'<a href="https://ankitv25.github.io/Asset-Allocation/">Open the source portfolio dashboard ↗</a>');
- const selector='<select id="book" aria-label="Portfolio">'+Object.entries(books).map(([k,v])=>option(k,v.name,book)).join("")+'</select>';
- const summary=section(b.name+' positioning',b.role,'<div class="statgrid">'+[["Stance",b.stance],["Forecast volatility",f(b.forecast,1)+'%'],["Volatility budget",f(b.budget,1)+'%']].map(([k,v])=>'<div><span class="mini">'+esc(k)+'</span><b>'+esc(v)+'</b></div>').join('')+'</div><p style="margin:12px 0">'+esc(b.thesis||"")+'</p><a class="link" href="'+esc(b.url)+'">Open portfolio book ↗</a> <span class="mini"> · as of '+esc(b.date)+'</span>',selector);
- const weights=section("Capital allocation","Share of portfolio capital (%)",'<div class="bars">'+b.blocks.map(v=>'<div class="barrow"><span>'+esc(v.block)+'</span><div class="track"><i style="width:'+Math.max(0,Math.min(100,v.weight))+'%"></i></div><b>'+f(v.weight,1)+'%</b></div>').join("")+'</div>');
- const sleeves=section("Risk concentration","Capital weight versus published share of portfolio risk",'<div class="tablebox"><table><thead><tr><th>Sleeve</th><th>Capital</th><th>Risk share</th><th>Difference</th></tr></thead><tbody>'+b.sleeves.map(r=>'<tr><td>'+esc(r.sleeve)+'</td><td>'+f(r.capital,1)+'%</td><td>'+f(r.risk,1)+'%</td><td>'+sf(r.risk-r.capital,1)+' pp</td></tr>').join('')+'</tbody></table></div>');
- return summary+'<div class="grid equal">'+weights+sleeves+'</div>';
-}
 function research(){
  const notes=section("Closing commentary","Each observation retains its own source date.",'<div class="readlist">'+E.readings.map(([label,body])=>'<div><b>'+esc(label)+'</b><p>'+esc(body)+'</p></div>').join("")+'</div>');
  const sp=byId.get('spx');
@@ -190,11 +179,14 @@ function research(){
  return '<div class="grid equal">'+notes+section("Sector beta","S&P 500 · up to 63 matched daily price-return intervals",'<div class="tablebox"><table><thead><tr><th>Sector</th><th>Beta</th><th>Observations</th></tr></thead><tbody>'+betas.sort((a,b)=>(b[1]??-Infinity)-(a[1]??-Infinity)).map(([r,v,n])=>'<tr><td><button data-focus="'+r.id+'">'+esc(r.name)+'</button></td><td>'+f(v)+'</td><td>'+n+'</td></tr>').join('')+'</tbody></table></div>','<a class="link" href="'+repo+'/blob/main/dashboard/RESEARCH.md">Notebook ↗</a>')+'</div><div class="section">'+section("Source ledger","Instrument basis, observation date and original provider",'<div class="tablebox"><table><thead><tr><th>Instrument</th><th>Observed</th><th>Basis</th><th>Source</th></tr></thead><tbody>'+markets.map(r=>'<tr><td>'+esc(r.name)+'</td><td>'+r.stats.day+'</td><td>'+esc(r.basis)+'</td><td><a href="'+esc(r.url)+'">'+esc(r.source)+'</a></td></tr>').join("")+'</tbody></table></div>')+'</div>';
 }
 function render(){
+ renderFreshness();
  const hash=location.hash.slice(1),view=Object.hasOwn(views,hash)?hash:"overview";
  document.body.classList.toggle("front-page",view==="overview");
+ const sourceDate=view==="portfolio" ? (E.books?.[book]?.live?.date || E.books?.[book]?.date) : byId.get("spx").stats.day;
+ $("editionDate").textContent=(view==="portfolio"?"Portfolio valuation · ":"US session · ")+(sourceDate?dateLabel(sourceDate):"Awaiting source");
  $("navigation").innerHTML=Object.keys(views).map(k=>'<a href="#'+k+'" '+(view===k?'aria-current="page" class="on"':'')+'>'+labels[k]+'</a>').join("");
  $("title").textContent=views[view][0];$("dek").textContent=views[view][1];
- $("content").innerHTML=({overview,markets:tape,rates,portfolio,research})[view]();
+ $("content").innerHTML=({overview,markets:tape,rates,portfolio:portfolioHealth,research})[view]();
  if($("search"))$("search").value=filter;
 }
 function focusChart(id){
@@ -204,19 +196,22 @@ function focusChart(id){
  requestAnimationFrame(()=>$("comparisonPanel")?.scrollIntoView({behavior:"smooth",block:"center"}));
 }
 document.addEventListener("click",e=>{
+ const bookLink=e.target.closest("a[data-open-book]");
+ if(bookLink)book=bookLink.dataset.openBook;
  const desk=e.target.closest("a[data-desk]");
  if(desk && Object.hasOwn(deskGroups,desk.dataset.desk)){group=deskGroups[desk.dataset.desk];filter="";sort="name"}
  const b=e.target.closest("button");if(!b)return;
- if(b.dataset.rates)location.hash="rates";
+ if(b.dataset.jump)$(b.dataset.jump)?.scrollIntoView({block:"start"});
+ else if(b.dataset.rates)location.hash="rates";
  else if(b.dataset.movers){moversSide=b.dataset.movers;document.querySelector(".movers-panel").outerHTML=movers();document.querySelector('[data-movers="'+moversSide+'"]').focus({preventScroll:true})}
  else if(b.dataset.region){region=b.dataset.region;document.querySelector(".world-panel").outerHTML=worldMarkets();document.querySelector('[data-region="'+region+'"]').focus({preventScroll:true})}
  else if(b.dataset.focus)focusChart(b.dataset.focus);
  else if(b.dataset.months){chartState.months=Number(b.dataset.months);render()}
- else if(b.dataset.sector){sectorWindow=b.dataset.sector;render()}});
-document.addEventListener("change",e=>{const {id,value}=e.target;
+ else if(b.dataset.sector){sectorWindow=b.dataset.sector;b.closest(".card").outerHTML=sectorRotation();document.querySelector('[data-sector="'+sectorWindow+'"]').focus({preventScroll:true})}});
+document.addEventListener("change",e=>{if(thesisControls(e) || handlePortfolioControl(e))return;
+ const {id,value}=e.target;
  if(id==="primary"){chartState.primary=value;if(value===chartState.comparison)chartState.comparison="";render()}
  else if(id==="comparison"){chartState.comparison=value;render()}
- else if(id==="book"){book=value;render()}
  else if(id==="group"||id==="sort"){if(id==="group")group=value;else sort=value;$("table").innerHTML=marketTable()}});
 document.addEventListener("input",e=>{if(e.target.id==="search"){filter=e.target.value;$("table").innerHTML=marketTable()}});
 document.addEventListener("pointermove",e=>{const svg=e.target.closest("#comparisonChart");if(!svg||!window.plotPoints?.length)return;
@@ -225,6 +220,7 @@ document.addEventListener("pointermove",e=>{const svg=e.target.closest("#compari
  $("cross").setAttribute("x1",item.x);$("cross").setAttribute("x2",item.x);$("cross").setAttribute("visibility","visible");
  $("hover").textContent=item.d+" · "+item.values.map((v,i)=>(i?byId.get(chartState.comparison):byId.get(chartState.primary)).name+" "+pct(v)).join("  /  ");});
 window.addEventListener("hashchange",()=>{render();window.scrollTo(0,0)});
+/*EDITION_MODULES*/
 $("editionDate").textContent="US session · "+dateLabel(byId.get("spx").stats.day);
 $("compiled").textContent="Edition compiled "+E.created;
 if(E.issues.length)$("alerts").innerHTML='<div class="warning">'+esc(E.issues.join(" "))+'</div>';

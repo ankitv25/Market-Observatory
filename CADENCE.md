@@ -1,5 +1,11 @@
 # Refresh ledger
 
+Automatic targets are 07:17, 13:17, 18:47 and 22:47 America/New_York Monday–Friday, and 10:17 Saturday–Sunday. The timezone follows daylight saving time. Hourly catch-up checks at minute 43 collect only when a target is still outstanding. Manual runs refresh immediately.
+
+Collection runs the market, Treasury, macro and portfolio adapters, regenerates commentary and charts, validates the financial calculations, archives the inputs and publishes GitHub Pages. Prices, portfolio valuations and macro readings retain their individual observation dates. The open reader checks for a new edition every five minutes.
+
+Actual completion times appear below and in the dashboard's **Cadence & sources** panel. GitHub may delay scheduled starts. [Workflow runs](https://github.com/ankitv25/Market-Observatory/actions/workflows/refresh.yml) · [GitHub scheduling behavior](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
+
 | Compiled (New York) | Instruments | Latest price observation | Treasury through | Quality notes | Edition | Run |
 |---|---:|---|---|---:|---|---|
 |2026-11-07T16:39:52-05:00|62|2026-11-06|2026-11-05|0|[snapshot](editions/2026-11/20261107T163952-0500.json)|local verification|
@@ -17,3 +23,5 @@
 |2026-11-12T22:32:14-05:00|62|2026-11-12|2026-11-10|0|[snapshot](editions/2026-11/20261112T223214-0500.json)|[run 43359609732](https://github.com/ankitv25/Market-Observatory/actions/runs/43359609732)|
 |2026-11-13T13:46:45-05:00|62|2026-11-13|2026-11-10|0|[snapshot](editions/2026-11/20261113T134645-0500.json)|[run 43485893158](https://github.com/ankitv25/Market-Observatory/actions/runs/43485893158)|
 |2026-11-13T22:28:20-05:00|62|2026-11-13|2026-11-12|0|[snapshot](editions/2026-11/20261113T222820-0500.json)|[run 43551793029](https://github.com/ankitv25/Market-Observatory/actions/runs/43551793029)|
+|2026-11-14T11:00:18-05:00|62|2026-11-13|2026-11-12|0|[snapshot](editions/2026-11/20261114T110018-0500.json)|local verification|
+|2026-11-16T08:31:09-05:00|62|2026-11-16|2026-11-12|1|[snapshot](editions/2026-11/20261116T083109-0500.json)|local verification|

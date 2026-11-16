@@ -154,24 +154,18 @@ def collect_macro():
 
 
 def collect_books():
-    """Small public snapshot of each book, preserving its source date and units."""
-    url = "https://ankitv25.github.io/Asset-Allocation/data/portfolio_books.json"
-    source = json.loads(read_text(url))
-    books = {}
-    for key in source["order"]:
-        book = source["books"][key]
-        risk = book["risk"]
-        books[key] = {
-            "name": source["portfolios"][key]["name"],
-            "role": source["portfolios"][key]["role"],
-            "date": date.fromisoformat(book["asof"]).isoformat(),
-            "growth": book["positioning"].get("growth_weight"),
-            "stance": book["positioning"].get("stance"),
-            "forecast": risk.get("forecast_vol"),
-            "budget": risk.get("vol_budget"),
-            "sleeves": risk.get("risk_contributions", []),
-            "blocks": book["construction"].get("blocks", []),
-            "thesis": book.get("portfolio", {}).get("thesis"),
-            "url": "https://ankitv25.github.io/Asset-Allocation/?p=" + key,
-        }
-    return books
+    """Read the allocation report and forward NAV from a single public revision."""
+    from portfolio_data import REPOSITORY, holding_returns, parse_nav, project_books
+    from daily_bridge import adjusted_history
+
+    api = f"https://api.github.com/repos/{REPOSITORY}/commits"
+    revision = json.loads(read_text(f"{api}/HEAD"))["sha"]
+    if not re.fullmatch(r"[a-f0-9]{40}", revision):
+        raise ValueError("Invalid Asset Allocation source revision")
+    nav_revision = json.loads(read_text(f"{api}?sha={revision}&path=data/live_nav.js&per_page=1"))[0]
+    published_at = nav_revision["commit"]["committer"]["date"]
+    base = f"https://raw.githubusercontent.com/{REPOSITORY}/{revision}/data"
+    source = json.loads(read_text(f"{base}/portfolio_books.json"))
+    live = parse_nav(read_text(f"{base}/live_nav.js"))
+    history = adjusted_history(live)
+    return project_books(source, live, holding_returns(live, history), revision, published_at, history=history)

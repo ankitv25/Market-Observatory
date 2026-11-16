@@ -37,7 +37,10 @@ for path in re.findall(r'\]\(([^)#]+)\)',readme):
 for name in ["banner","sectors","curve"]: ElementTree.parse(root/f"assets/{name}.svg")
 html=(root/"dashboard/observatory.html").read_text()
 embedded=re.search(r'<script id="data" type="application/json">(.*?)</script>',html,re.S)
-assert json.loads(embedded[1])==data
+reader_data = json.loads(embedded[1])
+reader_data.pop("refresh", None)
+assert reader_data == data
+assert json.loads((root / "dashboard/status.json").read_text())["created"] == data["created"]
 ledger=(root/"CADENCE.md").read_text().splitlines()[-1]
 archive=re.search(r'\[snapshot\]\((.*?)\)',ledger)[1]
 assert json.loads((root/archive).read_text())==data

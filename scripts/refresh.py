@@ -11,6 +11,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from context_data import collect_curve, collect_macro, collect_books
+from cadence import metadata
 from graphics import render_graphics
 from markets import collect, INSTRUMENTS
 
@@ -224,8 +225,16 @@ def main():
     for r in e["markets"]:
         notes.append(f"|{r['name']}|[{r['source']}]({r['url']})|{r['basis']}|{r['stats']['day']}|{r['stats']['base'] or '—'}|")
     (ROOT/"dashboard/SOURCES.md").write_text("\n".join(notes)+"\n")
-    payload=json.dumps(e,ensure_ascii=False).replace("<","\\u003c")
-    (ROOT/"dashboard/observatory.html").write_text((ROOT/"scripts/reader.html").read_text().replace("/*STYLE*/", (ROOT/"scripts/monitor.css").read_text()).replace("/*APP*/", (ROOT/"scripts/monitor.js").read_text()).replace("<!--EDITION-->",payload))
+    reader_edition = dict(e, refresh=metadata(e["created"]))
+    write_json(ROOT / "dashboard/status.json", {"created": e["created"]})
+    payload=json.dumps(reader_edition,ensure_ascii=False).replace("<","\\u003c")
+    scripts = ROOT / "scripts"
+    modules = ("rotation", "dispatches", "spotlight", "theses", "portfolio", "freshness")
+    panels = "\n".join((scripts / f"{name}.js").read_text() for name in modules)
+    app = (scripts / "monitor.js").read_text().replace("/*EDITION_MODULES*/", panels)
+    style = "\n".join((scripts / name).read_text() for name in ("monitor.css", "portfolio.css"))
+    reader = (scripts / "reader.html").read_text().replace("/*STYLE*/", style).replace("/*APP*/", app)
+    (ROOT / "dashboard/observatory.html").write_text(reader.replace("<!--EDITION-->", payload))
     print(f"Edition {e['created']} · {len(e['markets'])} instruments · {hashlib.sha256(DATA.read_bytes()).hexdigest()[:16]}")
 
 

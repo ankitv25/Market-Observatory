@@ -37,6 +37,7 @@ jobs:
           python3 scripts/verify.py
           mkdir -p public
           cp dashboard/observatory.html public/index.html
+          cp dashboard/status.json public/status.json
           python3 scripts/build_desk_designs.py public/design/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

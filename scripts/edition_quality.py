@@ -65,4 +65,41 @@ def quality_errors(edition):
     macro = edition["macro"]
     if date.fromisoformat(macro["date"])>cutoff or not math.isfinite(macro["score"]):
         errors.append("Macro: invalid confirmed score or vintage")
+    errors.extend(portfolio_errors(edition))
+    return errors
+
+
+def portfolio_errors(edition):
+    errors = []
+    cutoff = datetime.fromisoformat(edition["created"])
+    for key, book in edition.get("books", {}).items():
+        live = book.get("live")
+        if not live:
+            continue
+        try:
+            dates, nav, reference = live["dates"], live["nav"], live["benchmark_nav"]
+            assert len(dates) == len(nav) == len(reference) and len(dates) >= 2
+            assert dates == sorted(set(dates)) and dates[-1] == live["date"]
+            assert dates[0] == live["inception"] and date.fromisoformat(dates[-1]) <= cutoff.date()
+            assert datetime.fromisoformat(live["published_at"].replace("Z", "+00:00")) <= cutoff
+            assert all(isinstance(v, (float, int)) and math.isfinite(v) and v > 0 for v in nav + reference)
+            close = lambda a, b: math.isclose(a, b, rel_tol=1e-7, abs_tol=.00011)
+            assert close(live["returns"]["1D"], 100*(nav[-1]/nav[-2]-1))
+            assert close(live["returns"]["SI"], 100*(nav[-1]/live["opening"]-1))
+            bridge = live["bridge"]
+            assert close(bridge["total"], nav[-1]-live["opening"])
+            assert close(sum(bridge["vehicles"].values())+bridge["fee"]+bridge["dealing"], bridge["total"])
+            levels = dict(zip(dates, nav))
+            for field in ("session", "completed_session"):
+                session = live.get(field)
+                if not session:
+                    continue
+                assert session["start"] < session["end"] <= live["date"]
+                assert close(session["net"], levels[session["end"]]-levels[session["start"]])
+                assert close(session["gross"]+session["fee"]+session["dealing"], session["net"]-(float(session.get("residual") or 0) if field=="completed_session" else 0))
+                moves = session.get("holding_moves", [])
+                if moves:
+                    assert close(sum(m["points"] for m in moves)+session["fee"]+session["dealing"]+float(session.get("residual") or 0), session["net"])
+        except (AssertionError, KeyError, TypeError, ValueError, ZeroDivisionError):
+            errors.append(f"Portfolio {key}: NAV dates, units or attribution do not reconcile")
     return errors

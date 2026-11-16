@@ -5,7 +5,7 @@ from pathlib import Path
 import subprocess
 
 repo = os.environ["GITHUB_REPOSITORY"]
-for name in ["README.md", "dashboard/latest.json", "assets/banner.svg", "CADENCE.md"]:
+for name in ["README.md", "dashboard/latest.json", "assets/banner.svg", "CADENCE.md", "dashboard/observatory.html", "dashboard/status.json"]:
     remote = subprocess.check_output(
         ["gh", "api", f"repos/{repo}/contents/{name}?ref=main", "--jq", ".sha"], text=True
     ).strip()
