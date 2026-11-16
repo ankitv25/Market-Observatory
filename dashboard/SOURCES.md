@@ -1,8 +1,7 @@
 # Sources and observation dates
 
-Compiled 2026-11-16T08:31:09-05:00.
+Compiled 2026-11-16T08:35:56-05:00.
 
-- Live feed unavailable; checked archived coverage for CHF=X
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|

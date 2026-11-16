@@ -8,11 +8,9 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-16T08:31:09-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-16T08:35:56-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
-
-**Source status.** Live feed unavailable; checked archived coverage for CHF=X
 
 **US equities.** The S&P 500 reached 7,561.67 on 2026-11-13, a move of -30.73 points (-0.40%) against 2026-11-12. Its six-month price change was +1.58% from 2026-05-13.
 
