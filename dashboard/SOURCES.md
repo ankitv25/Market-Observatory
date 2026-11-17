@@ -1,6 +1,6 @@
 # Sources and observation dates
 
-Compiled 2026-11-17T09:53:11-05:00.
+Compiled 2026-11-17T15:57:18-05:00.
 
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
@@ -28,8 +28,8 @@ Compiled 2026-11-17T09:53:11-05:00.
 |US small cap|[Yahoo Finance](https://finance.yahoo.com/quote/IWM/history/)|ETF session close, price only|2026-11-16|2026-05-15|
 |US momentum|[Yahoo Finance](https://finance.yahoo.com/quote/MTUM/history/)|ETF session close, price only|2026-11-16|2026-05-15|
 |US quality|[Yahoo Finance](https://finance.yahoo.com/quote/QUAL/history/)|ETF session close, price only|2026-11-16|2026-05-15|
-|Euro STOXX 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ESTOXX50E/history/)|Cash index session close, index points|2026-11-16|2026-05-15|
-|FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-16|2026-05-15|
+|Euro STOXX 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ESTOXX50E/history/)|Cash index session close, index points|2026-11-17|2026-05-15|
+|FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-17|2026-05-15|
 |Nikkei 225|[Yahoo Finance](https://finance.yahoo.com/quote/%5EN225/history/)|Cash index session close, index points|2026-11-17|2026-05-15|
 |Hang Seng|[Yahoo Finance](https://finance.yahoo.com/quote/%5EHSI/history/)|Cash index session close, index points|2026-11-17|2026-05-15|
 |Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-17|2026-05-15|

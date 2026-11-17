@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-17T09:53:11-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-17T15:57:18-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -55,8 +55,8 @@ Edition compiled **2026-11-17T09:53:11-05:00** · 62 market instruments · dated
 |[US momentum](https://finance.yahoo.com/quote/MTUM/history/) · MTUM|65.71|-2.27|-3.34%|-11.88%|2026-11-16|
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|55.16|-0.86|-1.54%|+4.84%|2026-11-16|
 |**Global**||||||
-|[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,348.35|-38.51|-0.60%|+8.93%|2026-11-16|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,881.60|-21.00|-0.19%|+6.73%|2026-11-16|
+|[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,212.11|-136.24|-2.15%|+6.60%|2026-11-17|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,689.87|-191.73|-1.76%|+4.85%|2026-11-17|
 |[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|58,860.43|-801.59|-1.34%|-4.15%|2026-11-17|
 |[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|23,508.17|-245.67|-1.03%|-9.45%|2026-11-17|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,387.40|+96.30|+0.38%|+7.38%|2026-11-17|
