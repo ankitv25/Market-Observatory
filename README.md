@@ -8,11 +8,9 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-17T00:14:21-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-17T09:53:11-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
-
-**Source status.** Live feed unavailable; checked archived coverage for JPY=X
 
 **US equities.** The S&P 500 reached 7,416.59 on 2026-11-16, a move of -145.08 points (-1.92%) against 2026-11-13. Its six-month price change was +0.11% from 2026-05-15.
 
@@ -59,9 +57,9 @@ Edition compiled **2026-11-17T00:14:21-05:00** · 62 market instruments · dated
 |**Global**||||||
 |[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,348.35|-38.51|-0.60%|+8.93%|2026-11-16|
 |[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,881.60|-21.00|-0.19%|+6.73%|2026-11-16|
-|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|59,662.02|-1,480.33|-2.42%|-2.85%|2026-11-16|
-|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|23,753.84|+116.24|+0.49%|-8.51%|2026-11-16|
-|[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,291.10|+146.80|+0.58%|+6.97%|2026-11-16|
+|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|58,860.43|-801.59|-1.34%|-4.15%|2026-11-17|
+|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|23,508.17|-245.67|-1.03%|-9.45%|2026-11-17|
+|[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,387.40|+96.30|+0.38%|+7.38%|2026-11-17|
 |[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|35,722.10|-383.80|-1.06%|+5.58%|2026-11-16|
 |[All-country equity](https://finance.yahoo.com/quote/ACWI/history/) · ACWI|153.00|-3.10|-1.99%|-0.70%|2026-11-16|
 |[Developed ex-US/Canada](https://finance.yahoo.com/quote/EFA/history/) · EFA|102.64|-1.53|-1.47%|+0.90%|2026-11-16|
@@ -98,7 +96,7 @@ Edition compiled **2026-11-17T00:14:21-05:00** · 62 market instruments · dated
 |[Listed infrastructure](https://finance.yahoo.com/quote/IGF/history/) · IGF|66.68|-0.34|-0.51%|+0.95%|2026-11-16|
 |[Managed futures](https://finance.yahoo.com/quote/DBMF/history/) · DBMF|32.14|-0.28|-0.86%|+2.91%|2026-11-16|
 |[Physical gold ETF](https://finance.yahoo.com/quote/GLD/history/) · GLD|352.93|-2.52|-0.71%|-15.42%|2026-11-16|
-|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|65,305.06|+1,177.01|+1.84%|-17.40%|2026-11-15|
+|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|64,855.84|-449.22|-0.69%|-16.99%|2026-11-16|
 |[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|22.91|+3.61|+18.70%|+24.31%|2026-11-16|
 
 ## Sector rotation
