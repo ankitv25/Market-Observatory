@@ -8,11 +8,9 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-16T18:01:53-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-16T20:52:41-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
-
-**Source status.** Macro unavailable (HTTPError). Portfolio books unavailable (HTTPError).
 
 **US equities.** The S&P 500 reached 7,416.59 on 2026-11-16, a move of -145.08 points (-1.92%) against 2026-11-13. Its six-month price change was +0.11% from 2026-05-15.
 
@@ -78,10 +76,10 @@ Edition compiled **2026-11-16T18:01:53-05:00** · 62 market instruments · dated
 |[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|105.19|-0.27|-0.25%|-4.03%|2026-11-13|
 |**FX**||||||
 |[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|103.4100|+0.2400|+0.23%|+5.01%|2026-11-13|
-|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.1050|-0.0045|-0.41%|-5.84%|2026-11-13|
-|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.8750|+0.1410|+0.09%|+1.40%|2026-11-13|
-|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3231|-0.0045|-0.34%|-2.26%|2026-11-13|
-|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8359|+0.0036|+0.44%|+7.11%|2026-11-13|
+|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.1025|-0.0025|-0.23%|-5.46%|2026-11-16|
+|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.7800|-0.0950|-0.06%|+0.88%|2026-11-16|
+|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3216|-0.0015|-0.11%|-1.31%|2026-11-16|
+|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8391|+0.0032|+0.38%|+7.00%|2026-11-16|
 |**Credit**||||||
 |[Short Treasuries](https://finance.yahoo.com/quote/SHY/history/) · SHY|81.23|+0.06|+0.07%|-1.01%|2026-11-16|
 |[Intermediate Treasuries](https://finance.yahoo.com/quote/IEF/history/) · IEF|90.24|+0.20|+0.22%|-3.50%|2026-11-16|
