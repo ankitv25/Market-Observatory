@@ -102,7 +102,7 @@ function quoteStrip(){
  const quotes=["spx","dji","ixic","rut","yield10","vix","wti","btc"].map(marketQuote).filter(Boolean);
  return '<div class="quotes" role="region" aria-label="Benchmark closes">'+quotes.map(r=>
   '<button class="quote" '+quoteTarget(r)+' title="'+esc(r.name+' · '+r.stats.day)+'"><span>'+esc(r.name)+'</span><b>'+
-  f(r.stats.last)+(r.yield?"%":"")+'</b><small class="'+cls(r.stats.change)+'">'+dailyMove(r)+(r.yield?'':' · '+pct(r.stats.pct))+'</small></button>').join("")+'</div>';
+  f(r.stats.last)+(r.yield?"%":"")+'</b><small class="'+cls(r.stats.change)+'">'+dailyMove(r)+(r.yield?'':' · '+pct(r.stats.pct))+'</small><time>'+shortDate(r.stats.day)+'</time></button>').join("")+'</div>';
 }
 function leadChart(row){
  const history=row.history.slice(-22), values=history.map(p=>p[1]), path=xy(values,320,62);

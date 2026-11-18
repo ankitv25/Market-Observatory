@@ -36,3 +36,9 @@ The dedicated portfolio monitor covers all five published books. NAV and referen
 The refresh schedule now targets 07:17, 13:17, 18:47 and 22:47 America/New_York on weekdays, plus 10:17 on weekends. Hourly checks at minute 43 recover missed targets. The dashboard shows actual compilation times, next targets, observation dates and the recent run history. An open reader checks for a newer edition every five minutes.
 
 Validation covers 25 Python regressions, browser controls and layouts at 320, 390, 768 and 1440 pixels, and replay of historical editions through all five views. Design references were inspected at [Bloomberg Markets](https://www.bloomberg.com/markets) and [WSJ Market Data](https://www.wsj.com/market-data). Commentary is calculated from this edition's observations.
+
+## November 17 closing-data refresh correction
+
+The 15:57 collection held the November 16 US close. The 18:09 catch-up skipped because the prior schedule had no target between 13:17 and 18:47. Added 16:17 and 17:17 New York targets and hourly retries when core US price dates remain behind after the close. The reader now shows benchmark dates, identifies a pending newer close, and opens new editions with a versioned URL to bypass cached HTML. Regression checks cover a recent collection containing old prices, retry spacing and the post-close target.
+
+Catch-up checks now run every 15 minutes, with delayed-price collection spaced hourly. Verified November 17 closes for all five US benchmarks, 27 Python regression checks and browser tests of the versioned edition reload.

@@ -1,6 +1,6 @@
 # Refresh ledger
 
-Automatic targets are 07:17, 13:17, 18:47 and 22:47 America/New_York Monday–Friday, and 10:17 Saturday–Sunday. The timezone follows daylight saving time. Hourly catch-up checks at minute 43 collect only when a target is still outstanding. Manual runs refresh immediately.
+Automatic targets are 07:17, 13:17, 16:17, 17:17, 18:47 and 22:47 America/New_York Monday–Friday, and 10:17 Saturday–Sunday. The timezone follows daylight saving time. Catch-up checks at minutes 13, 28, 43 and 58 collect when a target is outstanding or US closing observations are still behind after 16:17. Price-date retries are spaced at least one hour apart, including exchange holidays. Manual runs refresh immediately.
 
 Collection runs the market, Treasury, macro and portfolio adapters, regenerates commentary and charts, validates the financial calculations, archives the inputs and publishes GitHub Pages. Prices, portfolio valuations and macro readings retain their individual observation dates. The open reader checks for a new edition every five minutes.
 
@@ -31,3 +31,4 @@ Actual completion times appear below and in the dashboard's **Cadence & sources*
 |2026-11-17T00:14:21-05:00|62|2026-11-16|2026-11-13|1|[snapshot](editions/2026-11/20261117T001421-0500.json)|[run 44022668095](https://github.com/ankitv25/Market-Observatory/actions/runs/44022668095)|
 |2026-11-17T09:53:11-05:00|62|2026-11-17|2026-11-13|0|[snapshot](editions/2026-11/20261117T095311-0500.json)|[run 44107993479](https://github.com/ankitv25/Market-Observatory/actions/runs/44107993479)|
 |2026-11-17T15:57:18-05:00|62|2026-11-17|2026-11-13|0|[snapshot](editions/2026-11/20261117T155718-0500.json)|[run 44174677217](https://github.com/ankitv25/Market-Observatory/actions/runs/44174677217)|
+|2026-11-17T22:05:13-05:00|62|2026-11-17|2026-11-16|0|[snapshot](editions/2026-11/20261117T220513-0500.json)|local verification|

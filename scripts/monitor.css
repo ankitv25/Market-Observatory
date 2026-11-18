@@ -167,3 +167,5 @@
 @media(max-width:900px){.freshness-body{grid-template-columns:1fr 1fr}.freshness-body>div:first-child{grid-column:1/-1}}
 @media(max-width:600px){.freshness>summary{flex-direction:column;align-items:start;gap:3px;font-size:10px}.freshness-body{grid-template-columns:1fr;gap:16px}.freshness-more{margin-left:6px}.lead-date{font-size:10px}.lead-date span{margin-left:6px}.chartHelp{height:auto;min-height:19px}.tools select{min-width:0}.head .seg{flex-shrink:0}}
 @media(max-width:350px){.brand{font-size:16px}.brand svg{width:24px}.design-entry{font-size:10px}.desk-table td,.desk-table td button{font-size:10px}.desk-table td span{font-size:8px}.desk-table th{font-size:8px}.thesis-panel .panel-head{flex-wrap:wrap}.lead-date span{display:block;margin-left:0}.world-grid small{font-size:10px}}
+
+.quote time{display:block;font:10px var(--mono);color:var(--muted);margin-top:3px}
