@@ -1,8 +1,7 @@
 # Sources and observation dates
 
-Compiled 2026-11-17T22:06:45-05:00.
+Compiled 2026-11-17T23:43:42-05:00.
 
-- Live feed unavailable; checked archived coverage for JPY=X
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
