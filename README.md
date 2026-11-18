@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-17T23:43:42-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-18T14:35:22-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -18,7 +18,7 @@ Edition compiled **2026-11-17T23:43:42-05:00** · 62 market instruments · dated
 
 **Equity style.** On 2026-11-17 large-cap growth (-0.77%) finished 0.53 percentage points ahead of large-cap value (-1.31%), measured by IWF and IWD.
 
-**Energy.** The Dec 2026 WTI contract closed at $85.72/bbl on 2026-11-16, -2.84 dollars per barrel against its own 2026-11-13 close.
+**Energy.** The Dec 2026 WTI contract closed at $86.01/bbl on 2026-11-17, +0.29 dollars per barrel against its own 2026-11-16 close.
 
 **US rates.** On 2026-11-16 the 2-year par yield was 4.83% and the 10-year was 5.12%. The 2s10s spread stood at +29 bp, changing by +2 bp versus 2026-11-13.
 
@@ -31,8 +31,8 @@ Edition compiled **2026-11-17T23:43:42-05:00** · 62 market instruments · dated
 |**Indices**||||||
 |[S&P 500](https://finance.yahoo.com/quote/%5EGSPC/history/) · ^GSPC|7,340.53|-76.06|-1.03%|-0.92%|2026-11-17|
 |[Nasdaq Composite](https://finance.yahoo.com/quote/%5EIXIC/history/) · ^IXIC|24,328.38|-181.38|-0.74%|-7.23%|2026-11-17|
-|[Nasdaq 100](https://finance.yahoo.com/quote/%5ENDX/history/) · ^NDX|27,001.79|-195.37|-0.72%|-7.29%|2026-11-17|
-|[Dow Industrials](https://finance.yahoo.com/quote/%5EDJI/history/) · ^DJI|50,759.40|-848.77|-1.64%|+2.49%|2026-11-17|
+|[Nasdaq 100](https://finance.yahoo.com/quote/%5ENDX/history/) · ^NDX|27,001.78|-195.37|-0.72%|-7.29%|2026-11-17|
+|[Dow Industrials](https://finance.yahoo.com/quote/%5EDJI/history/) · ^DJI|50,759.42|-848.75|-1.64%|+2.49%|2026-11-17|
 |[Russell 2000](https://finance.yahoo.com/quote/%5ERUT/history/) · ^RUT|2,701.87|-41.07|-1.50%|-3.27%|2026-11-17|
 |**Sectors**||||||
 |[Technology](https://finance.yahoo.com/quote/XLK/history/) · XLK|163.26|-1.50|-0.91%|-7.38%|2026-11-17|
@@ -55,8 +55,8 @@ Edition compiled **2026-11-17T23:43:42-05:00** · 62 market instruments · dated
 |[US momentum](https://finance.yahoo.com/quote/MTUM/history/) · MTUM|65.30|-0.41|-0.62%|-12.43%|2026-11-17|
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|54.49|-0.67|-1.21%|+3.57%|2026-11-17|
 |**Global**||||||
-|[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,212.11|-136.24|-2.15%|+6.60%|2026-11-17|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,689.90|-191.70|-1.76%|+4.85%|2026-11-17|
+|[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,154.39|-57.72|-0.93%|+5.22%|2026-11-18|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,551.17|-138.73|-1.30%|+2.20%|2026-11-18|
 |[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|58,860.43|-801.59|-1.34%|-4.15%|2026-11-17|
 |[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|23,508.17|-245.67|-1.03%|-9.45%|2026-11-17|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,387.40|+96.30|+0.38%|+7.38%|2026-11-17|
@@ -65,17 +65,17 @@ Edition compiled **2026-11-17T23:43:42-05:00** · 62 market instruments · dated
 |[Developed ex-US/Canada](https://finance.yahoo.com/quote/EFA/history/) · EFA|101.35|-1.29|-1.26%|-0.36%|2026-11-17|
 |[Emerging markets](https://finance.yahoo.com/quote/EEM/history/) · EEM|58.27|-0.62|-1.05%|-10.45%|2026-11-17|
 |**Futures**||||||
-|[WTI crude](https://finance.yahoo.com/quote/CLZ26.NYM/history/) · CLZ26.NYM|85.72|-2.84|-3.21%|+2.76%|2026-11-16|
-|[Brent crude](https://finance.yahoo.com/quote/BZF27.NYM/history/) · BZF27.NYM|92.44|-3.40|-3.55%|+4.01%|2026-11-16|
-|[Natural gas](https://finance.yahoo.com/quote/NGZ26.NYM/history/) · NGZ26.NYM|3.12|-0.11|-3.34%|-24.32%|2026-11-16|
-|[Gold](https://finance.yahoo.com/quote/GCZ26.CMX/history/) · GCZ26.CMX|3,853.00|-33.30|-0.86%|-17.36%|2026-11-16|
-|[Silver](https://finance.yahoo.com/quote/SIZ26.CMX/history/) · SIZ26.CMX|46.86|-2.26|-4.60%|-40.62%|2026-11-16|
-|[Copper](https://finance.yahoo.com/quote/HGZ26.CMX/history/) · HGZ26.CMX|6.01|-0.08|-1.36%|-6.80%|2026-11-16|
-|[Corn](https://finance.yahoo.com/quote/ZCZ26.CBT/history/) · ZCZ26.CBT|448.75|+3.25|+0.73%|-6.70%|2026-11-16|
-|[S&P 500 E-mini](https://finance.yahoo.com/quote/ESZ26.CME/history/) · ESZ26.CME|7,439.00|-144.00|-1.90%|-1.50%|2026-11-16|
-|[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|105.44|+0.25|+0.24%|-3.05%|2026-11-16|
+|[WTI crude](https://finance.yahoo.com/quote/CLZ26.NYM/history/) · CLZ26.NYM|86.01|+0.29|+0.34%|+3.10%|2026-11-17|
+|[Brent crude](https://finance.yahoo.com/quote/BZF27.NYM/history/) · BZF27.NYM|93.14|+0.70|+0.76%|+4.79%|2026-11-17|
+|[Natural gas](https://finance.yahoo.com/quote/NGZ26.NYM/history/) · NGZ26.NYM|3.21|+0.09|+2.75%|-22.23%|2026-11-17|
+|[Gold](https://finance.yahoo.com/quote/GCZ26.CMX/history/) · GCZ26.CMX|3,864.20|+11.20|+0.29%|-17.12%|2026-11-17|
+|[Silver](https://finance.yahoo.com/quote/SIZ26.CMX/history/) · SIZ26.CMX|47.36|+0.50|+1.06%|-39.99%|2026-11-17|
+|[Copper](https://finance.yahoo.com/quote/HGZ26.CMX/history/) · HGZ26.CMX|5.99|-0.02|-0.36%|-7.14%|2026-11-17|
+|[Corn](https://finance.yahoo.com/quote/ZCZ26.CBT/history/) · ZCZ26.CBT|446.75|-2.00|-0.45%|-7.12%|2026-11-17|
+|[S&P 500 E-mini](https://finance.yahoo.com/quote/ESZ26.CME/history/) · ESZ26.CME|7,359.00|-80.00|-1.08%|-2.56%|2026-11-17|
+|[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|105.61|+0.17|+0.16%|-2.89%|2026-11-17|
 |**FX**||||||
-|[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|103.5500|+0.1400|+0.14%|+4.31%|2026-11-16|
+|[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|103.4900|-0.0600|-0.06%|+4.25%|2026-11-17|
 |[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0998|-0.0027|-0.24%|-5.69%|2026-11-17|
 |[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.5230|-0.2570|-0.16%|+0.72%|2026-11-17|
 |[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3185|-0.0032|-0.24%|-1.54%|2026-11-17|
@@ -96,7 +96,7 @@ Edition compiled **2026-11-17T23:43:42-05:00** · 62 market instruments · dated
 |[Listed infrastructure](https://finance.yahoo.com/quote/IGF/history/) · IGF|66.13|-0.55|-0.82%|+0.12%|2026-11-17|
 |[Managed futures](https://finance.yahoo.com/quote/DBMF/history/) · DBMF|32.06|-0.08|-0.25%|+2.66%|2026-11-17|
 |[Physical gold ETF](https://finance.yahoo.com/quote/GLD/history/) · GLD|352.48|-0.45|-0.13%|-15.53%|2026-11-17|
-|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|64,855.84|-449.22|-0.69%|-16.99%|2026-11-16|
+|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|64,893.95|+38.10|+0.06%|-16.19%|2026-11-17|
 |[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|25.46|+2.55|+11.13%|+38.14%|2026-11-17|
 
 ## Sector rotation
