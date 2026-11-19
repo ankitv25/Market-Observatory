@@ -1,9 +1,7 @@
 # Sources and observation dates
 
-Compiled 2026-11-18T21:36:05-05:00.
+Compiled 2026-11-18T23:30:54-05:00.
 
-- Macro unavailable (HTTPError).
-- Portfolio books unavailable (HTTPError).
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|

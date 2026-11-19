@@ -8,11 +8,9 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-18T21:36:05-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-18T23:30:54-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
-
-**Source status.** Macro unavailable (HTTPError). Portfolio books unavailable (HTTPError).
 
 **US equities.** The S&P 500 reached 7,323.63 on 2026-11-18, a move of -16.90 points (-0.23%) against 2026-11-17. Its six-month price change was -1.07% from 2026-05-18.
 
@@ -34,7 +32,7 @@ Edition compiled **2026-11-18T21:36:05-05:00** · 62 market instruments · dated
 |[S&P 500](https://finance.yahoo.com/quote/%5EGSPC/history/) · ^GSPC|7,323.63|-16.90|-0.23%|-1.07%|2026-11-18|
 |[Nasdaq Composite](https://finance.yahoo.com/quote/%5EIXIC/history/) · ^IXIC|24,429.88|+101.50|+0.42%|-6.37%|2026-11-18|
 |[Nasdaq 100](https://finance.yahoo.com/quote/%5ENDX/history/) · ^NDX|27,116.26|+114.48|+0.42%|-6.48%|2026-11-18|
-|[Dow Industrials](https://finance.yahoo.com/quote/%5EDJI/history/) · ^DJI|50,198.17|-561.25|-1.11%|+1.03%|2026-11-18|
+|[Dow Industrials](https://finance.yahoo.com/quote/%5EDJI/history/) · ^DJI|50,198.20|-561.22|-1.11%|+1.03%|2026-11-18|
 |[Russell 2000](https://finance.yahoo.com/quote/%5ERUT/history/) · ^RUT|2,714.31|+12.44|+0.46%|-2.19%|2026-11-18|
 |**Sectors**||||||
 |[Technology](https://finance.yahoo.com/quote/XLK/history/) · XLK|163.81|+0.55|+0.34%|-6.05%|2026-11-18|
