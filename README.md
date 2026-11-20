@@ -8,9 +8,11 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-19T19:55:44-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-19T23:19:06-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
+
+**Source status.** Live feed unavailable; checked archived coverage for CHF=X
 
 **US equities.** The S&P 500 reached 7,175.83 on 2026-11-19, a move of -147.80 points (-2.02%) against 2026-11-18. Its six-month price change was -2.42% from 2026-05-19.
 
@@ -32,7 +34,7 @@ Edition compiled **2026-11-19T19:55:44-05:00** · 62 market instruments · dated
 |[S&P 500](https://finance.yahoo.com/quote/%5EGSPC/history/) · ^GSPC|7,175.83|-147.80|-2.02%|-2.42%|2026-11-19|
 |[Nasdaq Composite](https://finance.yahoo.com/quote/%5EIXIC/history/) · ^IXIC|23,879.20|-550.68|-2.25%|-7.70%|2026-11-19|
 |[Nasdaq 100](https://finance.yahoo.com/quote/%5ENDX/history/) · ^NDX|26,517.05|-599.21|-2.21%|-7.99%|2026-11-19|
-|[Dow Industrials](https://finance.yahoo.com/quote/%5EDJI/history/) · ^DJI|49,097.06|-1,101.11|-2.19%|-0.54%|2026-11-19|
+|[Dow Industrials](https://finance.yahoo.com/quote/%5EDJI/history/) · ^DJI|49,097.10|-1,101.07|-2.19%|-0.54%|2026-11-19|
 |[Russell 2000](https://finance.yahoo.com/quote/%5ERUT/history/) · ^RUT|2,655.11|-59.20|-2.18%|-3.35%|2026-11-19|
 |**Sectors**||||||
 |[Technology](https://finance.yahoo.com/quote/XLK/history/) · XLK|160.69|-3.12|-1.90%|-7.24%|2026-11-19|
@@ -56,10 +58,10 @@ Edition compiled **2026-11-19T19:55:44-05:00** · 62 market instruments · dated
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|53.31|-1.11|-2.04%|+1.76%|2026-11-19|
 |**Global**||||||
 |[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,113.86|-40.53|-0.66%|+4.49%|2026-11-19|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,452.68|-98.52|-0.93%|+1.18%|2026-11-19|
-|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|59,024.28|+163.85|+0.28%|-2.95%|2026-11-18|
-|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|23,294.75|-213.42|-0.91%|-9.27%|2026-11-18|
-|[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,227.95|-159.45|-0.63%|+6.67%|2026-11-18|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,452.70|-98.50|-0.93%|+1.18%|2026-11-19|
+|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|59,444.21|+419.93|+0.71%|-1.83%|2026-11-19|
+|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,841.62|-453.13|-1.95%|-11.46%|2026-11-19|
+|[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,514.30|+286.35|+1.14%|+8.03%|2026-11-19|
 |[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|34,028.73|-549.37|-1.59%|+0.85%|2026-11-19|
 |[All-country equity](https://finance.yahoo.com/quote/ACWI/history/) · ACWI|147.74|-2.94|-1.95%|-3.53%|2026-11-19|
 |[Developed ex-US/Canada](https://finance.yahoo.com/quote/EFA/history/) · EFA|98.78|-1.48|-1.48%|-3.08%|2026-11-19|

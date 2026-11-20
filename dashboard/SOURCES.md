@@ -1,7 +1,8 @@
 # Sources and observation dates
 
-Compiled 2026-11-19T19:55:44-05:00.
+Compiled 2026-11-19T23:19:06-05:00.
 
+- Live feed unavailable; checked archived coverage for CHF=X
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
@@ -30,9 +31,9 @@ Compiled 2026-11-19T19:55:44-05:00.
 |US quality|[Yahoo Finance](https://finance.yahoo.com/quote/QUAL/history/)|ETF session close, price only|2026-11-19|2026-05-19|
 |Euro STOXX 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ESTOXX50E/history/)|Cash index session close, index points|2026-11-19|2026-05-19|
 |FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-19|2026-05-19|
-|Nikkei 225|[Yahoo Finance](https://finance.yahoo.com/quote/%5EN225/history/)|Cash index session close, index points|2026-11-18|2026-05-18|
-|Hang Seng|[Yahoo Finance](https://finance.yahoo.com/quote/%5EHSI/history/)|Cash index session close, index points|2026-11-18|2026-05-18|
-|Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-18|2026-05-18|
+|Nikkei 225|[Yahoo Finance](https://finance.yahoo.com/quote/%5EN225/history/)|Cash index session close, index points|2026-11-19|2026-05-19|
+|Hang Seng|[Yahoo Finance](https://finance.yahoo.com/quote/%5EHSI/history/)|Cash index session close, index points|2026-11-19|2026-05-19|
+|Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-19|2026-05-19|
 |S&P/TSX Composite|[Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPTSE/history/)|Cash index session close, index points|2026-11-19|2026-05-19|
 |All-country equity|[Yahoo Finance](https://finance.yahoo.com/quote/ACWI/history/)|ETF session close, price only|2026-11-19|2026-05-19|
 |Developed ex-US/Canada|[Yahoo Finance](https://finance.yahoo.com/quote/EFA/history/)|ETF session close, price only|2026-11-19|2026-05-19|
