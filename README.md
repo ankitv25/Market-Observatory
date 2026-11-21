@@ -8,11 +8,9 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-20T21:18:28-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-20T22:57:07-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
-
-**Source status.** Treasury unavailable (RuntimeError).
 
 **US equities.** The S&P 500 reached 6,910.39 on 2026-11-20, a move of -265.44 points (-3.70%) against 2026-11-19. Its six-month price change was -7.03% from 2026-05-20.
 
@@ -58,9 +56,9 @@ Edition compiled **2026-11-20T21:18:28-05:00** · 62 market instruments · dated
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|51.87|-1.44|-2.70%|-2.24%|2026-11-20|
 |**Global**||||||
 |[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|5,941.95|-171.91|-2.81%|-0.57%|2026-11-20|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,346.34|-106.36|-1.02%|-0.82%|2026-11-20|
-|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|59,444.21|+419.93|+0.71%|-1.83%|2026-11-19|
-|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,841.62|-453.13|-1.95%|-11.46%|2026-11-19|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,346.30|-106.40|-1.02%|-0.82%|2026-11-20|
+|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|56,436.65|-3,007.56|-5.06%|-5.63%|2026-11-20|
+|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,410.80|-430.82|-1.89%|-12.63%|2026-11-20|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,800.60|+286.30|+1.12%|+9.05%|2026-11-20|
 |[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|33,189.85|-838.85|-2.47%|-2.85%|2026-11-20|
 |[All-country equity](https://finance.yahoo.com/quote/ACWI/history/) · ACWI|142.59|-5.15|-3.49%|-8.07%|2026-11-20|
