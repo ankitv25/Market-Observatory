@@ -1,8 +1,8 @@
 # Sources and observation dates
 
-Compiled 2026-11-20T17:58:54-05:00.
+Compiled 2026-11-20T21:18:28-05:00.
 
-- Live feed unavailable; checked archived coverage for JPY=X
+- Treasury unavailable (RuntimeError).
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
@@ -55,10 +55,10 @@ Compiled 2026-11-20T17:58:54-05:00.
 |Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-19|2026-05-19|
 |Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
 |US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-19|2026-05-19|
-|EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-19|2026-05-19|
-|USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-19|2026-05-19|
-|GBP/USD|[Yahoo Finance](https://finance.yahoo.com/quote/GBPUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-19|2026-05-19|
-|USD/CHF|[Yahoo Finance](https://finance.yahoo.com/quote/CHF%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-19|2026-05-19|
+|EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
+|USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
+|GBP/USD|[Yahoo Finance](https://finance.yahoo.com/quote/GBPUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
+|USD/CHF|[Yahoo Finance](https://finance.yahoo.com/quote/CHF%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
 |WTI crude|[Yahoo Finance](https://finance.yahoo.com/quote/CLZ26.NYM/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-19|2026-05-19|
 |Brent crude|[Yahoo Finance](https://finance.yahoo.com/quote/BZF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-19|2026-05-19|
 |Natural gas|[Yahoo Finance](https://finance.yahoo.com/quote/NGZ26.NYM/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-19|2026-05-19|
