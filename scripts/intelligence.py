@@ -382,8 +382,8 @@ def build_intelligence(edition):
         current = window_assessment(identifier,label,sessions,0,calendar,rows,points,audit,expected=expected.isoformat())
         previous = window_assessment(identifier,label,sessions,sessions,calendar,rows,points,audit,historical=True)
         current["previous"] = {key:previous[key] for key in ("start","end","regime","score","confidence")}
-        before_ids = {r["id"] for r in previous["evidence"] if r["status"]=="included"}
-        current_ids = {r["id"] for r in current["evidence"] if r["status"]=="included"}
+        before_ids = {(r["id"],tuple(sorted(i["id"] for i in r["inputs"] if i["eligible"]))) for r in previous["evidence"] if r["status"]=="included"}
+        current_ids = {(r["id"],tuple(sorted(i["id"] for i in r["inputs"] if i["eligible"]))) for r in current["evidence"] if r["status"]=="included"}
         if "insufficient evidence" in (previous["regime"],current["regime"]):
             transition = "Comparison unavailable because one window has insufficient evidence."
         elif before_ids != current_ids:

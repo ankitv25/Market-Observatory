@@ -91,8 +91,9 @@ function intelligenceContext(intelligence) {
       '<b>'+esc(row.title)+'</b>'+((row.metrics || []).length?'<dl class="intel-metrics">'+row.metrics.map(metric=>'<div><dt>'+esc(metric.label)+'</dt><dd>'+f(metric.value,2)+' '+esc(metric.unit)+'</dd></div>').join('')+'</dl>':'')+'<p>'+esc(row.detail || "Awaiting source")+'</p>'+(row.reason?'<p class="intel-context-reason">'+esc(row.reason)+'</p>':'')+'</article>').join("")+'</div></details>';
 }
 
-function intelligenceSourceAudit(intelligence) {
-  const sources=intelligence.sources || [];
+function intelligenceSourceAudit(intelligence, window) {
+  const used=window?new Set((window.evidence || []).filter(row=>row.status==="included").flatMap(row=>(row.inputs || []).filter(input=>input.eligible).map(input=>input.id))):null;
+  const sources=(intelligence.sources || []).map(row=>used?{...row,used_in_score:used.has(row.id)}:row);
   const excluded=sources.filter(row=>!row.used_in_score).length;
   const stale=sources.filter(row=>row.status==="stale").length;
   const unavailable=sources.filter(row=>["missing","future"].includes(row.status)).length;
@@ -116,7 +117,7 @@ function marketIntelligence() {
   return '<section class="intel-panel" id="market-intelligence" aria-label="Market intelligence"><div class="intel-topline"><h2>Market intelligence</h2>'+
     '<p>Assessment as of '+esc(intelligenceDate(intelligence.asof))+'</p></div><div class="intel-tabs" aria-label="Assessment horizon">'+controls+'</div>'+
     ageNote+'<div class="intel-main">'+intelligenceNarrative(window,intelligence)+intelligenceConfidencePanel(window,intelligence)+'</div>'+intelligenceEvidence(window)+
-    intelligenceDrivers(intelligence)+intelligenceConsiderations(intelligence)+intelligenceTriggers(intelligence)+intelligenceSignalAudit(window,intelligence)+intelligenceContext(intelligence)+intelligenceSourceAudit(intelligence)+'</section>';
+    intelligenceDrivers(intelligence)+intelligenceConsiderations(intelligence)+intelligenceTriggers(intelligence)+intelligenceSignalAudit(window,intelligence)+intelligenceContext(intelligence)+intelligenceSourceAudit(intelligence,window)+'</section>';
 }
 
 function intelligenceHistory() {

@@ -79,3 +79,6 @@ assert.equal(calendarReader.run('readerExpectedClose(new Date("2026-11-26T17:00:
 assert.equal(calendarReader.run('readerExpectedClose(new Date("2026-11-27T13:11:00-05:00"))'),"2026-11-27");
 assert.equal(run('validPipelineRecord({recent:[null],counts:{success:1}})'),false);
 assert.equal(run('validPipelineRecord({recent:[{stages:[],sources:{groups:{a:null}}}],counts:{}})'),false);
+
+assert(run('intelligenceSourceAudit({sources:[{id:"spx",name:"Test index",used_in_score:true}]},{evidence:[]})').includes('Context / excluded'));
+assert(!run('intelligenceSourceAudit({sources:[{id:"spx",name:"Test index",used_in_score:true}]},{evidence:[]})').includes('<td>Scored</td>'));

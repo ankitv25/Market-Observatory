@@ -51,6 +51,12 @@ class IntelligenceTests(unittest.TestCase):
         self.assertEqual(expected_session("2026-11-27T13:05:00-05:00"),date(2026,11,25))
         self.assertEqual(expected_session("2026-11-27T13:11:00-05:00"),date(2026,11,27))
 
+    def test_sector_membership_change_limits_transition_comparability(self):
+        row(self.edition,"xlk")["history"].pop()
+        result=build_intelligence(self.edition)
+        self.assertEqual(result["windows"][0]["coverage"]["eligible"],6)
+        self.assertIn("Coverage changed",result["windows"][0]["transition"])
+
     def test_timezone_is_required(self):
         with self.assertRaises(ValueError):
             expected_session("2026-11-22T10:00:00")
