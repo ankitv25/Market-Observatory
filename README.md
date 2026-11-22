@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-22T13:43:53-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-22T13:46:37-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -18,7 +18,7 @@ The US equity benchmark median returned -3.23%, against -3.90% for developed ex-
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
-**Source status.** Live feed unavailable; checked archived coverage for JPY=X Prior observations retained for BZF27.NYM
+**Source status.** Live feed unavailable; checked archived coverage for CHF=X Prior observations retained for BZF27.NYM
 
 **US equities.** The S&P 500 reached 6,910.39 on 2026-11-20, a move of -265.44 points (-3.70%) against 2026-11-19. Its six-month price change was -7.03% from 2026-05-20.
 

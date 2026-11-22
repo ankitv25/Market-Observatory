@@ -1,8 +1,8 @@
 # Sources and observation dates
 
-Compiled 2026-11-22T13:43:53-05:00.
+Compiled 2026-11-22T13:46:37-05:00.
 
-- Live feed unavailable; checked archived coverage for JPY=X
+- Live feed unavailable; checked archived coverage for CHF=X
 - Prior observations retained for BZF27.NYM
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
