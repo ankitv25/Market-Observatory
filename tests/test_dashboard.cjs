@@ -5,7 +5,7 @@ const vm = require("node:vm");
 
 const root = path.resolve(__dirname, "..");
 const scripts = path.join(root, "scripts");
-const modules = ["rotation", "dispatches", "spotlight", "theses", "portfolio", "freshness"]
+const modules = ["rotation", "dispatches", "spotlight", "theses", "portfolio", "freshness", "intelligence", "pipeline-view"]
   .map(name => fs.readFileSync(path.join(scripts, name + ".js"), "utf8")).join("\n");
 const application = fs.readFileSync(path.join(scripts, "monitor.js"), "utf8")
   .replace("/*EDITION_MODULES*/", modules);
@@ -36,7 +36,7 @@ editions.push(JSON.parse(fs.readFileSync(path.join(root, "dashboard/latest.json"
 
 for (const edition of editions) {
   const {nodes, run} = openEdition(edition);
-  for (const view of ["overview", "markets", "rates", "portfolio", "research"]) {
+  for (const view of ["overview", "markets", "rates", "portfolio", "research", "pipeline"]) {
     run('location.hash = "#' + view + '"; render();');
     assert(!/\b(?:NaN|undefined|Infinity)\b/.test(nodes.get("content").innerHTML),
       edition.created + " invalid text in " + view);
@@ -65,4 +65,17 @@ const embedded = fs.readFileSync(path.join(root, "dashboard/observatory.html"), 
   .match(/<script>([\s\S]*)<\/script>/)[1];
 new vm.Script(embedded);
 assert(embedded.includes("function portfolioHealth()"));
-console.log("Dashboard replay passed for " + editions.length + " editions, five views and all books; interval and financial calculations checked.");
+console.log("Dashboard replay passed for " + editions.length + " editions, six views and all books; interval and financial calculations checked.");
+
+// The status bar must not request a Thanksgiving close, and must recognize an early close.
+const calendarEdition=JSON.parse(JSON.stringify(editions.at(-1)));
+calendarEdition.refresh={calendar:{holidays:{2026:"11-26"},early_closes:{2026:"11-27"}}};
+const calendarReader=openEdition({...calendarEdition,refresh:undefined});
+// readerExpectedClose also runs without metadata for historical offline editions.
+assert.equal(calendarReader.run('readerExpectedClose(new Date("2026-11-22T12:00:00-05:00"))'),"2026-11-20");
+
+calendarReader.run('E.refresh={calendar:{holidays:{2026:"11-26"},early_closes:{2026:"11-27"}}}');
+assert.equal(calendarReader.run('readerExpectedClose(new Date("2026-11-26T17:00:00-05:00"))'),"2026-11-25");
+assert.equal(calendarReader.run('readerExpectedClose(new Date("2026-11-27T13:11:00-05:00"))'),"2026-11-27");
+assert.equal(run('validPipelineRecord({recent:[null],counts:{success:1}})'),false);
+assert.equal(run('validPipelineRecord({recent:[{stages:[],sources:{groups:{a:null}}}],counts:{}})'),false);

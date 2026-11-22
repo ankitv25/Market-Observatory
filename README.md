@@ -8,11 +8,17 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-21T14:36:24-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-22T13:40:05-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
-**Source status.** Live feed unavailable; checked archived coverage for CHF=X
+**Market assessment:** risk-off · evidence agreement 83/100 · as of 2026-11-20. This score is not a forecast probability.
+
+The US equity benchmark median returned -3.23%, against -3.90% for developed ex-US and emerging-market ETFs. VIX changed +26.20%. High-yield ETF prices trailed short Treasuries by 0.54 pp. The counterweight is small-cap and equal-weight participation.
+
+[Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
+
+**Source status.** Prior observations retained for BZF27.NYM
 
 **US equities.** The S&P 500 reached 6,910.39 on 2026-11-20, a move of -265.44 points (-3.70%) against 2026-11-19. Its six-month price change was -7.03% from 2026-05-20.
 
@@ -98,7 +104,7 @@ Edition compiled **2026-11-21T14:36:24-05:00** · 62 market instruments · dated
 |[Listed infrastructure](https://finance.yahoo.com/quote/IGF/history/) · IGF|64.19|-0.65|-1.00%|-4.48%|2026-11-20|
 |[Managed futures](https://finance.yahoo.com/quote/DBMF/history/) · DBMF|31.45|-0.35|-1.10%|+1.09%|2026-11-20|
 |[Physical gold ETF](https://finance.yahoo.com/quote/GLD/history/) · GLD|322.87|-12.31|-3.67%|-22.65%|2026-11-20|
-|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|58,798.98|-3,102.84|-5.01%|-24.09%|2026-11-20|
+|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|60,094.09|+1,295.11|+2.20%|-22.50%|2026-11-21|
 |[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|35.89|+7.45|+26.20%|+105.79%|2026-11-20|
 
 ## Sector rotation

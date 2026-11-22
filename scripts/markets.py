@@ -155,6 +155,23 @@ def dated_future(spec, generic, now):
     raise ValueError(f"Could not resolve the named {root} contract")
 
 
+def session_quote(payload, history, now):
+    """Vendor quote timestamp and a verified prior-session price anchor."""
+    meta = payload["meta"]
+    stamp, price = meta.get("regularMarketTime"), meta.get("regularMarketPrice")
+    if not isinstance(stamp, (int, float)) or not isinstance(price, (int, float)):
+        return None
+    if not math.isfinite(price) or price <= 0 or not math.isfinite(stamp) or stamp > now.timestamp():
+        return None
+    observed = datetime.fromtimestamp(stamp, ZoneInfo(meta["exchangeTimezoneName"]))
+    prior = next(((d, v) for d, v in reversed(history) if d < observed.date().isoformat()), None)
+    if not prior or prior[1] <= 0 or (observed.date()-date.fromisoformat(prior[0])).days > 5:
+        return None
+    return dict(observed_at=observed.isoformat(), day=observed.date().isoformat(), last=price,
+                previous_day=prior[0], change=price-prior[1], pct=100*(price/prior[1]-1),
+                basis="Vendor regular-session quote; feed may be delayed")
+
+
 def live_record(spec, now):
     symbol = spec["symbol"]
     payload = chart(symbol)
@@ -164,7 +181,8 @@ def live_record(spec, now):
         instrument.update(symbol=symbol, contract=delivery, basis=f"{FUTURES_BASIS} · {delivery}")
     else:
         history = closed_history(payload, now)
-    return dict(instrument, history=history, source="Yahoo Finance",
+    snapshot = session_quote(payload, history, now) if spec["group"] != "Futures" else None
+    return dict(instrument, history=history, session_quote=snapshot, source="Yahoo Finance",
                 url=f"https://finance.yahoo.com/quote/{quote(symbol, safe='')}/history/")
 
 

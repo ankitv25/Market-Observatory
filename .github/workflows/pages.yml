@@ -7,6 +7,7 @@ on:
       - docs/DESK_DESIGNS.md
       - scripts/build_desk_designs.py
       - scripts/desk_design.css
+      - scripts/pipeline.py
       - .github/workflows/pages.yml
   workflow_run:
     workflows: [Market edition]
@@ -14,7 +15,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  actions: read
   pages: write
   id-token: write
 concurrency:
@@ -23,49 +25,62 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_repository.full_name == github.repository
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.retry.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Prepare live edition
-        run: |
-          python3 scripts/verify.py
-          mkdir -p public
-          cp dashboard/observatory.html public/index.html
-          cp dashboard/status.json public/status.json
-          python3 scripts/build_desk_designs.py public/design/index.html
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Prepare edition and compare with served content
+        id: gate
+        run: python scripts/pipeline.py pages-prepare
       - uses: actions/configure-pages@v5
+        if: steps.gate.outputs.deploy == 'true'
       - uses: actions/upload-pages-artifact@v3
+        if: steps.gate.outputs.deploy == 'true'
         with:
           path: public
-      - uses: actions/deploy-pages@v4
+      - name: Wait for the uploaded artifact to become visible
+        if: steps.gate.outputs.deploy == 'true'
+        run: python scripts/pipeline.py pages-wait
+      - name: Deploy verified edition
+        uses: actions/deploy-pages@v4
+        if: steps.gate.outputs.deploy == 'true'
         id: deployment
-      - name: Confirm the served edition matches the published file
-        env:
-          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        continue-on-error: true
+      - name: Recheck artifact before retry
+        if: steps.deployment.outcome == 'failure'
         run: |
-          python3 - <<'PY'
-          import hashlib
-          import os
-          import time
-          import urllib.request
-          from pathlib import Path
-          expected = hashlib.sha256(Path("public/index.html").read_bytes()).digest()
-          url = os.environ["PAGE_URL"] + "?edition=" + os.environ["GITHUB_RUN_ID"]
-          for attempt in range(12):
-              try:
-                  with urllib.request.urlopen(url, timeout=15) as response:
-                      if hashlib.sha256(response.read()).digest() == expected:
-                          print("Verified served dashboard", url)
-                          break
-              except OSError as exc:
-                  print(exc)
-              time.sleep(5)
-          else:
-              raise SystemExit("Served dashboard did not match this edition")
-          PY
+          sleep 10
+          python scripts/pipeline.py pages-wait
+      - name: Retry deployment
+        uses: actions/deploy-pages@v4
+        if: steps.deployment.outcome == 'failure'
+        id: retry
+        continue-on-error: true
+      - name: Verify the served edition
+        if: steps.deployment.outcome == 'success' || steps.retry.outcome == 'success'
+        run: python scripts/pipeline.py pages-verify
+      - name: Record deployment outcome
+        if: always()
+        run: python scripts/pipeline.py pages-finish --publish
+      - name: Retain deployment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-run-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/market-pipeline-state.json
+            runs/*/pages-${{ github.run_id }}-${{ github.run_attempt }}.json
+            public/manifest.json
+          if-no-files-found: warn
+          retention-days: 30

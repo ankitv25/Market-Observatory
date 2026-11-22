@@ -1,8 +1,8 @@
 # Sources and observation dates
 
-Compiled 2026-11-21T14:36:24-05:00.
+Compiled 2026-11-22T13:40:05-05:00.
 
-- Live feed unavailable; checked archived coverage for CHF=X
+- Prior observations retained for BZF27.NYM
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@ Compiled 2026-11-21T14:36:24-05:00.
 |Listed infrastructure|[Yahoo Finance](https://finance.yahoo.com/quote/IGF/history/)|ETF session close, price only|2026-11-20|2026-05-20|
 |Managed futures|[Yahoo Finance](https://finance.yahoo.com/quote/DBMF/history/)|ETF session close, price only|2026-11-20|2026-05-20|
 |Physical gold ETF|[Yahoo Finance](https://finance.yahoo.com/quote/GLD/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-20|2026-05-20|
+|Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-21|2026-05-21|
 |Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
 |US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
 |EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|

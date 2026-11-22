@@ -18,8 +18,9 @@ const views={
  markets:["Cross-asset tape","Compare prices, changes and six-month trends across the covered universe."],
  rates:["Rates & macro","Treasury curve changes and the evidence behind the confirmed macro regime."],
  portfolio:["Portfolio monitor","Performance, attribution and risk across the published portfolio books."],
+ pipeline:["Refresh & reliability","Every collection, validation and publication attempt, with observed source dates."],
  research:["Research desk","Daily observations, sector sensitivities and the sources behind this edition."]};
-const labels={overview:"Overview",markets:"Market tape",rates:"Rates & macro",portfolio:"Portfolio monitor",research:"Research desk"};
+const labels={overview:"Overview",markets:"Market tape",rates:"Rates & macro",portfolio:"Portfolio monitor",research:"Research desk",pipeline:"Refresh & reliability"};
 function section(title,sub,body,control=""){return '<section class="card"><div class="head"><div><h2>'+esc(title)+'</h2><p class="sub">'+esc(sub)+'</p></div>'+control+'</div>'+body+'</section>'}
 function option(v,t,selected){return '<option value="'+esc(v)+'" '+(selected===v?'selected':'')+'>'+esc(t)+'</option>'}
 function segments(values,active,attribute){return '<div class="seg">'+values.map(([value,label])=>'<button '+attribute+'="'+value+'" class="'+(active==value?'on':'')+'" aria-pressed="'+(active==value)+'">'+label+'</button>').join("")+'</div>'}
@@ -99,10 +100,13 @@ function dailyMove(row){
  return sf(row.stats.change,dispatchPrecision(row))+" "+row.unit;
 }
 function quoteStrip(){
- const quotes=["spx","dji","ixic","rut","yield10","vix","wti","btc"].map(marketQuote).filter(Boolean);
+ const quotes=["spx","dji","ixic","rut","yield10","vix","wti","btc"].map(marketQuote).filter(Boolean).map(row=>{
+  const quote=row.session_quote;
+  return quote && quote.day>row.stats.day ? {...row,stats:{...row.stats,...quote},intraday:true} : row;
+ });
  return '<div class="quotes" role="region" aria-label="Benchmark closes">'+quotes.map(r=>
   '<button class="quote" '+quoteTarget(r)+' title="'+esc(r.name+' · '+r.stats.day)+'"><span>'+esc(r.name)+'</span><b>'+
-  f(r.stats.last)+(r.yield?"%":"")+'</b><small class="'+cls(r.stats.change)+'">'+dailyMove(r)+(r.yield?'':' · '+pct(r.stats.pct))+'</small><time>'+shortDate(r.stats.day)+'</time></button>').join("")+'</div>';
+  f(r.stats.last)+(r.yield?"%":"")+'</b><small class="'+cls(r.stats.change)+'">'+dailyMove(r)+(r.yield?'':' · '+pct(r.stats.pct))+'</small><time>'+ (r.intraday?esc(freshnessTime(r.stats.observed_at))+' · quote':shortDate(r.stats.day)+' close')+'</time></button>').join("")+'</div>';
 }
 function leadChart(row){
  const history=row.history.slice(-22), values=history.map(p=>p[1]), path=xy(values,320,62);
@@ -157,9 +161,9 @@ function worldMarkets(){
 function overview(){
  const jumps=[["dispatches","Market dispatches"],["active-charts","Moves in focus"],["rotation-detail","Sector leadership"],["portfolio-brief","Portfolio thesis"]];
  const contents='<div class="edition-contents" aria-label="Overview sections">'+jumps.filter(([id])=>id!=="active-charts"||pulsePicks.length).map(([target,label])=>'<button data-jump="'+target+'">'+label+' <span aria-hidden="true">↓</span></button>').join("")+'<a href="#portfolio">Portfolio monitor ↗</a></div>';
- return quoteStrip()+marketLead()+contents+'<div class="home-grid">'+deskTable()+movers()+'</div>'+worldMarkets()+
+ return quoteStrip()+marketLead()+marketIntelligence()+contents+'<div class="home-grid">'+deskTable()+movers()+'</div>'+worldMarkets()+
   '<div class="grid">'+relativeChart()+sectorRotation()+'</div>'+activeCharts()+marketDispatches()+rotationDetail()+
-  '<div class="grid equal">'+curvePanel()+regimePanel()+'</div>'+overviewTheses();
+  '<div class="grid equal">'+curvePanel()+regimePanel()+'</div>'+overviewTheses()+intelligenceHistory();
 }
 function marketTable(){
  const rows=markets.filter(r=>(!group||r.group===group)&&(r.name+' '+r.symbol).toLowerCase().includes(filter.toLowerCase())).sort((a,b)=>sort==='name'?a.name.localeCompare(b.name):(b.stats[sort]??-Infinity)-(a.stats[sort]??-Infinity));
@@ -186,7 +190,7 @@ function render(){
  $("editionDate").textContent=(view==="portfolio"?"Portfolio valuation · ":"US session · ")+(sourceDate?dateLabel(sourceDate):"Awaiting source");
  $("navigation").innerHTML=Object.keys(views).map(k=>'<a href="#'+k+'" '+(view===k?'aria-current="page" class="on"':'')+'>'+labels[k]+'</a>').join("");
  $("title").textContent=views[view][0];$("dek").textContent=views[view][1];
- $("content").innerHTML=({overview,markets:tape,rates,portfolio:portfolioHealth,research})[view]();
+ $("content").innerHTML=({overview,markets:tape,rates,portfolio:portfolioHealth,research,pipeline:pipelinePanel})[view]();
  if($("search"))$("search").value=filter;
 }
 function focusChart(id){
@@ -196,6 +200,7 @@ function focusChart(id){
  requestAnimationFrame(()=>$("comparisonPanel")?.scrollIntoView({behavior:"smooth",block:"center"}));
 }
 document.addEventListener("click",e=>{
+ if(handleIntelligenceControl(e))return;
  const bookLink=e.target.closest("a[data-open-book]");
  if(bookLink)book=bookLink.dataset.openBook;
  const desk=e.target.closest("a[data-desk]");

@@ -12,6 +12,11 @@ data=json.loads((root/"dashboard/latest.json").read_text())
 errors=quality_errors(data)
 if errors:
     raise SystemExit("Financial quality checks failed:\n" + "\n".join(errors))
+if data.get("intelligence"):
+    from intelligence import build_intelligence
+    actual=dict(data["intelligence"])
+    actual.pop("history",None)
+    assert actual==build_intelligence(data), "Published intelligence differs from its source observations"
 rows=data["markets"]
 assert len(rows)==len({r["id"] for r in rows})
 observed=set()
@@ -39,6 +44,7 @@ html=(root/"dashboard/observatory.html").read_text()
 embedded=re.search(r'<script id="data" type="application/json">(.*?)</script>',html,re.S)
 reader_data = json.loads(embedded[1])
 reader_data.pop("refresh", None)
+reader_data.pop("pipeline", None)
 assert reader_data == data
 assert json.loads((root / "dashboard/status.json").read_text())["created"] == data["created"]
 ledger=(root/"CADENCE.md").read_text().splitlines()[-1]

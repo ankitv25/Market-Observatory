@@ -42,3 +42,13 @@ Validation covers 25 Python regressions, browser controls and layouts at 320, 39
 The 15:57 collection held the November 16 US close. The 18:09 catch-up skipped because the prior schedule had no target between 13:17 and 18:47. Added 16:17 and 17:17 New York targets and hourly retries when core US price dates remain behind after the close. The reader now shows benchmark dates, identifies a pending newer close, and opens new editions with a versioned URL to bypass cached HTML. Regression checks cover a recent collection containing old prices, retry spacing and the post-close target.
 
 Catch-up checks now run every 15 minutes, with delayed-price collection spaced hourly. Verified November 17 closes for all five US benchmarks, 27 Python regression checks and browser tests of the versioned edition reload.
+
+## November 22 intelligence and pipeline reliability
+
+Replaced collection-only success reporting with durable per-attempt records, isolated candidate validation, source transport and observation-date separation, skipped-check outcomes, requested-slot lateness, bounded retries and served-file verification. The live dashboard gains a Refresh & reliability tab backed by the repository ledger, with an offline snapshot. Pages deployment waits for uploaded-artifact visibility to address the observed missing-artifact race.
+
+Added dated market assessments over one, five and 21 matched sessions, explicit eligibility exclusions, opposing signals, transparent heuristic confidence, portfolio review considerations and archived commentary history. Monthly Fed staff credit context keeps its separate frequency. Session quote cards distinguish unfinished quotes from completed analytics. Source datasets are retained and dated; upstream monthly models are not fabricated into current observations.
+
+The requested cadence is 07:17, 09:00, 12:30, 16:30 and 22:47 New York weekdays, 10:17 weekends, with 15-minute catch-up checks. GitHub scheduled delivery remains best effort; missed targets are recorded rather than described as successful updates.
+
+Validation: 61 Python checks cover stale and future observations, aligned return windows, incomplete confirmations, exchange holidays, clean collection retries, rejected candidates, concurrent log updates and the Pages artifact race. The reader replay passed for 42 stored editions across six views and all portfolio books. Chrome checks passed at 1440, 390 and 320 pixels, including horizon controls, source audits and expanded execution records.

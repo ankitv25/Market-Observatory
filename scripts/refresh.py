@@ -11,7 +11,10 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from context_data import collect_curve, collect_macro, collect_books
+from credit_context import collect_credit_context
 from cadence import metadata
+from intelligence import build_intelligence
+from pipeline import pipeline_metadata
 from graphics import render_graphics
 from markets import collect, INSTRUMENTS
 
@@ -142,6 +145,9 @@ def readme(e):
            "**[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**", "",
            f"Edition compiled **{e['created']}** · {len(rows)} market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.", "",
            "## The daily reading",""]
+    if e.get("intelligence"):
+        intelligence=e["intelligence"]
+        lines += [f"**Market assessment:** {intelligence['regime']} · evidence agreement {intelligence['confidence']}/100 · as of {intelligence['asof']}. This score is not a forecast probability.", "", intelligence["summary"], "", "[Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)", ""]
     if e["issues"]:
         lines += ["**Source status.** " + " ".join(e["issues"]), ""]
     for title,body in e["readings"]: lines += [f"**{title}.** {body}", ""]
@@ -177,9 +183,16 @@ def main():
     else:
         now=datetime.now(ET)
         issues=[]
+        source_status={}
         def attempt(label,fn, fallback):
-            try: return fn()
+            started=datetime.now(ET).isoformat(timespec="seconds")
+            try:
+                value=fn()
+                source_status[label]={"outcome":"fetched","started_at":started,"finished_at":datetime.now(ET).isoformat(timespec="seconds")}
+                return value
             except Exception as exc:
+                source_status[label]={"outcome":"retained" if fallback else "unavailable","started_at":started,
+                                      "finished_at":datetime.now(ET).isoformat(timespec="seconds"),"error":str(exc)[:500]}
                 issues.append(f"{label} unavailable ({type(exc).__name__}).")
                 print(f"{label}: {exc}",file=sys.stderr)
                 return fallback
@@ -188,6 +201,7 @@ def main():
         rows=market_rows(fresh,prev.get("markets",[]),now)
         c=attempt("Treasury",collect_curve,prev.get("curve",{}))
         m=attempt("Macro",collect_macro,prev.get("macro",{}))
+        credit=attempt("Credit research",lambda:collect_credit_context(now.isoformat()),prev.get("credit_context",{}))
         books=attempt("Portfolio books",collect_books,prev.get("books",{}))
         for key,value in [("curve",c),("macro",m)]:
             if not value and prev.get(key): issues.append(f"Missing {key} response.")
@@ -203,8 +217,19 @@ def main():
         if retained: issues.append("Prior observations retained for "+", ".join(retained))
         stale=[r["symbol"] for r in rows if (now.date()-date.fromisoformat(r["stats"]["day"])).days>4]
         if stale: issues.append("Observations older than four calendar days: "+", ".join(stale))
-        e={"created":now.isoformat(timespec="seconds"),"markets":rows,"curve":c,"macro":m,"issues":issues,"books":books}
+        e={"created":now.isoformat(timespec="seconds"),"markets":rows,"curve":c,"macro":m,"issues":issues,"books":books,"source_status":source_status,"credit_context":credit}
         e["readings"]=readings(e)
+        e["intelligence"]=build_intelligence(e)
+        archive=ROOT/"editions"/now.strftime("%Y-%m")/(now.strftime("%Y%m%dT%H%M%S%z")+".json")
+        history=[]
+        for path in sorted((ROOT/"editions").glob("*/*.json"),reverse=True):
+            older=json.loads(path.read_text())
+            assessment=older.get("intelligence")
+            if assessment and older["created"] < e["created"]:
+                history.append(dict({key:assessment.get(key) for key in ("created","asof","regime","confidence","summary")},archive=str(path.relative_to(ROOT))))
+            if len(history)>=9: break
+        current=dict({key:e["intelligence"].get(key) for key in ("created","asof","regime","confidence","summary")},archive=str(archive.relative_to(ROOT)))
+        e["intelligence"]["history"]=[current]+history
         write_json(DATA,e)
         # Each distinct publication retains its exact inputs and commentary.
         archive=ROOT/"editions"/now.strftime("%Y-%m")/(now.strftime("%Y%m%dT%H%M%S%z")+".json")
@@ -225,14 +250,14 @@ def main():
     for r in e["markets"]:
         notes.append(f"|{r['name']}|[{r['source']}]({r['url']})|{r['basis']}|{r['stats']['day']}|{r['stats']['base'] or '—'}|")
     (ROOT/"dashboard/SOURCES.md").write_text("\n".join(notes)+"\n")
-    reader_edition = dict(e, refresh=metadata(e["created"]))
+    reader_edition = dict(e, refresh=metadata(e["created"]), pipeline=pipeline_metadata())
     write_json(ROOT / "dashboard/status.json", {"created": e["created"]})
     payload=json.dumps(reader_edition,ensure_ascii=False).replace("<","\\u003c")
     scripts = ROOT / "scripts"
-    modules = ("rotation", "dispatches", "spotlight", "theses", "portfolio", "freshness")
+    modules = ("rotation", "dispatches", "spotlight", "theses", "portfolio", "freshness", "intelligence", "pipeline-view")
     panels = "\n".join((scripts / f"{name}.js").read_text() for name in modules)
     app = (scripts / "monitor.js").read_text().replace("/*EDITION_MODULES*/", panels)
-    style = "\n".join((scripts / name).read_text() for name in ("monitor.css", "portfolio.css"))
+    style = "\n".join((scripts / name).read_text() for name in ("monitor.css", "portfolio.css", "intelligence.css", "pipeline-view.css"))
     reader = (scripts / "reader.html").read_text().replace("/*STYLE*/", style).replace("/*APP*/", app)
     (ROOT / "dashboard/observatory.html").write_text(reader.replace("<!--EDITION-->", payload))
     print(f"Edition {e['created']} · {len(e['markets'])} instruments · {hashlib.sha256(DATA.read_bytes()).hexdigest()[:16]}")
