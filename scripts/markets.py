@@ -10,6 +10,7 @@ import json
 import math
 import re
 import sys
+import time
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -87,14 +88,23 @@ def get_json(url):
 
 
 def chart(symbol, span="1y"):
-    query = f"{YAHOO}{quote(symbol, safe='')}?range={span}&interval=1d"
-    result = get_json(query)["chart"]
-    if result.get("error") or not result.get("result"):
-        raise ValueError(f"No daily history for {symbol}")
-    payload = result["result"][0]
-    if payload["meta"]["symbol"].upper() != symbol.upper():
-        raise ValueError(f"Unexpected series returned for {symbol}")
-    return payload
+    """Retry transient failures on both vendor endpoints before using an archive."""
+    endpoints = (YAHOO, YAHOO.replace("query1.", "query2."), YAHOO)
+    for attempt, endpoint in enumerate(endpoints):
+        try:
+            query = f"{endpoint}{quote(symbol, safe='')}?range={span}&interval=1d"
+            result = get_json(query)["chart"]
+            if result.get("error") or not result.get("result"):
+                raise ValueError(f"No daily history for {symbol}")
+            payload = result["result"][0]
+            if payload["meta"]["symbol"].upper() != symbol.upper():
+                raise ValueError(f"Unexpected series returned for {symbol}")
+            return payload
+        except FETCH_ERRORS as exc:
+            # A nonexistent contract needs at most one check per endpoint.
+            if attempt == len(endpoints)-1 or (attempt and isinstance(exc, HTTPError) and exc.code in (400,404)):
+                raise
+            time.sleep(.35*(attempt+1))
 
 
 def closed_history(payload, now):
@@ -226,21 +236,34 @@ def archived_series(failed):
 
 
 def collect():
-    """Return available histories in registry order and log missing coverage."""
+    """Retry individual feeds before falling back, preserving the actual outcome."""
     now = datetime.now(timezone.utc)
+    errors = {}
 
     def fetch(spec):
         try:
-            return live_record(spec, now)
+            row = live_record(spec, now)
+            row["collection"] = dict(status="live", retrieved_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+            return row
         except FETCH_ERRORS as exc:
-            print(f"markets: {spec['symbol']} unavailable ({exc})", file=sys.stderr)
+            errors[spec["id"]] = f"{type(exc).__name__}: {exc}"
             return None
 
     with ThreadPoolExecutor(max_workers=5) as executor:
         records = list(executor.map(fetch, INSTRUMENTS))
     found = {row["id"]: row for row in records if row}
     failed = [spec for spec in INSTRUMENTS if spec["id"] not in found]
+    # Recheck after the initial burst. Futures may have had mismatched cache
+    # vintages while their generic and named contracts were being fetched.
+    for spec in failed:
+        row = fetch(spec)
+        if row:
+            found[spec["id"]] = row
+    failed = [spec for spec in failed if spec["id"] not in found]
     if failed:
+        for spec in failed:
+            print(f"markets: {spec['symbol']} unavailable ({errors[spec['id']]})", file=sys.stderr)
         for row in archived_series(failed):
+            row["collection"] = dict(status="archive", retrieved_at=datetime.now(timezone.utc).isoformat(timespec="seconds"), error=errors[row["id"]])
             found[row["id"]] = row
     return [found[spec["id"]] for spec in INSTRUMENTS if spec["id"] in found]

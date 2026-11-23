@@ -82,3 +82,10 @@ assert.equal(run('validPipelineRecord({recent:[{stages:[],sources:{groups:{a:nul
 
 assert(run('intelligenceSourceAudit({sources:[{id:"spx",name:"Test index",used_in_score:true}]},{evidence:[]})').includes('Context / excluded'));
 assert(!run('intelligenceSourceAudit({sources:[{id:"spx",name:"Test index",used_in_score:true}]},{evidence:[]})').includes('<td>Scored</td>'));
+
+const healthyReader=openEdition({...editions.at(-1),issues:[],market_health:{checked:62,live:62,archive:0,retained:0,missing:0}});
+assert(healthyReader.run('sourceStatus()').includes('Refresh successful'));
+assert(healthyReader.run('sourceStatus()').includes('62 of 62 market feeds refreshed'));
+const partialReader=openEdition({...editions.at(-1),issues:['Awaiting a new source response for Brent crude'],market_health:{checked:62,live:61,archive:0,retained:1,missing:0}});
+assert(partialReader.run('sourceStatus()').includes('Edition updated · source delays'));
+assert(!partialReader.run('sourceStatus()').includes('Refresh successful'));

@@ -52,3 +52,9 @@ Added dated market assessments over one, five and 21 matched sessions, explicit 
 The requested cadence is 07:17, 09:00, 12:30, 16:30 and 22:47 New York weekdays, 10:17 weekends, with 15-minute catch-up checks. GitHub scheduled delivery remains best effort; missed targets are recorded rather than described as successful updates.
 
 Validation: 61 Python checks cover stale and future observations, aligned return windows, incomplete confirmations, exchange holidays, clean collection retries, rejected candidates, concurrent log updates and the Pages artifact race. The reader replay passed for 42 stored editions across six views and all portfolio books. Chrome checks passed at 1440, 390 and 320 pixels, including horizon controls, source audits and expanded execution records.
+
+## November 23 feed recovery and visible refresh outcomes
+
+The Sunday edition retained warning text for CHF and Brent. Overnight checks skipped collection because the latest scheduled slot had an edition and core US closes were current. The CHF archive attempt was also reported even when its older rows were rejected in favor of the newer saved vendor series.
+
+Added bounded retries across both vendor endpoints and a second pass for failed instruments before archive fallback. Per-instrument collection outcomes distinguish newly fetched, archived and retained rows. The collector reports the source actually selected. Failed market feeds now trigger hourly recovery checks even when core price dates are current. The dashboard displays a successful refresh only when every covered market feed was fetched and no source issue remains; partial collections identify source delays by instrument name, with details available to inspect. Observation timestamps continue to govern analytical eligibility.

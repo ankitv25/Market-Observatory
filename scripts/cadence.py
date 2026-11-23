@@ -64,7 +64,7 @@ def source_freshness(edition, now):
                 treasury=(edition.get("curve", {}).get("rows") or [{}])[-1].get("date"),
                 macro=edition.get("macro", {}).get("date"),
                 portfolios={key: value.get("live", {}).get("date") for key,value in edition.get("books", {}).items()},
-                transport=edition.get("source_status", {}), calendar_source=CALENDAR_SOURCE,
+                transport=edition.get("source_status", {}), market_health=edition.get("market_health", {}), calendar_source=CALENDAR_SOURCE,
                 calendar_verified=now.astimezone(ZONE).year in HOLIDAYS)
 
 
@@ -77,7 +77,11 @@ def refresh_due(created, now, edition=None):
     # while the expected completed US session remains absent.
     if edition and now-collected >= timedelta(hours=1):
         freshness = source_freshness(edition, now)
-        return not freshness["core_total"] or bool(freshness["core_stale"])
+        health = edition.get("market_health", {})
+        source_retry = any(health.get(key,0) for key in ("archive","retained","missing"))
+        if not health:
+            source_retry = any("unavailable" in issue.lower() or "retained" in issue.lower() for issue in edition.get("issues",[]))
+        return source_retry or not freshness["core_total"] or bool(freshness["core_stale"])
     return False
 
 

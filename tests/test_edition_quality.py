@@ -13,6 +13,11 @@ FIXTURE=json.loads((ROOT/"editions/2026-11/20261107T172033-0500.json").read_text
 
 
 class QualityGateTest(unittest.TestCase):
+    def test_success_health_cannot_hide_retained_or_unchecked_inputs(self):
+        edition=copy.deepcopy(FIXTURE)
+        edition["market_health"]={"checked":len(edition["markets"]),"live":len(edition["markets"]),"archive":0,"retained":0,"missing":0}
+        self.assertTrue(any("health does not reconcile" in e for e in quality_errors(edition)))
+
     def test_known_good_edition(self):
         self.assertEqual(quality_errors(FIXTURE),[])
 

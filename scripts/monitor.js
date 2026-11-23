@@ -228,5 +228,5 @@ window.addEventListener("hashchange",()=>{render();window.scrollTo(0,0)});
 /*EDITION_MODULES*/
 $("editionDate").textContent="US session · "+dateLabel(byId.get("spx").stats.day);
 $("compiled").textContent="Edition compiled "+E.created;
-if(E.issues.length)$("alerts").innerHTML='<div class="warning">'+esc(E.issues.join(" "))+'</div>';
+$("alerts").innerHTML=sourceStatus();
 render();

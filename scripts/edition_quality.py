@@ -23,6 +23,21 @@ def quality_errors(edition):
     cutoff = datetime.fromisoformat(edition["created"]).date()
     rows = edition["markets"]
     ids = {r["id"] for r in rows}
+    if "market_health" in edition:
+        health=edition["market_health"]
+        counts={key:sum(r.get("collection",{}).get("status")==key for r in rows) for key in ("live","archive","retained")}
+        expected_health=dict(counts,checked=len(rows),missing=len(set(SERIES)-ids))
+        if health != expected_health or sum(counts.values()) != len(rows):
+            errors.append("Market collection health does not reconcile to instrument outcomes")
+        for row in rows:
+            state=row.get("collection",{})
+            if state.get("status")=="live":
+                try:
+                    retrieved=datetime.fromisoformat(state["retrieved_at"])
+                    if retrieved.utcoffset() is None or retrieved < datetime.fromisoformat(edition["created"]) or row["source"] != "Yahoo Finance":
+                        raise ValueError("Invalid live collection evidence")
+                except (KeyError,TypeError,ValueError):
+                    errors.append(f"{row['id']}: live collection lacks current retrieval evidence")
     for group, required in REQUIRED.items():
         for key in required:
             if key not in ids:

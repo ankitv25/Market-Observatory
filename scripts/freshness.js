@@ -31,7 +31,7 @@ function freshness(now = new Date()) {
   const awaitingClose=close && expected && close<expected;
   const outcomes=typeof pipelineState!=="undefined" ? pipelineState.recent || [] : [];
   const failed=["refresh","pages"].some(kind=>(pipelineState.last_outcome?.[kind] || outcomes.find(r=>r.kind===kind&&r.status!=="skipped"))?.status==="failed");
-  const label = failed ? "Pipeline failure · see reliability" : awaitingClose ? "Awaiting newer US close" : delayed ? "Refresh overdue" : missed ? "Refresh due" : "Collected";
+  const label = failed ? "Pipeline failure · see reliability" : awaitingClose ? "Awaiting newer US close" : delayed ? "Refresh overdue" : missed ? "Refresh due" : E.market_health?.live===E.market_health?.checked && E.market_health?.checked && !E.market_health?.missing && !E.issues.length ? "Refresh successful" : "Published with source notes";
   const families = [
     ["US equities", markets.filter(r=>r.group==="Indices").map(r=>r.stats.day)],
     ["Global equities", markets.filter(r=>r.group==="Global").map(r=>r.stats.day)],
@@ -53,6 +53,15 @@ function freshness(now = new Date()) {
     '</b>. All times America/New_York, with daylight saving changes.</p><p>Checks every 15 minutes retry missed targets. Delayed US closing prices are retried hourly. Exchange holidays can retain the preceding close. GitHub may delay starts. The reader checks for a newer edition every five minutes and loads it automatically.</p><p>Benchmark cards may show a newer timestamped vendor session quote; analytics use completed daily bars. Portfolio valuations and the monthly macro model keep their own source dates.</p>'+
     '<a href="#pipeline">Refresh &amp; reliability →</a> · <a href="'+esc(schedule.workflow)+'">Refresh runs ↗</a> · <a href="'+repo+'/blob/main/CADENCE.md">Full edition ledger ↗</a></div>'+
     '<div><h3>Observation dates</h3><table>'+dates+'</table></div><div><h3>Recent refreshes</h3><ul>'+history+'</ul></div></div></details>';
+}
+function sourceStatus() {
+  const health=E.market_health;
+  if(!health) return E.issues.length?'<details class="source-notes"><summary>Source coverage notes</summary><ul>'+E.issues.map(note=>'<li>'+esc(note)+'</li>').join('')+'</ul></details>':'';
+  const complete=health.checked>0 && health.live===health.checked && !health.missing && !E.issues.length;
+  const message=complete?'Refresh successful':'Edition updated · source delays';
+  const coverage=health.live+' of '+(health.checked+health.missing)+' market feeds refreshed';
+  return '<div class="collection-status '+(complete?'complete':'partial')+'"><div><b>'+message+'</b><span>'+esc(coverage)+' · '+esc(freshnessTime(E.created))+'</span></div><a href="#pipeline">Refresh record →</a></div>'+
+    (E.issues.length?'<details class="source-notes"><summary>See delayed sources and retained observation dates</summary><ul>'+E.issues.map(note=>'<li>'+esc(note)+'</li>').join('')+'</ul></details>':'');
 }
 function renderFreshness() {
   const open=$("cadence-details")?.open;

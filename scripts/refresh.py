@@ -51,7 +51,7 @@ def pct(value):
 
 
 def market_rows(fetched, previous, now):
-    rows = {r["id"]: r for r in previous}
+    rows = {r["id"]: dict(r, collection=dict(status="retained", attempted_at=now.isoformat(timespec="seconds"))) for r in previous}
     for row in fetched:
         clean = {}
         for day, value in row["history"]:
@@ -211,13 +211,15 @@ def main():
         fresh_ids={r["id"] for r in fresh}
         missing = [r["symbol"] for r in INSTRUMENTS if r["id"] not in {x["id"] for x in rows}]
         if missing: issues.append("No usable history for " + ", ".join(missing))
-        archived = [r["symbol"] for r in fresh if r["source"] == "Convexity Lab archive"]
-        if archived: issues.append("Live feed unavailable; checked archived coverage for " + ", ".join(archived))
-        retained=[r["symbol"] for r in rows if r["id"] not in fresh_ids]
-        if retained: issues.append("Prior observations retained for "+", ".join(retained))
+        archived = [r["name"] for r in rows if r.get("collection",{}).get("status")=="archive"]
+        if archived: issues.append("Archived observations used for " + ", ".join(archived))
+        retained=[r["name"] for r in rows if r.get("collection",{}).get("status")=="retained"]
+        if retained: issues.append("Awaiting a new source response for "+", ".join(retained))
         stale=[r["symbol"] for r in rows if (now.date()-date.fromisoformat(r["stats"]["day"])).days>4]
         if stale: issues.append("Observations older than four calendar days: "+", ".join(stale))
         e={"created":now.isoformat(timespec="seconds"),"markets":rows,"curve":c,"macro":m,"issues":issues,"books":books,"source_status":source_status,"credit_context":credit}
+        e["market_health"]={"checked":len(rows),"live":sum(r.get("collection",{}).get("status")=="live" for r in rows),
+                            "archive":len(archived),"retained":len(retained),"missing":len(missing)}
         e["readings"]=readings(e)
         e["intelligence"]=build_intelligence(e)
         archive=ROOT/"editions"/now.strftime("%Y-%m")/(now.strftime("%Y%m%dT%H%M%S%z")+".json")
