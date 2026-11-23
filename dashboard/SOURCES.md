@@ -1,58 +1,59 @@
 # Sources and observation dates
 
-Compiled 2026-11-23T08:16:50-05:00.
+Compiled 2026-11-23T16:16:33-05:00.
 
+- Awaiting a new source response for Hang Seng, Nifty 50
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
-|S&P 500|[Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPC/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
-|Nasdaq Composite|[Yahoo Finance](https://finance.yahoo.com/quote/%5EIXIC/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
-|Nasdaq 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENDX/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
-|Dow Industrials|[Yahoo Finance](https://finance.yahoo.com/quote/%5EDJI/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
-|Russell 2000|[Yahoo Finance](https://finance.yahoo.com/quote/%5ERUT/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
-|Technology|[Yahoo Finance](https://finance.yahoo.com/quote/XLK/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Communication Services|[Yahoo Finance](https://finance.yahoo.com/quote/XLC/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Consumer Discretionary|[Yahoo Finance](https://finance.yahoo.com/quote/XLY/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Consumer Staples|[Yahoo Finance](https://finance.yahoo.com/quote/XLP/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Energy|[Yahoo Finance](https://finance.yahoo.com/quote/XLE/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Financials|[Yahoo Finance](https://finance.yahoo.com/quote/XLF/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Health Care|[Yahoo Finance](https://finance.yahoo.com/quote/XLV/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Industrials|[Yahoo Finance](https://finance.yahoo.com/quote/XLI/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Materials|[Yahoo Finance](https://finance.yahoo.com/quote/XLB/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Real Estate|[Yahoo Finance](https://finance.yahoo.com/quote/XLRE/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Utilities|[Yahoo Finance](https://finance.yahoo.com/quote/XLU/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|US large cap|[Yahoo Finance](https://finance.yahoo.com/quote/SPY/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Equal-weight S&P 500|[Yahoo Finance](https://finance.yahoo.com/quote/RSP/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|US large-cap growth|[Yahoo Finance](https://finance.yahoo.com/quote/IWF/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|US large-cap value|[Yahoo Finance](https://finance.yahoo.com/quote/IWD/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|US small cap|[Yahoo Finance](https://finance.yahoo.com/quote/IWM/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|US momentum|[Yahoo Finance](https://finance.yahoo.com/quote/MTUM/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|US quality|[Yahoo Finance](https://finance.yahoo.com/quote/QUAL/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Euro STOXX 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ESTOXX50E/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
-|FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
+|S&P 500|[Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPC/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
+|Nasdaq Composite|[Yahoo Finance](https://finance.yahoo.com/quote/%5EIXIC/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
+|Nasdaq 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENDX/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
+|Dow Industrials|[Yahoo Finance](https://finance.yahoo.com/quote/%5EDJI/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
+|Russell 2000|[Yahoo Finance](https://finance.yahoo.com/quote/%5ERUT/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
+|Technology|[Yahoo Finance](https://finance.yahoo.com/quote/XLK/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Communication Services|[Yahoo Finance](https://finance.yahoo.com/quote/XLC/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Consumer Discretionary|[Yahoo Finance](https://finance.yahoo.com/quote/XLY/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Consumer Staples|[Yahoo Finance](https://finance.yahoo.com/quote/XLP/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Energy|[Yahoo Finance](https://finance.yahoo.com/quote/XLE/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Financials|[Yahoo Finance](https://finance.yahoo.com/quote/XLF/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Health Care|[Yahoo Finance](https://finance.yahoo.com/quote/XLV/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Industrials|[Yahoo Finance](https://finance.yahoo.com/quote/XLI/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Materials|[Yahoo Finance](https://finance.yahoo.com/quote/XLB/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Real Estate|[Yahoo Finance](https://finance.yahoo.com/quote/XLRE/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Utilities|[Yahoo Finance](https://finance.yahoo.com/quote/XLU/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|US large cap|[Yahoo Finance](https://finance.yahoo.com/quote/SPY/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Equal-weight S&P 500|[Yahoo Finance](https://finance.yahoo.com/quote/RSP/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|US large-cap growth|[Yahoo Finance](https://finance.yahoo.com/quote/IWF/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|US large-cap value|[Yahoo Finance](https://finance.yahoo.com/quote/IWD/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|US small cap|[Yahoo Finance](https://finance.yahoo.com/quote/IWM/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|US momentum|[Yahoo Finance](https://finance.yahoo.com/quote/MTUM/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|US quality|[Yahoo Finance](https://finance.yahoo.com/quote/QUAL/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Euro STOXX 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ESTOXX50E/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
+|FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
 |Nikkei 225|[Yahoo Finance](https://finance.yahoo.com/quote/%5EN225/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
 |Hang Seng|[Yahoo Finance](https://finance.yahoo.com/quote/%5EHSI/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
 |Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
-|S&P/TSX Composite|[Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPTSE/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
-|All-country equity|[Yahoo Finance](https://finance.yahoo.com/quote/ACWI/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Developed ex-US/Canada|[Yahoo Finance](https://finance.yahoo.com/quote/EFA/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Emerging markets|[Yahoo Finance](https://finance.yahoo.com/quote/EEM/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Short Treasuries|[Yahoo Finance](https://finance.yahoo.com/quote/SHY/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Intermediate Treasuries|[Yahoo Finance](https://finance.yahoo.com/quote/IEF/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Long Treasuries|[Yahoo Finance](https://finance.yahoo.com/quote/TLT/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Inflation-linked Treasuries|[Yahoo Finance](https://finance.yahoo.com/quote/TIP/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Investment-grade credit|[Yahoo Finance](https://finance.yahoo.com/quote/LQD/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|High-yield credit|[Yahoo Finance](https://finance.yahoo.com/quote/HYG/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Agency mortgages|[Yahoo Finance](https://finance.yahoo.com/quote/MBB/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Municipal bonds|[Yahoo Finance](https://finance.yahoo.com/quote/MUB/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|EM dollar debt|[Yahoo Finance](https://finance.yahoo.com/quote/EMB/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Senior loans|[Yahoo Finance](https://finance.yahoo.com/quote/BKLN/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Listed real estate|[Yahoo Finance](https://finance.yahoo.com/quote/VNQ/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Listed infrastructure|[Yahoo Finance](https://finance.yahoo.com/quote/IGF/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Managed futures|[Yahoo Finance](https://finance.yahoo.com/quote/DBMF/history/)|ETF session close, price only|2026-11-20|2026-05-20|
-|Physical gold ETF|[Yahoo Finance](https://finance.yahoo.com/quote/GLD/history/)|ETF session close, price only|2026-11-20|2026-05-20|
+|S&P/TSX Composite|[Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPTSE/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
+|All-country equity|[Yahoo Finance](https://finance.yahoo.com/quote/ACWI/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Developed ex-US/Canada|[Yahoo Finance](https://finance.yahoo.com/quote/EFA/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Emerging markets|[Yahoo Finance](https://finance.yahoo.com/quote/EEM/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Short Treasuries|[Yahoo Finance](https://finance.yahoo.com/quote/SHY/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Intermediate Treasuries|[Yahoo Finance](https://finance.yahoo.com/quote/IEF/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Long Treasuries|[Yahoo Finance](https://finance.yahoo.com/quote/TLT/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Inflation-linked Treasuries|[Yahoo Finance](https://finance.yahoo.com/quote/TIP/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Investment-grade credit|[Yahoo Finance](https://finance.yahoo.com/quote/LQD/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|High-yield credit|[Yahoo Finance](https://finance.yahoo.com/quote/HYG/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Agency mortgages|[Yahoo Finance](https://finance.yahoo.com/quote/MBB/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Municipal bonds|[Yahoo Finance](https://finance.yahoo.com/quote/MUB/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|EM dollar debt|[Yahoo Finance](https://finance.yahoo.com/quote/EMB/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Senior loans|[Yahoo Finance](https://finance.yahoo.com/quote/BKLN/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Listed real estate|[Yahoo Finance](https://finance.yahoo.com/quote/VNQ/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Listed infrastructure|[Yahoo Finance](https://finance.yahoo.com/quote/IGF/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Managed futures|[Yahoo Finance](https://finance.yahoo.com/quote/DBMF/history/)|ETF session close, price only|2026-11-23|2026-05-22|
+|Physical gold ETF|[Yahoo Finance](https://finance.yahoo.com/quote/GLD/history/)|ETF session close, price only|2026-11-23|2026-05-22|
 |Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-22|2026-05-22|
-|Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
+|Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
 |US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
 |EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
 |USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
