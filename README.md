@@ -8,17 +8,17 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-23T16:16:33-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-23T18:52:26-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
 **Market assessment:** risk-on · evidence agreement 83/100 · as of 2026-11-23. This score is not a forecast probability.
 
-The US equity benchmark median returned +4.07%, against +5.04% for developed ex-US and emerging-market ETFs. VIX changed -25.88%. High-yield ETF prices outpaced short Treasuries by 0.30 pp. The counterweight is small-cap and equal-weight participation.
+The US equity benchmark median returned +4.07%, against +5.07% for developed ex-US and emerging-market ETFs. VIX changed -25.83%. High-yield ETF prices outpaced short Treasuries by 0.30 pp. The counterweight is small-cap and equal-weight participation.
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
-**Source status.** Awaiting a new source response for Hang Seng, Nifty 50
+**Source status.** Awaiting a new source response for Euro STOXX 50, Hang Seng, Nifty 50
 
 **US equities.** The S&P 500 reached 7,237.17 on 2026-11-23, a move of +326.78 points (+4.73%) against 2026-11-20. Its six-month price change was -3.16% from 2026-05-22.
 
@@ -28,7 +28,7 @@ The US equity benchmark median returned +4.07%, against +5.04% for developed ex-
 
 **Energy.** The Jan 2027 WTI contract closed at $83.41/bbl on 2026-11-20, +0.97 dollars per barrel against its own 2026-11-19 close.
 
-**US rates.** On 2026-11-19 the 2-year par yield was 4.76% and the 10-year was 5.04%. The 2s10s spread stood at +28 bp, changing by +1 bp versus 2026-11-18.
+**US rates.** On 2026-11-20 the 2-year par yield was 4.63% and the 10-year was 4.92%. The 2s10s spread stood at +29 bp, changing by +1 bp versus 2026-11-19.
 
 **Macro backdrop.** The latest available MRS observation is 2026-09-30. Its regime is Neutral with a composite score of 0.2537.
 
@@ -41,7 +41,7 @@ The US equity benchmark median returned +4.07%, against +5.04% for developed ex-
 |[Nasdaq Composite](https://finance.yahoo.com/quote/%5EIXIC/history/) · ^IXIC|24,089.56|+1,471.83|+6.51%|-8.56%|2026-11-23|
 |[Nasdaq 100](https://finance.yahoo.com/quote/%5ENDX/history/) · ^NDX|26,746.10|+1,717.12|+6.86%|-9.28%|2026-11-23|
 |[Dow Industrials](https://finance.yahoo.com/quote/%5EDJI/history/) · ^DJI|49,595.31|+1,447.98|+3.01%|-1.95%|2026-11-23|
-|[Russell 2000](https://finance.yahoo.com/quote/%5ERUT/history/) · ^RUT|2,669.65|+87.86|+3.40%|-6.96%|2026-11-23|
+|[Russell 2000](https://finance.yahoo.com/quote/%5ERUT/history/) · ^RUT|2,669.66|+87.86|+3.40%|-6.96%|2026-11-23|
 |**Sectors**||||||
 |[Technology](https://finance.yahoo.com/quote/XLK/history/) · XLK|162.38|+13.37|+8.97%|-9.98%|2026-11-23|
 |[Communication Services](https://finance.yahoo.com/quote/XLC/history/) · XLC|103.60|+3.57|+3.57%|-10.27%|2026-11-23|
@@ -55,7 +55,7 @@ The US equity benchmark median returned +4.07%, against +5.04% for developed ex-
 |[Real Estate](https://finance.yahoo.com/quote/XLRE/history/) · XLRE|42.90|+0.44|+1.04%|-3.73%|2026-11-23|
 |[Utilities](https://finance.yahoo.com/quote/XLU/history/) · XLU|43.32|+0.63|+1.48%|-4.48%|2026-11-23|
 |**Styles**||||||
-|[US large cap](https://finance.yahoo.com/quote/SPY/history/) · SPY|722.51|+32.70|+4.74%|-3.10%|2026-11-23|
+|[US large cap](https://finance.yahoo.com/quote/SPY/history/) · SPY|722.29|+32.48|+4.71%|-3.13%|2026-11-23|
 |[Equal-weight S&P 500](https://finance.yahoo.com/quote/RSP/history/) · RSP|212.82|+5.38|+2.59%|+3.02%|2026-11-23|
 |[US large-cap growth](https://finance.yahoo.com/quote/IWF/history/) · IWF|109.83|+8.11|+7.97%|-12.14%|2026-11-23|
 |[US large-cap value](https://finance.yahoo.com/quote/IWD/history/) · IWD|252.37|+4.96|+2.00%|+6.79%|2026-11-23|
@@ -68,10 +68,10 @@ The US equity benchmark median returned +4.07%, against +5.04% for developed ex-
 |[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|56,436.65|-3,007.56|-5.06%|-5.63%|2026-11-20|
 |[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,383.74|-27.06|-0.12%|-12.58%|2026-11-23|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,349.65|-450.95|-1.75%|+6.87%|2026-11-23|
-|[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|34,081.44|+891.54|+2.69%|-1.13%|2026-11-23|
+|[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|34,082.12|+892.22|+2.69%|-1.13%|2026-11-23|
 |[All-country equity](https://finance.yahoo.com/quote/ACWI/history/) · ACWI|148.94|+6.35|+4.45%|-4.52%|2026-11-23|
 |[Developed ex-US/Canada](https://finance.yahoo.com/quote/EFA/history/) · EFA|98.76|+2.62|+2.73%|-5.02%|2026-11-23|
-|[Emerging markets](https://finance.yahoo.com/quote/EEM/history/) · EEM|57.80|+3.96|+7.36%|-12.26%|2026-11-23|
+|[Emerging markets](https://finance.yahoo.com/quote/EEM/history/) · EEM|57.83|+3.99|+7.41%|-12.22%|2026-11-23|
 |**Futures**||||||
 |[WTI crude](https://finance.yahoo.com/quote/CLF27.NYM/history/) · CLF27.NYM|83.41|+0.97|+1.18%|+4.69%|2026-11-20|
 |[Brent crude](https://finance.yahoo.com/quote/BZF27.NYM/history/) · BZF27.NYM|92.57|+0.59|+0.64%|+7.25%|2026-11-20|
@@ -103,9 +103,9 @@ The US equity benchmark median returned +4.07%, against +5.04% for developed ex-
 |[Listed real estate](https://finance.yahoo.com/quote/VNQ/history/) · VNQ|93.67|+1.11|+1.20%|-3.20%|2026-11-23|
 |[Listed infrastructure](https://finance.yahoo.com/quote/IGF/history/) · IGF|64.76|+0.57|+0.89%|-3.92%|2026-11-23|
 |[Managed futures](https://finance.yahoo.com/quote/DBMF/history/) · DBMF|31.56|+0.11|+0.35%|+1.51%|2026-11-23|
-|[Physical gold ETF](https://finance.yahoo.com/quote/GLD/history/) · GLD|333.04|+10.17|+3.15%|-19.52%|2026-11-23|
+|[Physical gold ETF](https://finance.yahoo.com/quote/GLD/history/) · GLD|333.02|+10.15|+3.14%|-19.53%|2026-11-23|
 |[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|61,161.91|+1,067.82|+1.78%|-18.98%|2026-11-22|
-|[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|26.60|-9.29|-25.88%|+59.28%|2026-11-23|
+|[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|26.62|-9.27|-25.83%|+59.40%|2026-11-23|
 
 ## Sector rotation
 
@@ -115,21 +115,21 @@ The US equity benchmark median returned +4.07%, against +5.04% for developed ex-
 
 ![US Treasury par yields](assets/curve.svg)
 
-[US Treasury par yields](https://www.federalreserve.gov/datadownload/Output.aspx?rel=H15&series=bf17364827e38702b42a58cf8eaa3f78&lastobs=300&from=&to=&filetype=csv&label=include&layout=seriescolumn) · 2026-11-19 versus 2026-11-18.
+[US Treasury par yields](https://www.federalreserve.gov/datadownload/Output.aspx?rel=H15&series=bf17364827e38702b42a58cf8eaa3f78&lastobs=300&from=&to=&filetype=csv&label=include&layout=seriescolumn) · 2026-11-20 versus 2026-11-19.
 
 | Maturity | Yield | Δ bp |
 |---|---:|---:|
-|1M|4.20%|+10|
-|3M|4.34%|+0|
-|6M|4.42%|-1|
-|1Y|4.62%|+0|
-|2Y|4.76%|-4|
-|3Y|4.81%|-3|
-|5Y|4.86%|-3|
-|7Y|4.94%|-2|
-|10Y|5.04%|-3|
-|20Y|5.43%|-1|
-|30Y|5.40%|-1|
+|1M|4.19%|-1|
+|3M|4.32%|-2|
+|6M|4.38%|-4|
+|1Y|4.51%|-11|
+|2Y|4.63%|-13|
+|3Y|4.65%|-16|
+|5Y|4.71%|-15|
+|7Y|4.80%|-14|
+|10Y|4.92%|-12|
+|20Y|5.34%|-9|
+|30Y|5.31%|-9|
 
 ## Edition record
 
