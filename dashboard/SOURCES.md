@@ -1,8 +1,8 @@
 # Sources and observation dates
 
-Compiled 2026-11-23T18:52:26-05:00.
+Compiled 2026-11-23T20:35:30-05:00.
 
-- Awaiting a new source response for Euro STOXX 50, Hang Seng, Nifty 50
+- Awaiting a new source response for Technology, Communication Services, Consumer Discretionary, Consumer Staples, Energy, Financials, Health Care, Industrials, Materials, Real Estate, Utilities, US large cap, Equal-weight S&P 500, US large-cap growth, US large-cap value, US small cap, US momentum, US quality, Euro STOXX 50, FTSE 100, Hang Seng, Nifty 50, All-country equity, Developed ex-US/Canada, Emerging markets, Short Treasuries, Intermediate Treasuries, Long Treasuries, Inflation-linked Treasuries, Investment-grade credit, High-yield credit, Agency mortgages, Municipal bonds, EM dollar debt, Senior loans, Listed real estate, Listed infrastructure, Managed futures, Physical gold ETF
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
@@ -55,10 +55,10 @@ Compiled 2026-11-23T18:52:26-05:00.
 |Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-22|2026-05-22|
 |Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
 |US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-20|2026-05-20|
-|EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
-|USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
-|GBP/USD|[Yahoo Finance](https://finance.yahoo.com/quote/GBPUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
-|USD/CHF|[Yahoo Finance](https://finance.yahoo.com/quote/CHF%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-20|2026-05-20|
+|EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-23|2026-05-22|
+|USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-23|2026-05-22|
+|GBP/USD|[Yahoo Finance](https://finance.yahoo.com/quote/GBPUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-23|2026-05-22|
+|USD/CHF|[Yahoo Finance](https://finance.yahoo.com/quote/CHF%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-23|2026-05-22|
 |WTI crude|[Yahoo Finance](https://finance.yahoo.com/quote/CLF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-20|2026-05-20|
 |Brent crude|[Yahoo Finance](https://finance.yahoo.com/quote/BZF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-20|2026-05-20|
 |Natural gas|[Yahoo Finance](https://finance.yahoo.com/quote/NGF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-20|2026-05-20|

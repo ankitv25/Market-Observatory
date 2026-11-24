@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-23T18:52:26-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-23T20:35:30-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -18,7 +18,7 @@ The US equity benchmark median returned +4.07%, against +5.07% for developed ex-
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
-**Source status.** Awaiting a new source response for Euro STOXX 50, Hang Seng, Nifty 50
+**Source status.** Awaiting a new source response for Technology, Communication Services, Consumer Discretionary, Consumer Staples, Energy, Financials, Health Care, Industrials, Materials, Real Estate, Utilities, US large cap, Equal-weight S&P 500, US large-cap growth, US large-cap value, US small cap, US momentum, US quality, Euro STOXX 50, FTSE 100, Hang Seng, Nifty 50, All-country equity, Developed ex-US/Canada, Emerging markets, Short Treasuries, Intermediate Treasuries, Long Treasuries, Inflation-linked Treasuries, Investment-grade credit, High-yield credit, Agency mortgages, Municipal bonds, EM dollar debt, Senior loans, Listed real estate, Listed infrastructure, Managed futures, Physical gold ETF
 
 **US equities.** The S&P 500 reached 7,237.17 on 2026-11-23, a move of +326.78 points (+4.73%) against 2026-11-20. Its six-month price change was -3.16% from 2026-05-22.
 
@@ -84,10 +84,10 @@ The US equity benchmark median returned +4.07%, against +5.07% for developed ex-
 |[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|106.84|+0.97|+0.91%|-1.99%|2026-11-20|
 |**FX**||||||
 |[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|103.8100|-0.0900|-0.09%|+4.74%|2026-11-20|
-|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0970|-0.0002|-0.02%|-5.49%|2026-11-20|
-|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.7070|+0.3260|+0.20%|+0.42%|2026-11-20|
-|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3086|-0.0060|-0.46%|-2.31%|2026-11-20|
-|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8441|+0.0006|+0.07%|+7.01%|2026-11-20|
+|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0972|+0.0002|+0.02%|-5.59%|2026-11-23|
+|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|158.9310|-0.7760|-0.49%|-0.05%|2026-11-23|
+|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3095|+0.0008|+0.06%|-2.52%|2026-11-23|
+|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8409|-0.0032|-0.38%|+6.92%|2026-11-23|
 |**Credit**||||||
 |[Short Treasuries](https://finance.yahoo.com/quote/SHY/history/) · SHY|81.57|-0.04|-0.05%|-0.67%|2026-11-23|
 |[Intermediate Treasuries](https://finance.yahoo.com/quote/IEF/history/) · IEF|91.64|-0.01|-0.01%|-2.39%|2026-11-23|
