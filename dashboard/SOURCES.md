@@ -1,10 +1,8 @@
 # Sources and observation dates
 
-Compiled 2026-11-24T17:26:20-05:00.
+Compiled 2026-11-24T18:26:38-05:00.
 
-- Macro unavailable (HTTPError).
-- Portfolio books unavailable (HTTPError).
-- Awaiting a new source response for Nikkei 225, Hang Seng
+- Awaiting a new source response for Euro STOXX 50, Nikkei 225, Hang Seng
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
