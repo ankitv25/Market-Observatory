@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-23T20:35:30-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-23T22:24:09-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -17,8 +17,6 @@ Edition compiled **2026-11-23T20:35:30-05:00** · 62 market instruments · dated
 The US equity benchmark median returned +4.07%, against +5.07% for developed ex-US and emerging-market ETFs. VIX changed -25.83%. High-yield ETF prices outpaced short Treasuries by 0.30 pp. The counterweight is small-cap and equal-weight participation.
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
-
-**Source status.** Awaiting a new source response for Technology, Communication Services, Consumer Discretionary, Consumer Staples, Energy, Financials, Health Care, Industrials, Materials, Real Estate, Utilities, US large cap, Equal-weight S&P 500, US large-cap growth, US large-cap value, US small cap, US momentum, US quality, Euro STOXX 50, FTSE 100, Hang Seng, Nifty 50, All-country equity, Developed ex-US/Canada, Emerging markets, Short Treasuries, Intermediate Treasuries, Long Treasuries, Inflation-linked Treasuries, Investment-grade credit, High-yield credit, Agency mortgages, Municipal bonds, EM dollar debt, Senior loans, Listed real estate, Listed infrastructure, Managed futures, Physical gold ETF
 
 **US equities.** The S&P 500 reached 7,237.17 on 2026-11-23, a move of +326.78 points (+4.73%) against 2026-11-20. Its six-month price change was -3.16% from 2026-05-22.
 
@@ -64,7 +62,7 @@ The US equity benchmark median returned +4.07%, against +5.07% for developed ex-
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|53.86|+1.99|+3.84%|+0.49%|2026-11-23|
 |**Global**||||||
 |[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,074.47|+132.52|+2.23%|+0.91%|2026-11-23|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,480.82|+134.52|+1.30%|+0.14%|2026-11-23|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,480.80|+134.50|+1.30%|+0.14%|2026-11-23|
 |[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|56,436.65|-3,007.56|-5.06%|-5.63%|2026-11-20|
 |[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,383.74|-27.06|-0.12%|-12.58%|2026-11-23|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,349.65|-450.95|-1.75%|+6.87%|2026-11-23|

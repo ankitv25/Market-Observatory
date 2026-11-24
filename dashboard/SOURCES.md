@@ -1,8 +1,7 @@
 # Sources and observation dates
 
-Compiled 2026-11-23T20:35:30-05:00.
+Compiled 2026-11-23T22:24:09-05:00.
 
-- Awaiting a new source response for Technology, Communication Services, Consumer Discretionary, Consumer Staples, Energy, Financials, Health Care, Industrials, Materials, Real Estate, Utilities, US large cap, Equal-weight S&P 500, US large-cap growth, US large-cap value, US small cap, US momentum, US quality, Euro STOXX 50, FTSE 100, Hang Seng, Nifty 50, All-country equity, Developed ex-US/Canada, Emerging markets, Short Treasuries, Intermediate Treasuries, Long Treasuries, Inflation-linked Treasuries, Investment-grade credit, High-yield credit, Agency mortgages, Municipal bonds, EM dollar debt, Senior loans, Listed real estate, Listed infrastructure, Managed futures, Physical gold ETF
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
