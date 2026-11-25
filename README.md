@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-25T04:10:31-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-25T08:33:54-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -65,7 +65,7 @@ The US equity benchmark median returned +0.04%, against -0.92% for developed ex-
 |[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,467.10|-13.70|-0.13%|+0.01%|2026-11-24|
 |[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|57,011.62|-1,633.01|-2.78%|-12.50%|2026-11-25|
 |[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|21,966.01|-253.64|-1.14%|-14.22%|2026-11-25|
-|[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,349.65|-450.95|-1.75%|+6.87%|2026-11-23|
+|[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,819.25|+469.60|+1.85%|+7.44%|2026-11-25|
 |[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|33,962.30|-119.80|-0.35%|-1.48%|2026-11-24|
 |[All-country equity](https://finance.yahoo.com/quote/ACWI/history/) · ACWI|148.14|-0.80|-0.54%|-5.03%|2026-11-24|
 |[Developed ex-US/Canada](https://finance.yahoo.com/quote/EFA/history/) · EFA|98.88|+0.12|+0.12%|-4.90%|2026-11-24|

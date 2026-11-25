@@ -1,6 +1,6 @@
 # Sources and observation dates
 
-Compiled 2026-11-25T04:10:31-05:00.
+Compiled 2026-11-25T08:33:54-05:00.
 
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
@@ -32,7 +32,7 @@ Compiled 2026-11-25T04:10:31-05:00.
 |FTSE 100|[Yahoo Finance](https://finance.yahoo.com/quote/%5EFTSE/history/)|Cash index session close, index points|2026-11-24|2026-05-22|
 |Nikkei 225|[Yahoo Finance](https://finance.yahoo.com/quote/%5EN225/history/)|Cash index session close, index points|2026-11-25|2026-05-25|
 |Hang Seng|[Yahoo Finance](https://finance.yahoo.com/quote/%5EHSI/history/)|Cash index session close, index points|2026-11-25|2026-05-22|
-|Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-23|2026-05-22|
+|Nifty 50|[Yahoo Finance](https://finance.yahoo.com/quote/%5ENSEI/history/)|Cash index session close, index points|2026-11-25|2026-05-25|
 |S&P/TSX Composite|[Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPTSE/history/)|Cash index session close, index points|2026-11-24|2026-05-22|
 |All-country equity|[Yahoo Finance](https://finance.yahoo.com/quote/ACWI/history/)|ETF session close, price only|2026-11-24|2026-05-22|
 |Developed ex-US/Canada|[Yahoo Finance](https://finance.yahoo.com/quote/EFA/history/)|ETF session close, price only|2026-11-24|2026-05-22|
