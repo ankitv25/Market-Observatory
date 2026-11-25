@@ -1,8 +1,8 @@
 # Sources and observation dates
 
-Compiled 2026-11-25T16:40:34-05:00.
+Compiled 2026-11-25T18:01:42-05:00.
 
-- Awaiting a new source response for Nikkei 225, Hang Seng, Nifty 50
+- Awaiting a new source response for Euro STOXX 50, Nikkei 225, Hang Seng, Nifty 50
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
