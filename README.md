@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-24T18:26:38-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-24T19:39:26-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -18,7 +18,7 @@ The US equity benchmark median returned +0.04%, against -0.92% for developed ex-
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
-**Source status.** Awaiting a new source response for Euro STOXX 50, Nikkei 225, Hang Seng
+**Source status.** Awaiting a new source response for Euro STOXX 50, FTSE 100, Nikkei 225, Hang Seng
 
 **US equities.** The S&P 500 reached 7,201.09 on 2026-11-24, a move of -36.08 points (-0.50%) against 2026-11-23. Its six-month price change was -3.64% from 2026-05-22.
 
@@ -30,7 +30,7 @@ The US equity benchmark median returned +0.04%, against -0.92% for developed ex-
 
 **US rates.** On 2026-11-23 the 2-year par yield was 4.63% and the 10-year was 4.92%. The 2s10s spread stood at +29 bp, changing by +0 bp versus 2026-11-20.
 
-**Macro backdrop.** The latest available MRS observation is 2026-09-30. Its regime is Neutral with a composite score of 0.2537.
+**Macro backdrop.** The latest available MRS observation is 2026-09-30. Its regime is Neutral with a composite score of 0.2463.
 
 ## Market tape
 
@@ -84,10 +84,10 @@ The US equity benchmark median returned +0.04%, against -0.92% for developed ex-
 |[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|106.75|-0.09|-0.09%|-1.95%|2026-11-23|
 |**FX**||||||
 |[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|104.3200|+0.5100|+0.49%|+5.03%|2026-11-23|
-|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0972|+0.0002|+0.02%|-5.59%|2026-11-23|
-|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|158.9310|-0.7760|-0.49%|-0.05%|2026-11-23|
-|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3095|+0.0008|+0.06%|-2.52%|2026-11-23|
-|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8409|-0.0032|-0.38%|+6.92%|2026-11-23|
+|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0908|-0.0063|-0.58%|-6.14%|2026-11-24|
+|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.0090|+0.0780|+0.05%|-0.01%|2026-11-24|
+|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3035|-0.0060|-0.46%|-2.96%|2026-11-24|
+|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8415|+0.0005|+0.06%|+6.99%|2026-11-24|
 |**Credit**||||||
 |[Short Treasuries](https://finance.yahoo.com/quote/SHY/history/) · SHY|81.57|+0.00|+0.00%|-0.67%|2026-11-24|
 |[Intermediate Treasuries](https://finance.yahoo.com/quote/IEF/history/) · IEF|91.64|+0.00|+0.00%|-2.39%|2026-11-24|
