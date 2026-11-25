@@ -1,6 +1,6 @@
 # Research notebook
 
-Edition 2026-11-24T19:39:26-05:00. These are mechanically evaluated market questions. A personal investment view belongs in a separately authored note.
+Edition 2026-11-25T04:10:31-05:00. These are mechanically evaluated market questions. A personal investment view belongs in a separately authored note.
 
 ## Has sector leadership broadened?
 

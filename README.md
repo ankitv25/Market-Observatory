@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-24T19:39:26-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-25T04:10:31-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -18,15 +18,13 @@ The US equity benchmark median returned +0.04%, against -0.92% for developed ex-
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
-**Source status.** Awaiting a new source response for Euro STOXX 50, FTSE 100, Nikkei 225, Hang Seng
-
 **US equities.** The S&P 500 reached 7,201.09 on 2026-11-24, a move of -36.08 points (-0.50%) against 2026-11-23. Its six-month price change was -3.64% from 2026-05-22.
 
 **Sector participation.** 9 of 11 reporting sector ETFs rose on 2026-11-24. Health Care led at +2.95%; Technology finished at -3.26%.
 
 **Equity style.** On 2026-11-24 large-cap growth (-1.77%) finished 2.39 percentage points behind large-cap value (+0.63%), measured by IWF and IWD.
 
-**Energy.** The Jan 2027 WTI contract closed at $80.17/bbl on 2026-11-23, -3.24 dollars per barrel against its own 2026-11-20 close.
+**Energy.** The Jan 2027 WTI contract closed at $82.05/bbl on 2026-11-24, +1.88 dollars per barrel against its own 2026-11-23 close.
 
 **US rates.** On 2026-11-23 the 2-year par yield was 4.63% and the 10-year was 4.92%. The 2s10s spread stood at +29 bp, changing by +0 bp versus 2026-11-20.
 
@@ -38,7 +36,7 @@ The US equity benchmark median returned +0.04%, against -0.92% for developed ex-
 |---|---:|---:|---:|---:|---|
 |**Indices**||||||
 |[S&P 500](https://finance.yahoo.com/quote/%5EGSPC/history/) · ^GSPC|7,201.09|-36.08|-0.50%|-3.64%|2026-11-24|
-|[Nasdaq Composite](https://finance.yahoo.com/quote/%5EIXIC/history/) · ^IXIC|23,733.54|-356.03|-1.48%|-9.91%|2026-11-24|
+|[Nasdaq Composite](https://finance.yahoo.com/quote/%5EIXIC/history/) · ^IXIC|23,733.54|-356.02|-1.48%|-9.91%|2026-11-24|
 |[Nasdaq 100](https://finance.yahoo.com/quote/%5ENDX/history/) · ^NDX|26,214.17|-531.93|-1.99%|-11.08%|2026-11-24|
 |[Dow Industrials](https://finance.yahoo.com/quote/%5EDJI/history/) · ^DJI|50,018.70|+423.39|+0.85%|-1.11%|2026-11-24|
 |[Russell 2000](https://finance.yahoo.com/quote/%5ERUT/history/) · ^RUT|2,684.94|+15.28|+0.57%|-6.42%|2026-11-24|
@@ -64,26 +62,26 @@ The US equity benchmark median returned +0.04%, against -0.92% for developed ex-
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|54.06|+0.20|+0.37%|+0.87%|2026-11-24|
 |**Global**||||||
 |[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,003.76|-70.71|-1.16%|-0.26%|2026-11-24|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,467.07|-13.73|-0.13%|+0.01%|2026-11-24|
-|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|58,644.63|+2,207.98|+3.91%|-7.41%|2026-11-24|
-|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,219.65|-164.09|-0.73%|-13.22%|2026-11-24|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,467.10|-13.70|-0.13%|+0.01%|2026-11-24|
+|[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|57,011.62|-1,633.01|-2.78%|-12.50%|2026-11-25|
+|[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|21,966.01|-253.64|-1.14%|-14.22%|2026-11-25|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,349.65|-450.95|-1.75%|+6.87%|2026-11-23|
 |[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|33,962.30|-119.80|-0.35%|-1.48%|2026-11-24|
 |[All-country equity](https://finance.yahoo.com/quote/ACWI/history/) · ACWI|148.14|-0.80|-0.54%|-5.03%|2026-11-24|
 |[Developed ex-US/Canada](https://finance.yahoo.com/quote/EFA/history/) · EFA|98.88|+0.12|+0.12%|-4.90%|2026-11-24|
 |[Emerging markets](https://finance.yahoo.com/quote/EEM/history/) · EEM|56.69|-1.14|-1.97%|-13.95%|2026-11-24|
 |**Futures**||||||
-|[WTI crude](https://finance.yahoo.com/quote/CLF27.NYM/history/) · CLF27.NYM|80.17|-3.24|-3.88%|+0.65%|2026-11-23|
-|[Brent crude](https://finance.yahoo.com/quote/BZF27.NYM/history/) · BZF27.NYM|89.37|-3.20|-3.46%|+3.46%|2026-11-23|
-|[Natural gas](https://finance.yahoo.com/quote/NGF27.NYM/history/) · NGF27.NYM|3.52|-0.22|-6.00%|-19.90%|2026-11-23|
-|[Gold](https://finance.yahoo.com/quote/GCZ26.CMX/history/) · GCZ26.CMX|3,651.40|+136.00|+3.87%|-21.02%|2026-11-23|
-|[Silver](https://finance.yahoo.com/quote/SIZ26.CMX/history/) · SIZ26.CMX|43.17|+2.10|+5.13%|-44.35%|2026-11-23|
-|[Copper](https://finance.yahoo.com/quote/HGH27.CMX/history/) · HGH27.CMX|5.72|+0.15|+2.68%|-13.55%|2026-11-23|
-|[Corn](https://finance.yahoo.com/quote/ZCH27.CBT/history/) · ZCH27.CBT|449.75|+1.00|+0.22%|-10.18%|2026-11-23|
-|[S&P 500 E-mini](https://finance.yahoo.com/quote/ESZ26.CME/history/) · ESZ26.CME|7,254.50|+319.50|+4.61%|-4.73%|2026-11-23|
-|[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|106.75|-0.09|-0.09%|-1.95%|2026-11-23|
+|[WTI crude](https://finance.yahoo.com/quote/CLF27.NYM/history/) · CLF27.NYM|82.05|+1.88|+2.35%|+3.01%|2026-11-24|
+|[Brent crude](https://finance.yahoo.com/quote/BZF27.NYM/history/) · BZF27.NYM|91.40|+2.03|+2.27%|+5.81%|2026-11-24|
+|[Natural gas](https://finance.yahoo.com/quote/NGF27.NYM/history/) · NGF27.NYM|3.66|+0.14|+3.97%|-16.71%|2026-11-24|
+|[Gold](https://finance.yahoo.com/quote/GCZ26.CMX/history/) · GCZ26.CMX|3,561.90|-89.50|-2.45%|-22.96%|2026-11-24|
+|[Silver](https://finance.yahoo.com/quote/SIZ26.CMX/history/) · SIZ26.CMX|40.78|-2.39|-5.54%|-47.44%|2026-11-24|
+|[Copper](https://finance.yahoo.com/quote/HGH27.CMX/history/) · HGH27.CMX|5.45|-0.27|-4.70%|-17.62%|2026-11-24|
+|[Corn](https://finance.yahoo.com/quote/ZCH27.CBT/history/) · ZCH27.CBT|450.25|+0.50|+0.11%|-10.08%|2026-11-24|
+|[S&P 500 E-mini](https://finance.yahoo.com/quote/ESZ26.CME/history/) · ESZ26.CME|7,217.50|-37.00|-0.51%|-5.21%|2026-11-24|
+|[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|106.86|+0.11|+0.10%|-1.85%|2026-11-24|
 |**FX**||||||
-|[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|104.3200|+0.5100|+0.49%|+5.03%|2026-11-23|
+|[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|103.8100|-0.5100|-0.49%|+4.52%|2026-11-24|
 |[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0908|-0.0063|-0.58%|-6.14%|2026-11-24|
 |[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.0090|+0.0780|+0.05%|-0.01%|2026-11-24|
 |[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3035|-0.0060|-0.46%|-2.96%|2026-11-24|
@@ -104,7 +102,7 @@ The US equity benchmark median returned +0.04%, against -0.92% for developed ex-
 |[Listed infrastructure](https://finance.yahoo.com/quote/IGF/history/) · IGF|65.17|+0.41|+0.63%|-3.31%|2026-11-24|
 |[Managed futures](https://finance.yahoo.com/quote/DBMF/history/) · DBMF|31.58|+0.02|+0.06%|+1.58%|2026-11-24|
 |[Physical gold ETF](https://finance.yahoo.com/quote/GLD/history/) · GLD|325.45|-7.57|-2.27%|-21.35%|2026-11-24|
-|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|61,210.98|+49.07|+0.08%|-20.17%|2026-11-23|
+|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|59,747.77|-1,463.22|-2.39%|-22.39%|2026-11-24|
 |[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|26.36|-0.26|-0.98%|+57.84%|2026-11-24|
 
 ## Sector rotation
