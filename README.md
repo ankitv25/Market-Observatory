@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-26T08:12:59-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-26T15:21:21-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -17,6 +17,8 @@ Edition compiled **2026-11-26T08:12:59-05:00** · 62 market instruments · dated
 The US equity benchmark median returned +0.23%, against -0.10% for developed ex-US and emerging-market ETFs. VIX changed +7.32%. High-yield ETF prices outpaced short Treasuries by 0.03 pp. The counterweight is equity volatility.
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
+
+**Source status.** Awaiting a new source response for Nikkei 225, Hang Seng, Nifty 50
 
 **US equities.** The S&P 500 reached 7,182.78 on 2026-11-25, a move of -18.31 points (-0.25%) against 2026-11-24. Its six-month price change was -3.89% from 2026-05-22.
 
@@ -61,8 +63,8 @@ The US equity benchmark median returned +0.23%, against -0.10% for developed ex-
 |[US momentum](https://finance.yahoo.com/quote/MTUM/history/) · MTUM|61.51|-0.38|-0.61%|-18.96%|2026-11-25|
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|54.03|-0.03|-0.06%|+0.81%|2026-11-25|
 |**Global**||||||
-|[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|5,894.46|-109.30|-1.82%|-2.08%|2026-11-25|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,426.90|-40.20|-0.38%|-0.38%|2026-11-25|
+|[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,014.74|+120.28|+2.04%|-0.81%|2026-11-26|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,609.30|+182.40|+1.75%|+1.12%|2026-11-26|
 |[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|57,499.16|+487.54|+0.86%|-11.53%|2026-11-26|
 |[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,226.88|+260.87|+1.19%|-13.17%|2026-11-26|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,884.50|+65.25|+0.25%|+8.24%|2026-11-26|
