@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-25T18:01:42-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-25T20:03:18-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -18,7 +18,7 @@ The US equity benchmark median returned +0.23%, against -0.10% for developed ex-
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
-**Source status.** Awaiting a new source response for Euro STOXX 50, Nikkei 225, Hang Seng, Nifty 50
+**Source status.** Awaiting a new source response for Technology, Communication Services, Consumer Discretionary, Consumer Staples, Energy, Financials, Health Care, Industrials, Materials, Real Estate, Utilities, US large cap, Equal-weight S&P 500, US large-cap growth, US large-cap value, US small cap, US momentum, US quality, Euro STOXX 50, FTSE 100, Nikkei 225, Hang Seng, Nifty 50, All-country equity, Developed ex-US/Canada, Emerging markets, Short Treasuries, Intermediate Treasuries, Long Treasuries, Inflation-linked Treasuries, Investment-grade credit, High-yield credit, Agency mortgages, Municipal bonds, EM dollar debt, Senior loans, Listed real estate, Listed infrastructure, Managed futures, Physical gold ETF
 
 **US equities.** The S&P 500 reached 7,182.78 on 2026-11-25, a move of -18.31 points (-0.25%) against 2026-11-24. Its six-month price change was -3.89% from 2026-05-22.
 
@@ -30,7 +30,7 @@ The US equity benchmark median returned +0.23%, against -0.10% for developed ex-
 
 **US rates.** On 2026-11-24 the 2-year par yield was 4.63% and the 10-year was 4.91%. The 2s10s spread stood at +28 bp, changing by -1 bp versus 2026-11-23.
 
-**Macro backdrop.** The latest available MRS observation is 2026-09-30. Its regime is Neutral with a composite score of 0.2463.
+**Macro backdrop.** The latest available MRS observation is 2026-10-31. Its regime is Neutral with a composite score of 0.166.
 
 ## Market tape
 
@@ -84,10 +84,10 @@ The US equity benchmark median returned +0.23%, against -0.10% for developed ex-
 |[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|106.86|+0.11|+0.10%|-1.85%|2026-11-24|
 |**FX**||||||
 |[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|103.8100|-0.5100|-0.49%|+4.52%|2026-11-24|
-|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0908|-0.0063|-0.58%|-6.14%|2026-11-24|
-|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.0090|+0.0780|+0.05%|-0.01%|2026-11-24|
-|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3035|-0.0060|-0.46%|-2.96%|2026-11-24|
-|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8415|+0.0005|+0.06%|+6.99%|2026-11-24|
+|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0962|+0.0054|+0.50%|-5.84%|2026-11-25|
+|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.2620|+0.2530|+0.16%|+0.20%|2026-11-25|
+|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3112|+0.0077|+0.59%|-2.74%|2026-11-25|
+|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8358|-0.0057|-0.68%|+6.84%|2026-11-25|
 |**Credit**||||||
 |[Short Treasuries](https://finance.yahoo.com/quote/SHY/history/) · SHY|81.64|+0.07|+0.09%|-0.58%|2026-11-25|
 |[Intermediate Treasuries](https://finance.yahoo.com/quote/IEF/history/) · IEF|92.06|+0.42|+0.46%|-1.94%|2026-11-25|
