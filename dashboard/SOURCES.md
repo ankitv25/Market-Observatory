@@ -1,6 +1,6 @@
 # Sources and observation dates
 
-Compiled 2026-11-26T16:29:58-05:00.
+Compiled 2026-11-26T17:55:06-05:00.
 
 - Awaiting a new source response for Nikkei 225, Hang Seng, Nifty 50
 
