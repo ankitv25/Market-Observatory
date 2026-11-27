@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-26T20:04:20-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-26T22:00:24-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -17,8 +17,6 @@ Edition compiled **2026-11-26T20:04:20-05:00** · 62 market instruments · dated
 The US equity benchmark median returned +0.23%, against -0.10% for developed ex-US and emerging-market ETFs. High-yield ETF prices outpaced short Treasuries by 0.03 pp.
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
-
-**Source status.** Awaiting a new source response for Euro STOXX 50, FTSE 100, Nikkei 225, Hang Seng, Nifty 50
 
 **US equities.** The S&P 500 reached 7,182.78 on 2026-11-25, a move of -18.31 points (-0.25%) against 2026-11-24. Its six-month price change was -3.89% from 2026-05-22.
 
