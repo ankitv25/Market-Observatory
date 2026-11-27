@@ -1,6 +1,6 @@
 # Sources and observation dates
 
-Compiled 2026-11-27T16:13:33-05:00.
+Compiled 2026-11-27T17:37:15-05:00.
 
 - Awaiting a new source response for Nikkei 225, Hang Seng, Nifty 50, Brent crude
 
@@ -53,7 +53,7 @@ Compiled 2026-11-27T16:13:33-05:00.
 |Managed futures|[Yahoo Finance](https://finance.yahoo.com/quote/DBMF/history/)|ETF session close, price only|2026-11-27|2026-05-27|
 |Physical gold ETF|[Yahoo Finance](https://finance.yahoo.com/quote/GLD/history/)|ETF session close, price only|2026-11-27|2026-05-27|
 |Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-26|2026-05-26|
-|Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-26|2026-05-26|
+|Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-27|2026-05-27|
 |US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-27|2026-05-27|
 |EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-26|2026-05-26|
 |USD/JPY|[Yahoo Finance](https://finance.yahoo.com/quote/JPY%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-26|2026-05-26|

@@ -8,13 +8,13 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-27T16:13:33-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-27T17:37:15-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
-**Market assessment:** risk-on · evidence agreement 67/100 · as of 2026-11-27. This score is not a forecast probability.
+**Market assessment:** risk-on · evidence agreement 83/100 · as of 2026-11-27. This score is not a forecast probability.
 
-The US equity benchmark median returned +1.65%, against +2.18% for developed ex-US and emerging-market ETFs. High-yield ETF prices outpaced short Treasuries by 0.14 pp.
+The US equity benchmark median returned +1.65%, against +2.18% for developed ex-US and emerging-market ETFs. VIX changed -15.84%. High-yield ETF prices outpaced short Treasuries by 0.14 pp.
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
@@ -28,7 +28,7 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 
 **Energy.** The Jan 2027 WTI contract closed at $83.08/bbl on 2026-11-27, -0.60 dollars per barrel against its own 2026-11-25 close.
 
-**US rates.** On 2026-11-24 the 2-year par yield was 4.63% and the 10-year was 4.91%. The 2s10s spread stood at +28 bp, changing by -1 bp versus 2026-11-23.
+**US rates.** On 2026-11-25 the 2-year par yield was 4.61% and the 10-year was 4.85%. The 2s10s spread stood at +24 bp, changing by -4 bp versus 2026-11-24.
 
 **Macro backdrop.** The latest available MRS observation is 2026-10-31. Its regime is Neutral with a composite score of 0.166.
 
@@ -83,7 +83,7 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 |[S&P 500 E-mini](https://finance.yahoo.com/quote/ESZ26.CME/history/) · ESZ26.CME|7,308.25|+112.50|+1.56%|-4.65%|2026-11-27|
 |[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|106.66|-0.53|-0.50%|-2.68%|2026-11-27|
 |**FX**||||||
-|[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|104.0420|+0.3720|+0.36%|+4.87%|2026-11-27|
+|[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|104.0140|+0.3440|+0.33%|+4.84%|2026-11-27|
 |[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0970|+0.0008|+0.07%|-5.73%|2026-11-26|
 |[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.2150|-0.0470|-0.03%|+0.16%|2026-11-26|
 |[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3113|+0.0001|+0.01%|-2.84%|2026-11-26|
@@ -105,7 +105,7 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 |[Managed futures](https://finance.yahoo.com/quote/DBMF/history/) · DBMF|31.66|+0.15|+0.48%|+2.10%|2026-11-27|
 |[Physical gold ETF](https://finance.yahoo.com/quote/GLD/history/) · GLD|334.40|+6.95|+2.12%|-18.14%|2026-11-27|
 |[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|60,494.71|+116.51|+0.19%|-20.22%|2026-11-26|
-|[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|26.80|-1.49|-5.27%|+57.55%|2026-11-26|
+|[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|23.81|-2.99|-11.16%|+46.16%|2026-11-27|
 
 ## Sector rotation
 
@@ -115,21 +115,21 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 
 ![US Treasury par yields](assets/curve.svg)
 
-[US Treasury par yields](https://www.federalreserve.gov/datadownload/Output.aspx?rel=H15&series=bf17364827e38702b42a58cf8eaa3f78&lastobs=300&from=&to=&filetype=csv&label=include&layout=seriescolumn) · 2026-11-24 versus 2026-11-23.
+[US Treasury par yields](https://www.federalreserve.gov/datadownload/Output.aspx?rel=H15&series=bf17364827e38702b42a58cf8eaa3f78&lastobs=300&from=&to=&filetype=csv&label=include&layout=seriescolumn) · 2026-11-25 versus 2026-11-24.
 
 | Maturity | Yield | Δ bp |
 |---|---:|---:|
-|1M|4.21%|+1|
-|3M|4.36%|-1|
-|6M|4.46%|+1|
-|1Y|4.59%|+2|
-|2Y|4.63%|+0|
-|3Y|4.67%|-2|
-|5Y|4.69%|-5|
-|7Y|4.79%|-2|
-|10Y|4.91%|-1|
-|20Y|5.33%|+0|
-|30Y|5.30%|+1|
+|1M|4.27%|+6|
+|3M|4.34%|-2|
+|6M|4.44%|-2|
+|1Y|4.56%|-3|
+|2Y|4.61%|-2|
+|3Y|4.64%|-3|
+|5Y|4.65%|-4|
+|7Y|4.74%|-5|
+|10Y|4.85%|-6|
+|20Y|5.28%|-5|
+|30Y|5.24%|-6|
 
 ## Edition record
 
