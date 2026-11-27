@@ -1,10 +1,10 @@
 # Research notebook
 
-Edition 2026-11-27T08:10:27-05:00. These are mechanically evaluated market questions. A personal investment view belongs in a separately authored note.
+Edition 2026-11-27T16:13:33-05:00. These are mechanically evaluated market questions. A personal investment view belongs in a separately authored note.
 
 ## Has sector leadership broadened?
 
-Between 2026-10-28 and 2026-11-25, **7 of 11 sector proxies advanced** over 20 common session intervals. Revisit this reading after the next close. Persistent narrowing while the index rises would challenge a broad-participation interpretation.
+Between 2026-10-29 and 2026-11-27, **7 of 11 sector proxies advanced** over 20 common session intervals. Revisit this reading after the next close. Persistent narrowing while the index rises would challenge a broad-participation interpretation.
 
 ## Which sleeves move with the US equity benchmark?
 
@@ -12,17 +12,17 @@ Descriptive price-return beta versus the S&P 500 over up to 63 matched daily int
 
 |Instrument|Beta|Correlation|Matched returns|Through|
 |---|---:|---:|---:|---|
-|Technology|1.81|0.92|63|2026-11-25|
-|Communication Services|0.71|0.62|63|2026-11-25|
-|Consumer Discretionary|0.94|0.81|63|2026-11-25|
-|Consumer Staples|-0.01|-0.01|63|2026-11-25|
-|Energy|-0.03|-0.02|63|2026-11-25|
-|Financials|0.56|0.62|63|2026-11-25|
-|Health Care|0.35|0.36|63|2026-11-25|
-|Industrials|0.86|0.82|63|2026-11-25|
-|Materials|0.60|0.62|63|2026-11-25|
-|Real Estate|0.36|0.45|63|2026-11-25|
-|Utilities|0.23|0.29|63|2026-11-25|
+|Technology|1.81|0.92|63|2026-11-27|
+|Communication Services|0.72|0.64|63|2026-11-27|
+|Consumer Discretionary|0.95|0.82|63|2026-11-27|
+|Consumer Staples|-0.00|-0.00|63|2026-11-27|
+|Energy|-0.00|-0.00|63|2026-11-27|
+|Financials|0.56|0.63|63|2026-11-27|
+|Health Care|0.34|0.36|63|2026-11-27|
+|Industrials|0.87|0.82|63|2026-11-27|
+|Materials|0.62|0.63|63|2026-11-27|
+|Real Estate|0.36|0.45|63|2026-11-27|
+|Utilities|0.23|0.29|63|2026-11-27|
 
 ## Policy evidence
 
