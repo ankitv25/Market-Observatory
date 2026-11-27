@@ -1,6 +1,6 @@
 # Sources and observation dates
 
-Compiled 2026-11-27T07:08:48-05:00.
+Compiled 2026-11-27T08:10:27-05:00.
 
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
