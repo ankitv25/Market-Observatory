@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-27T17:37:15-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-27T19:36:51-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -18,7 +18,7 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
-**Source status.** Awaiting a new source response for Nikkei 225, Hang Seng, Nifty 50, Brent crude
+**Source status.** Awaiting a new source response for Euro STOXX 50, FTSE 100, Nikkei 225, Hang Seng, Nifty 50, Brent crude
 
 **US equities.** The S&P 500 reached 7,297.49 on 2026-11-27, a move of +114.71 points (+1.60%) against 2026-11-25. Its six-month price change was -2.96% from 2026-05-27.
 
@@ -84,10 +84,10 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 |[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|106.66|-0.53|-0.50%|-2.68%|2026-11-27|
 |**FX**||||||
 |[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|104.0140|+0.3440|+0.33%|+4.84%|2026-11-27|
-|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0970|+0.0008|+0.07%|-5.73%|2026-11-26|
-|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.2150|-0.0470|-0.03%|+0.16%|2026-11-26|
-|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3113|+0.0001|+0.01%|-2.84%|2026-11-26|
-|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8312|-0.0046|-0.55%|+6.15%|2026-11-26|
+|[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0972|+0.0002|+0.02%|-5.71%|2026-11-27|
+|[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.2810|+0.0660|+0.04%|+0.02%|2026-11-27|
+|[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3107|-0.0006|-0.04%|-2.59%|2026-11-27|
+|[USD/CHF](https://finance.yahoo.com/quote/CHF%3DX/history/) · CHF=X|0.8345|+0.0033|+0.40%|+6.29%|2026-11-27|
 |**Credit**||||||
 |[Short Treasuries](https://finance.yahoo.com/quote/SHY/history/) · SHY|81.62|-0.02|-0.02%|-0.73%|2026-11-27|
 |[Intermediate Treasuries](https://finance.yahoo.com/quote/IEF/history/) · IEF|91.66|-0.40|-0.43%|-2.82%|2026-11-27|
