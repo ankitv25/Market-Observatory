@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-27T19:36:51-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-27T22:24:47-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -18,7 +18,7 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
 
-**Source status.** Awaiting a new source response for Euro STOXX 50, FTSE 100, Nikkei 225, Hang Seng, Nifty 50, Brent crude
+**Source status.** Awaiting a new source response for Brent crude
 
 **US equities.** The S&P 500 reached 7,297.49 on 2026-11-27, a move of +114.71 points (+1.60%) against 2026-11-25. Its six-month price change was -2.96% from 2026-05-27.
 
@@ -64,7 +64,7 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 |[US quality](https://finance.yahoo.com/quote/QUAL/history/) · QUAL|54.67|+0.64|+1.18%|+1.60%|2026-11-27|
 |**Global**||||||
 |[Euro STOXX 50](https://finance.yahoo.com/quote/%5ESTOXX50E/history/) · ^STOXX50E|6,089.20|+74.46|+1.24%|+0.31%|2026-11-27|
-|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,698.81|+89.51|+0.84%|+1.84%|2026-11-27|
+|[FTSE 100](https://finance.yahoo.com/quote/%5EFTSE/history/) · ^FTSE|10,698.80|+89.50|+0.84%|+1.84%|2026-11-27|
 |[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|58,711.11|+1,211.95|+2.11%|-9.67%|2026-11-27|
 |[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,694.77|+467.89|+2.11%|-10.40%|2026-11-27|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,607.20|-277.30|-1.07%|+7.11%|2026-11-27|

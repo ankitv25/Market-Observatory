@@ -1,8 +1,8 @@
 # Sources and observation dates
 
-Compiled 2026-11-27T19:36:51-05:00.
+Compiled 2026-11-27T22:24:47-05:00.
 
-- Awaiting a new source response for Euro STOXX 50, FTSE 100, Nikkei 225, Hang Seng, Nifty 50, Brent crude
+- Awaiting a new source response for Brent crude
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
