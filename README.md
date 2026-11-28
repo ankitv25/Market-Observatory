@@ -8,7 +8,7 @@
 
 **[Market tape](#market-tape) · [Sector rotation](#sector-rotation) · [Treasury curve](#treasury-curve) · [Research notebook](dashboard/RESEARCH.md) · [Cadence log](CADENCE.md) · [Work log](WORKLOG.md)**
 
-Edition compiled **2026-11-27T22:24:47-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
+Edition compiled **2026-11-28T07:08:12-05:00** · 62 market instruments · dated observations below. Prices and changes use each instrument’s own feed and session. Percentages use unrounded prices.
 
 ## The daily reading
 
@@ -17,8 +17,6 @@ Edition compiled **2026-11-27T22:24:47-05:00** · 62 market instruments · dated
 The US equity benchmark median returned +1.65%, against +2.18% for developed ex-US and emerging-market ETFs. VIX changed -15.84%. High-yield ETF prices outpaced short Treasuries by 0.14 pp.
 
 [Assessment rules](docs/METHODOLOGY.md#market-intelligence-and-historical-story) · [Pipeline execution records](runs/)
-
-**Source status.** Awaiting a new source response for Brent crude
 
 **US equities.** The S&P 500 reached 7,297.49 on 2026-11-27, a move of +114.71 points (+1.60%) against 2026-11-25. Its six-month price change was -2.96% from 2026-05-27.
 
@@ -68,13 +66,13 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 |[Nikkei 225](https://finance.yahoo.com/quote/%5EN225/history/) · ^N225|58,711.11|+1,211.95|+2.11%|-9.67%|2026-11-27|
 |[Hang Seng](https://finance.yahoo.com/quote/%5EHSI/history/) · ^HSI|22,694.77|+467.89|+2.11%|-10.40%|2026-11-27|
 |[Nifty 50](https://finance.yahoo.com/quote/%5ENSEI/history/) · ^NSEI|25,607.20|-277.30|-1.07%|+7.11%|2026-11-27|
-|[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|34,839.87|+412.97|+1.20%|+1.24%|2026-11-27|
+|[S&P/TSX Composite](https://finance.yahoo.com/quote/%5EGSPTSE/history/) · ^GSPTSE|34,839.90|+413.00|+1.20%|+1.24%|2026-11-27|
 |[All-country equity](https://finance.yahoo.com/quote/ACWI/history/) · ACWI|150.58|+2.58|+1.74%|-4.48%|2026-11-27|
 |[Developed ex-US/Canada](https://finance.yahoo.com/quote/EFA/history/) · EFA|100.52|+1.34|+1.35%|-4.06%|2026-11-27|
 |[Emerging markets](https://finance.yahoo.com/quote/EEM/history/) · EEM|58.10|+1.70|+3.01%|-15.05%|2026-11-27|
 |**Futures**||||||
 |[WTI crude](https://finance.yahoo.com/quote/CLF27.NYM/history/) · CLF27.NYM|83.08|-0.60|-0.72%|+8.15%|2026-11-27|
-|[Brent crude](https://finance.yahoo.com/quote/BZF27.NYM/history/) · BZF27.NYM|94.61|+3.21|+3.51%|+9.53%|2026-11-25|
+|[Brent crude](https://finance.yahoo.com/quote/BZF27.NYM/history/) · BZF27.NYM|95.44|+0.83|+0.88%|+14.90%|2026-11-27|
 |[Natural gas](https://finance.yahoo.com/quote/NGF27.NYM/history/) · NGF27.NYM|3.49|-0.17|-4.57%|-19.67%|2026-11-27|
 |[Gold](https://finance.yahoo.com/quote/GCZ26.CMX/history/) · GCZ26.CMX|3,639.60|+103.80|+2.94%|-19.92%|2026-11-27|
 |[Silver](https://finance.yahoo.com/quote/SIZ26.CMX/history/) · SIZ26.CMX|43.17|+3.11|+7.76%|-43.41%|2026-11-27|
@@ -83,7 +81,7 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 |[S&P 500 E-mini](https://finance.yahoo.com/quote/ESZ26.CME/history/) · ESZ26.CME|7,308.25|+112.50|+1.56%|-4.65%|2026-11-27|
 |[10Y Treasury note](https://finance.yahoo.com/quote/ZNZ26.CBT/history/) · ZNZ26.CBT|106.66|-0.53|-0.50%|-2.68%|2026-11-27|
 |**FX**||||||
-|[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|104.0140|+0.3440|+0.33%|+4.84%|2026-11-27|
+|[US Dollar Index](https://finance.yahoo.com/quote/DX-Y.NYB/history/) · DX-Y.NYB|104.0100|+0.3400|+0.33%|+4.84%|2026-11-27|
 |[EUR/USD](https://finance.yahoo.com/quote/EURUSD%3DX/history/) · EURUSD=X|1.0972|+0.0002|+0.02%|-5.71%|2026-11-27|
 |[USD/JPY](https://finance.yahoo.com/quote/JPY%3DX/history/) · JPY=X|159.2810|+0.0660|+0.04%|+0.02%|2026-11-27|
 |[GBP/USD](https://finance.yahoo.com/quote/GBPUSD%3DX/history/) · GBPUSD=X|1.3107|-0.0006|-0.04%|-2.59%|2026-11-27|
@@ -104,7 +102,7 @@ The US equity benchmark median returned +1.65%, against +2.18% for developed ex-
 |[Listed infrastructure](https://finance.yahoo.com/quote/IGF/history/) · IGF|66.00|+0.29|+0.44%|-1.70%|2026-11-27|
 |[Managed futures](https://finance.yahoo.com/quote/DBMF/history/) · DBMF|31.66|+0.15|+0.48%|+2.10%|2026-11-27|
 |[Physical gold ETF](https://finance.yahoo.com/quote/GLD/history/) · GLD|334.40|+6.95|+2.12%|-18.14%|2026-11-27|
-|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|60,494.71|+116.51|+0.19%|-20.22%|2026-11-26|
+|[Bitcoin](https://finance.yahoo.com/quote/BTC-USD/history/) · BTC-USD|59,866.37|-628.34|-1.04%|-19.47%|2026-11-27|
 |[Cboe VIX](https://finance.yahoo.com/quote/%5EVIX/history/) · ^VIX|23.81|-2.99|-11.16%|+46.16%|2026-11-27|
 
 ## Sector rotation

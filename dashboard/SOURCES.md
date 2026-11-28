@@ -1,8 +1,7 @@
 # Sources and observation dates
 
-Compiled 2026-11-27T22:24:47-05:00.
+Compiled 2026-11-28T07:08:12-05:00.
 
-- Awaiting a new source response for Brent crude
 
 | Instrument | Source | Basis | Observed | Six-month anchor |
 |---|---|---|---|---|
@@ -52,7 +51,7 @@ Compiled 2026-11-27T22:24:47-05:00.
 |Listed infrastructure|[Yahoo Finance](https://finance.yahoo.com/quote/IGF/history/)|ETF session close, price only|2026-11-27|2026-05-27|
 |Managed futures|[Yahoo Finance](https://finance.yahoo.com/quote/DBMF/history/)|ETF session close, price only|2026-11-27|2026-05-27|
 |Physical gold ETF|[Yahoo Finance](https://finance.yahoo.com/quote/GLD/history/)|ETF session close, price only|2026-11-27|2026-05-27|
-|Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-26|2026-05-26|
+|Bitcoin|[Yahoo Finance](https://finance.yahoo.com/quote/BTC-USD/history/)|UTC daily spot close|2026-11-27|2026-05-27|
 |Cboe VIX|[Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX/history/)|Cash index session close, index points|2026-11-27|2026-05-27|
 |US Dollar Index|[Yahoo Finance](https://finance.yahoo.com/quote/DX-Y.NYB/history/)|Cash index session close, index points|2026-11-27|2026-05-27|
 |EUR/USD|[Yahoo Finance](https://finance.yahoo.com/quote/EURUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-27|2026-05-27|
@@ -60,7 +59,7 @@ Compiled 2026-11-27T22:24:47-05:00.
 |GBP/USD|[Yahoo Finance](https://finance.yahoo.com/quote/GBPUSD%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-27|2026-05-27|
 |USD/CHF|[Yahoo Finance](https://finance.yahoo.com/quote/CHF%3DX/history/)|Daily spot close, expressed in the quote currency|2026-11-27|2026-05-27|
 |WTI crude|[Yahoo Finance](https://finance.yahoo.com/quote/CLF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-27|2026-05-27|
-|Brent crude|[Yahoo Finance](https://finance.yahoo.com/quote/BZF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-25|2026-05-22|
+|Brent crude|[Yahoo Finance](https://finance.yahoo.com/quote/BZF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-27|2026-05-27|
 |Natural gas|[Yahoo Finance](https://finance.yahoo.com/quote/NGF27.NYM/history/)|Named delivery contract, vendor daily closing price · Jan 2027|2026-11-27|2026-05-27|
 |Gold|[Yahoo Finance](https://finance.yahoo.com/quote/GCZ26.CMX/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-27|2026-05-27|
 |Silver|[Yahoo Finance](https://finance.yahoo.com/quote/SIZ26.CMX/history/)|Named delivery contract, vendor daily closing price · Dec 2026|2026-11-27|2026-05-27|
